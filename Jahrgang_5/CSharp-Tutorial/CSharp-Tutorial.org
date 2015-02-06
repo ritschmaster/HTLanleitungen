@@ -1,0 +1,1410 @@
+# Copyright (C)  2014 Richard Bäck.
+# Permission is granted to copy, distribute and/or modify this document
+# under the terms of the GNU Free Documentation License, Version 1.3 or
+# any later version published by the Free Software Foundation; with no
+# Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+# copy of the license is included in the section entitled "GNU Free
+# Documentation License".
+
+#+TITLE:     C# Anleitung - REST + Klient
+#+AUTHOR:    Richard Bäck
+#+EMAIL:     richard.baeck@openmailbox.org
+#+DATE:      2015-01-31 Sa\pagebreak
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  de
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+XSLT:
+\pagebreak
+
+* Vorwort
+Diese Anleitung beschreibt, wie man eine Datenschicht, einen
+REST-Dienst und einen WPF-Klienten anlegt. Als Beispiel dient eine
+Musikverwaltung mit Interpret, Album und Liedern.
+* Datenschicht
+** Lösung anlegen
+1. Visual Studio starten
+2. ,,FILE''
+3. ,,New''
+4. ,,Project...''
+5. ,,Templates'' \rightarrow ,,Visual C#'' \rightarrow ,,Windows''
+   \rightarrow ,,Class Library''
+6. Variablen setzen:
+   1. Name = MusicDataLayer
+   2. Location = Save/Path/For/Your/Solution
+   3. Solution name = MusicManager
+   4. Create directory for solution = true
+7. ,,OK''
+** Entity Framework installieren
+# <<sec:entityframework>>
+1. Rechtsklick auf die Lösung ,,MusicManager''
+2. ,,Manage NuGet Packages''
+3. ,,Online''
+4. Nach ,,EntityFramework'' suchen
+5. Den ersten Vorschlag installieren
+6. Den Dialog durchführen und danach schließen
+** Referenz zu System.Data.Entity setzen
+# <<sec:addentityref>>
+1. Rechtsklick auf das Project ,,MusicDataLayer''
+2. ,,Add Reference...''
+3. ,,System.Data.Entity'' anhacken
+4. Dialog schließen
+** Entitätsmengen erstellen
+1. Neuen Ordner stellen mit dem Namen ,,Entities''
+2. Die generierte Datei umbennen auf ,,Entities.cs''
+3. Die Datei muss nun berarbeitet werden und soll danach so aussehen:
+#+BEGIN_SRC csharp
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MusicDataLayer.Entities
+{
+    public class Song
+    {
+        public int SongId { get; set; }
+        public string Name { get; set; }
+        public int Duration { get; set; } // in sec
+
+        public int InterpreterId { get; set; }
+        [ForeignKey("InterpreterId")]
+        public virtual Interpreter Interpreter { get; set; }
+
+        public int AlbumId { get; set; }
+        [ForeignKey("AlbumId")]
+        public virtual Album Album { get; set; }
+    }
+    public class Album
+    {
+        public int AlbumId { get; set; }
+        public string Name { get; set; }
+        public int Year { get; set; }
+        public virtual ICollection<Song> Songs { get; set; }
+    }
+    public class Interpreter
+    {
+        public int InterpreterId { get; set; }
+        public string Name { get; set; }
+        public virtual ICollection<Song> Songs { get; set; }
+    }
+}
+#+END_SRC
+** DbContext ableiten
+1. Neuen Ordner erstellen mit dem Namen ,,Database''
+2. Eine neue C#-Datei namens ,,MusicDbContext.cs'' anlegen
+3. Die generierte Datei in den neu erstellten Ordner verschieben
+4. Die Datei sollte dann verändert werden, dass sie so aussieht:
+#+BEGIN_SRC csharp
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MusicDataLayer
+{
+    public class MusicDbContext : DbContext
+    {
+        public DbSet<Song> Songs { get; set; }
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<Interpreter> Interpreters { get; set; }
+
+        public MusicDbContext() :
+            base(
+"Data Source=(localdb)\\v11.0;Initial Catalog=MusicDb;Integrated Security=True"
+            )
+        {
+        }
+    }
+}
+#+END_SRC
+** Repository anlegen
+Ein ,,Repository'' dient für einmalige Arbeiten an Objekten. Man kann
+ein ,,Update()''-Aufruf vom ,,Repository'' also mit einem
+,,update''-Aufruf in z.B. ,,sqlplus'' mit ,,AUTOCOMMIT=ON''
+vergleichen.
+#+BEGIN_LATEX
+\\
+#+END_LATEX
+1. Neuen Ordner namens ,,Repository'' anlegen
+2. Neue C#-Datei in den neu erstellten Ordner anlegen mit dem Namen
+   ,,Repository''
+3. In diese Klasse wird nun die Schnittstelle ,,IRepository'' und die
+   Klasse ,,Repository'' geschrieben:
+#+BEGIN_SRC csharp
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MusicDataLayer
+{
+    public interface IRepository<T>
+    {
+        void Create(T obj);
+        void Update(T obj);
+        void Delete(T obj);
+
+        // Parameter is a lambda object which gets passed to LINQ
+        IEnumerable<T> Get(Expression<Func<T, bool>> query = null);
+        T GetById(int id);
+    }
+
+    public class Repository<T, TContext> : IRepository<T>
+        where T : class
+        where TContext : DbContext, new()
+    {
+
+        public void Create(T obj)
+        {
+            using (TContext ctx = new TContext())
+            {
+                ctx.Set<T>().Add(obj);
+                ctx.SaveChanges();
+            }
+        }
+
+        public void Update(T obj)
+        {
+            using (TContext ctx = new TContext())
+            {
+                ctx.Set<T>().Attach(obj);
+                ctx.Entry<T>(obj).State = EntityState.Modified;
+                ctx.SaveChanges();
+            }
+        }
+
+        public void Delete(T obj)
+        {
+            using (TContext ctx = new TContext())
+            {
+                ctx.Set<T>().Attach(obj);
+                ctx.Set<T>().Remove(obj);
+                ctx.SaveChanges();
+            }
+        }
+
+        public IEnumerable<T> Get(Expression<Func<T, bool>> query = null)
+        {
+            using (TContext ctx = new TContext())
+            {
+                IQueryable<T> result = ctx.Set<T>();
+                if (query != null)
+                    result = result.Where(query);
+                return result.ToList();
+            }
+        }
+
+        public T GetById(int id)
+        {
+            using (TContext ctx = new TContext())
+            {
+                return ctx.Set<T>().Find(id);
+            }
+        }
+    }
+
+    public class RepositoryMusic<T> : Repository<T, MusicDbContext>
+            where T : class
+    {
+    }
+}
+#+END_SRC
+** Unit of Work
+Eine ,,Unit of Work'' dient zur Verarbeitung von Transaktionen. Man
+kann ein ,,Update()''-Aufruf aus der ,,Unit-of-Work'' also mit einem
+,,update''-Aufruf in z.B. ,,sqlplus'' mit ,,AUTOCOMMIT=OFF''
+vergleichen. Es muss, um eine Transaktion erfolgreich zu beenden,
+immer ,,Save()'' aufgerufen werden. Dies wird durch das Verwenden der
+,,Unit of Work'' mit dem Schlüsselwort ,,using'' automatisch
+abgesetzt.
+#+BEGIN_LATEX
+\\
+#+END_LATEX
+1. Neuer Ordner mit dem Namen ,,UnitOfWork''
+2. Anlegen einer C#-Datei names ,,RepositoryUow.cs'' in dem erstellten
+   Ordner. Diese steuert alle Kommandos für die Datenbank.
+3. ,,RepositoryUow.cs'' soll nun so aussehen:
+   #+BEGIN_SRC csharp
+   using System;
+   using System.Collections.Generic;
+   using System.Data.Entity;
+   using System.Linq;
+   using System.Text;
+   using System.Linq.Expressions;
+   using System.Threading.Tasks;
+
+   namespace MusicDataLayer
+   {
+       public class RepositoryUow<T> : IRepository<T>
+           where T: class
+       {
+           private DbContext _context;
+
+           public RepositoryUow(DbContext context)
+           {
+               _context = context;
+           }
+
+           public void Create(T obj)
+           {
+               _context.Set<T>().Add(obj);
+           }
+
+           public void Update(T obj)
+           {
+               if (_context.Entry<T>(obj).State == EntityState.Detached)
+               {
+                   _context.Set<T>().Attach(obj);
+               }
+               _context.Entry<T>(obj).State = EntityState.Modified;
+           }
+
+           public void Delete(T obj)
+           {
+               if (_context.Entry<T>(obj).State == EntityState.Detached)
+               {
+                   _context.Set<T>().Attach(obj);
+               }
+               _context.Set<T>().Remove(obj);
+           }
+
+           public IEnumerable<T> Get(Expression<Func<T, bool>> query = null)
+           {
+               IQueryable<T> result = _context.Set<T>();
+               if (query != null)
+                   result = result.Where(query);
+               return result.ToList();
+           }
+
+           public T GetById(int id)
+           {
+               return _context.Set<T>().Find(id);
+           }
+       }
+   }
+   #+END_SRC
+4. Anlegen einer C#-Datei namens ,,UnitOfWork.cs'' in dem erstellten
+   Ordner. Diese steuert das Ende der Transaktion und somit das
+   Festsetzen der Daten in einen konsistenten Zustand.
+5. Die Datei ,,UnitOfWork.cs'' soll nun so aussehen:
+   #+BEGIN_SRC csharp
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
+   using System.Threading.Tasks;
+
+   namespace MusicDataLayer.UnitOfWork
+   {
+       public interface IUnitOfWork : IDisposable
+       {
+           IRepository<T> GetRep<T>() where T : class;
+           void Save();
+       }
+
+       public class MusicUnitOfWork : IUnitOfWork
+       {
+           private MusicDbContext db = new MusicDbContext();
+           private bool disposed = false;
+
+           public IRepository<T> GetRep<T>() where T : class
+           {
+               var rep = new RepositoryUow<T>(db);
+               return rep as IRepository<T>;
+           }
+
+           public void Save()
+           {
+               db.SaveChanges();
+           }
+
+           private void Dispose(bool disposing)
+           {
+               if (!disposed)
+               {
+                   if (disposing)
+                       db.Dispose(); // free the locked ressources
+               }
+               disposed = true;
+           }
+
+           public void Dispose()
+           {
+               Dispose(true);
+               GC.SuppressFinalize(this); // suppress calling the destructor
+           }
+       }
+   }
+   #+END_SRC
+** Anlegen von DTOs
+Um einen reibungslosen Datentransfer zu gewährleisten ist es ratsam
+DTOs (= ,,Data Transfer Objects'' = Objekte für den Datentransfer)
+anzulegen.
+#+BEGIN_LATEX
+\\
+#+END_LATEX
+1. Im Ordner ,,Entities'' eine neue C#-Datei namens ,,DTOs.cs''
+   anlegen
+2. Diese sollte dann so aussehen:
+   #+BEGIN_SRC csharp
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
+   using System.Threading.Tasks;
+
+   namespace MusicDataLayer
+   {
+       public class SongDTO
+       {
+           public int SongId { get; set; }
+           public string Name { get; set; }
+           public int Duration { get; set; } // in seconds
+
+           public int InterpreterId { get; set; }
+
+           public int AlbumId { get; set; }
+           public AlbumDTO Album { get; set; }
+       }
+       public class AlbumDTO
+       {
+           public int AlbumId { get; set; }
+           public string Name { get; set; }
+           public int Year { get; set; }
+       }
+       public class InterpreterDTO
+       {
+           public int InterpreterId { get; set; }
+           public string Name { get; set; }
+       }
+   }
+   #+END_SRC
+** Datenbank anlegen
+1. ,,VIEW'' \rightarrow ,,Other Windows'' \rightarrow ,,Package Manager
+   Console''
+2. In das neu geöffnete Terminal ,,enable-migrations''. Mit diesem
+   Kommando wird ,,Migrations/Configuration.cs'' genriert. In dieser
+   Klasse wird die Datenbank mit der Methode ,,Seed()'' befüllt.
+3. ,,Migrations/Configuration.cs'' sollte umgeändert werden, damit sie
+   etwa so aussieht (= Einspielen von Testdaten):
+   #+BEGIN_SRC csharp
+   namespace MusicDataLayer.Migrations
+   {
+       using System;
+       using System.Collections.Generic;
+       using System.Data.Entity;
+       using System.Data.Entity.Migrations;
+       using System.Linq;
+
+       internal sealed class Configuration :
+          DbMigrationsConfiguration<MusicDataLayer.MusicDbContext>
+       {
+           public Configuration()
+           {
+               AutomaticMigrationsEnabled = false;
+           }
+
+           protected override void Seed(MusicDataLayer.MusicDbContext context)
+           {
+               // Delete old stuff
+               context.Albums.RemoveRange(context.Albums.ToList());
+               context.Songs.RemoveRange(context.Songs.ToList());
+               context.Interpreters.RemoveRange(context.Interpreters.ToList());
+
+               // Make some fresh stuff
+               Interpreter inter1 = new Interpreter()
+               {
+                   Name = "Gordon Goodwin Big Phat Band",
+                   Songs = new List<Song>()
+                   {
+                       new Song()
+                       {
+                           Name = "Backrow Politics",
+                           Duration = 180,
+                           Album = new Album()
+                           {
+                               Name = "Album1", Year = 2015
+                           }
+                       },
+                       new Song()
+                       {
+                           Name = "The Jazz Police",
+                           Duration = 180,
+                           Album = new Album()
+                           {
+                               Name = "Album2", Year = 2014
+                           }
+                       }
+                   }
+               };
+
+               Album albumMingus = new Album()
+               {
+                   Name = "Mingus Album",
+                   Year = 2015
+               };
+               Interpreter inter2 = new Interpreter()
+               {
+                   Name = "Charles Mingus Big Band",
+                   Songs = new List<Song>()
+                   {
+                       new Song()
+                       {
+                           Name = "Moanin'",
+                           Duration = 180,
+                           Album = albumMingus
+                       },
+                       new Song()
+                       {
+                           Name = "Ecclusiastics",
+                           Duration = 180,
+                           Album = albumMingus
+                       },
+                       new Song()
+                       {
+                           Name = "Invisible lady",
+                           Duration = 180,
+                           Album = albumMingus
+                       }
+                   }
+               };
+
+               Interpreter inter3 = new Interpreter()
+               {
+                   Name = "Dave Brubeck",
+                   Songs = new List<Song>()
+                   {
+                       new Song()
+                       {
+                           Name = "Take five",
+                           Duration = 177,
+                           Album = new Album()
+                           {
+                               Name = "Dave", Year = 1975
+                           }
+                       }
+                   }
+               };
+
+               // Populate the database with the fresh stuff
+               context.Interpreters.AddOrUpdate(inter1);
+               context.Interpreters.AddOrUpdate(inter2);
+               context.Interpreters.AddOrUpdate(inter3);
+               context.SaveChanges();
+           }
+       }
+   }
+   #+END_SRC
+4. ,,add-migration'' eingeben. Wenn eine Parameter Aufforderung kommt,
+   einfach ,,MusicDb'' eintippen. Mit diesem Kommando wird eine neue
+   Klasse generiert, mit der die Datenbank dann schlussendlie erstellt
+   werden kann.
+5. ,,update-database'' eingeben. Nun wird die Datenbank generiert und
+   unter ,,C:/users/youruser/MusicDb.mdf'' gespeichert.
+** Datebankverbindung
+Für Testzwecke kann auch eine Verbindung zu der neu erstellten
+Datenbank aufgebaut werden.
+#+BEGIN_LATEX
+\\
+#+END_LATEX
+1. ,,Server Explorer''
+2. Rechtsklick auf ,,Data Connections''
+3. ,,Add Connection...''
+4. ,,Microsft SQL Server Database File'' auswählen und weiter
+5. Die Verbindungszeichenkette ,,C:/users/youruser/MusicDb.mdf''
+   eintragen
+** Ninject-Factory erstellen
+1. Ninject installieren. Dies wird wie im Kapitel [[sec:entityframework]]
+   abgewickelt.
+2. Neuen Ordner namens ,,Factory'' anlegen
+3. Neue C#-Datei namens ,,Factory.cs'' in dem Ordner anlegen
+4. ,,Factory.cs'' sollte dann so aussehen:
+   #+BEGIN_SRC csharp
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
+   using System.Threading.Tasks;
+
+   namespace MusicDataLayer
+   {
+       public static class Factory
+       {
+           private static IKernel kernel;
+
+           static Factory()
+           {
+               kernel = new StandardKernel();
+               CreateBindings();
+               //CreateMockBindings();
+           }
+
+           private static void CreateMockBindings()
+           {
+               //kernel.Bind<IUnitOfWork>()
+               //    .To<MockUnitOfWork>();
+               //kernel.Bind<IRepository<Song>>()
+                  //.To<MockRepository<Song>>()
+                  //.WithConstructorArgument("init", songs)
+           }
+
+           private static void CreateBindings()
+           {
+               kernel.Bind<IUnitOfWork>()
+                   .To<MusicUnitOfWork>();
+
+               kernel.Bind<IRepository<Song>>().To<RepositoryMusic<Song>>();
+               kernel.Bind<IRepository<Album>>().To<RepositoryMusic<Album>>();
+               kernel.Bind<IRepository<Interpreter>>()
+                     .To<RepositoryMusic<Interpreter>>();
+           }
+
+           public static T Get<T>()
+           {
+               return kernel.Get<T>();
+           }
+       }
+   }
+   #+END_SRC
+* REST-Dienst
+** Neues Project anlegen
+1. Rechtsklick auf Lösung
+2. ,,Add'' \rightarrow ,,New'' \rightarrow ,,Project...''
+3. ,,Visual C#'' \rightarrow ,,Web'' \rightarrow ,,ASP.NET MVC 4 Web
+   Application''
+4. Variablen setzen:
+   1. Name = MusicService
+5. ,,OK''
+6. Ein neuer Dialog öffnet sich
+7. ,,Web API'' auswählen
+8. ,,OK''
+** Referenz zur Datenschicht erstellen
+# <<sec:addreference>>
+1. Rechtsklick auf das Project ,,MusicService''
+2. ,,Project Dependencies''
+3. Bei der Liste ,,Depends on'' das Project ,,MusicDataLayer''
+   anhacken
+4. Rechtsklick auf das Project ,,MusicService''
+5. ,,Add reference''
+6. ,,Solution'' \rightarrow ,,Projects''
+7. Bei der Liste das Project ,,MusicDataLayer'' anhacken
+8. ,,OK''
+** Erstellen des SongController
+# <<sec:songcontroller>>
+Es gibt entweder schon einen Controller (z.B.:
+Controllers/ValuesController.cs), dann kann dieser benutzt werden (nur
+umbennen zu ,,SongController'') und es kann die nächste Aufzählung
+übersprungen werden. Sollte dieser Controller noch nicht existieren,
+kann man ihn erstellen durch:
+1. Rechtsklick auf ,,Controllers''
+2. ,,Add'' \rightarrow ,,Controller...''
+3. Variablen setzen:
+   1. Controller name = SongController
+   2. Template = API Controller with empty read/write actions
+4. ,,Add''
+#+BEGIN_LATEX
+\\
+#+END_LATEX
+Der ,,SongController'' soll nun so aussehen:
+#+BEGIN_SRC csharp
+using MusicDataLayer;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace MusicService.Controllers
+{
+    public class SongController : ApiController
+    {
+        private IRepository<Song> rep = Factory.Get<RepositoryMusic<Song>>();
+
+        private SongDTO createDTO(Song song)
+        {
+            return new SongDTO
+            {
+                SongId = song.SongId,
+                Name = song.Name,
+                Duration = song.Duration,
+                AlbumId = song.AlbumId,
+                InterpreterId = song.InterpreterId,
+                //Album = new AlbumDTO
+                //{
+                //    AlbumId = song.Album.AlbumId,
+                //    Name = song.Album.Name,
+                //    Year = song.Album.Year
+                //}
+            };
+        }
+
+        private Song createModel(SongDTO songDTO)
+        {
+            return new Song
+            {
+                SongId = songDTO.SongId,
+                Name = songDTO.Name,
+                Duration = songDTO.Duration,
+                AlbumId = songDTO.AlbumId,
+                InterpreterId = songDTO.InterpreterId
+            };
+        }
+
+        // GET api/song
+        public IEnumerable<SongDTO> Get()
+        {
+            return rep.Get().Select(song => createDTO(song));
+        }
+
+        // GET api/song?interpreterid=5
+        public IEnumerable<SongDTO> GetByInterpreterId(int interpreterid)
+        {
+            return rep.Get(song => song.InterpreterId == interpreterid)
+                      .Select(song => createDTO(song));
+        }
+
+
+        // GET api/song/5
+        public SongDTO Get(int id)
+        {
+            Song song = rep.GetById(id);
+            return createDTO(song);
+        }
+
+        // POST api/song
+        public void Post([FromBody]SongDTO value)
+        {
+            rep.Create(createModel(value));
+        }
+
+        // PUT api/song/5
+        public void Put(int id, [FromBody]SongDTO value)
+        {
+            rep.Update(createModel(value));
+        }
+
+        // DELETE api/song/5
+        public void Delete(int id)
+        {
+            rep.Delete(new Song { SongId = id });
+        }
+    }
+}
+#+END_SRC
+** Erstellen des InterpreterController
+Es muss ein Controller wie im Kapitel [[sec:songcontroller]] erstellt
+werden, nur mit dem Namen ,,InterpreterController''. Die Quelldatei
+sollte dann so aussehen:
+#+BEGIN_SRC csharp
+using MusicDataLayer;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace MusicService.Controllers
+{
+    public class InterpreterController : ApiController
+    {
+        private IRepository<Interpreter> rep =
+            Factory.Get<RepositoryMusic<Interpreter>>();
+
+        private InterpreterDTO createDTO(Interpreter interpreter)
+        {
+            return new InterpreterDTO
+            {
+                InterpreterId = interpreter.InterpreterId,
+                Name = interpreter.Name
+            };
+        }
+
+        private Interpreter createModel(InterpreterDTO interpreterDTO)
+        {
+            return new Interpreter
+            {
+                InterpreterId = interpreterDTO.InterpreterId,
+                Name = interpreterDTO.Name
+            };
+        }
+
+        // GET api/interpreter
+        public IEnumerable<InterpreterDTO> Get()
+        {
+            return rep.Get().Select(i => createDTO(i));
+        }
+
+        // GET api/interpreter/5
+        public InterpreterDTO Get(int id)
+        {
+            return createDTO(rep.GetById(id));
+        }
+
+        // POST api/interpreter
+        public void Post([FromBody]InterpreterDTO value)
+        {
+            rep.Create(createModel(value));
+        }
+
+        // PUT api/interpreter/5
+        public void Put(int id, [FromBody]InterpreterDTO value)
+        {
+            rep.Update(createModel(value));
+        }
+
+        // DELETE api/interpreter/5
+        public void Delete(int id)
+        {
+            rep.Delete(new Interpreter { InterpreterId = id });
+        }
+    }
+}
+#+END_SRC
+** Erstellen des AlbumController
+Es muss ein Controller wie im Kapitel [[sec:songcontroller]] erstellt
+werden, nur mit dem Namen ,,AlbumController''. Die Quelldatei sollte
+dann so aussehen:
+#+BEGIN_SRC csharp
+using MusicDataLayer;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace MusicService.Controllers
+{
+    public class AlbumController : ApiController
+    {
+        private IRepository<Album> rep =
+            Factory.Get<RepositoryMusic<Album>>();
+
+        private AlbumDTO createDTO(Album album)
+        {
+            return new AlbumDTO
+            {
+                AlbumId = album.AlbumId,
+                Name = album.Name,
+                Year = album.Year
+            };
+        }
+
+        private Album createModel(AlbumDTO albumDTO)
+        {
+            return new Album
+            {
+                AlbumId = albumDTO.AlbumId,
+                Name = albumDTO.Name,
+                Year = albumDTO.Year
+            };
+        }
+
+        // GET api/album
+        public IEnumerable<AlbumDTO> Get()
+        {
+            return rep.Get().Select(a => createDTO(a));
+        }
+
+        // GET api/album/5
+        public AlbumDTO Get(int id)
+        {
+            return createDTO(rep.GetById(id));
+        }
+
+        // POST api/album
+        public void Post([FromBody]AlbumDTO value)
+        {
+            rep.Create(createModel(value));
+        }
+
+        // PUT api/album/5
+        public void Put(int id, [FromBody]AlbumDTO value)
+        {
+            rep.Update(createModel(value));
+        }
+
+        // DELETE api/album/5
+        public void Delete(int id)
+        {
+            rep.Delete(new Album { AlbumId = id });
+        }
+    }
+}
+#+END_SRC
+* WPF-Klienten
+** Neues Project anlegen
+1. Rechtsklick auf Lösung
+2. ,,Add'' \rightarrow ,,New'' \rightarrow ,,Project...''
+3. ,,Visual C#'' \rightarrow ,,Windows'' \rightarrow ,,WPF
+   Application''
+4. Variablen setzen:
+   1. Name = MusicClient
+5. ,,OK''
+** Referenz zur Datenschicht erstellen
+Siehe Kapitel [[sec:addreference]].
+** RESTRepository
+Mit dem ,,RESTRepository'' findet eine Implementierung von
+,,IRepository'' statt, die es erlaubt ,,CRUD'' über das Netzwerk
+auszuführen.
+#+BEGIN_LATEX
+\\
+#+END_LATEX
+1. ,,System.Net.Http'' wie in Kapitel [[sec:addentityref]] referenzieren -
+   Einbindung für die Verwendung von ,,HttpClient''
+2. ,,System.Web.Extensions'' wie in Kapitel [[sec:addentityref]] -
+   Einbindung für Serialisierung
+   referenzieren
+3. Neue C#-Datei ,,RESTRepository'' anlegen
+4. Diese soll dann etwa so aussehen:
+#+BEGIN_SRC csharp
+using MusicDataLayer;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web.Script.Serialization;
+
+namespace MusicClient
+{
+    public class RESTRepository
+    {
+        private HttpClient client;
+        private JavaScriptSerializer serializer = new JavaScriptSerializer();
+
+        public RESTRepository(string baseUrl)
+        {
+            client = new HttpClient { BaseAddress = new Uri(baseUrl) };
+        }
+
+        // e.g.: InterpreterDTO -> Interpreter
+        private string RemoveDTO<T>()
+        {
+            var name = typeof(T).Name;
+            name = name.Substring(0, name.Length - 3);
+            return name;
+        }
+
+        public void Create<T>(T obj)
+        {
+            var json = serializer.Serialize(obj);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            client.PostAsync(RemoveDTO<T>(), content);
+        }
+
+        public void Update<T>(T obj, int id)
+        {
+            var json = serializer.Serialize(obj);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            client.PutAsync(RemoveDTO<T>() + "/" + id.ToString(), content);
+        }
+
+        public void Delete<T>(T obj, int id)
+        {
+            client.DeleteAsync(RemoveDTO<T>() + id.ToString());
+        }
+
+        public IEnumerable<T> Get<T>(string query = "")
+        {
+
+            var result = client.GetStringAsync(RemoveDTO<T>() + query).Result;
+            return serializer.Deserialize<IEnumerable<T>>(result);
+        }
+
+        public T GetById<T>(int id)
+        {
+            var result = client.GetStringAsync(
+                    RemoveDTO<T>() + "/" + id.ToString()).Result;
+            return serializer.Deserialize<T>(result);
+        }
+    }
+}
+#+END_SRC
+** Das ViewModel
+Das ViewModel ist das Bindeglied zwischen Datenverarbeitung und
+Datenpräsentation. XAML nimmt z.B. eine Liste von Liedern und zeigt
+diese an. Jedes Lied-Objekt (= ,,ViewModelManageSong'') enthält
+Attribute, die auf das Lied-Datenobjekt zugreifen. Diese Attribute
+können von XAML aus abgerufen und zur Anzeige gebracht werden.
+*** ViewModelBase
+1. Neuen Ordner ,,ViewModel'' erstellen
+2. In dem Ordner ,,ViewModel'' eine neue C#-Datei namens ,,ViewModelBase.cs''
+   anlegen
+3. ,,ViewModelBase.cs'' (Hinweis: bleibt immer gleich!):
+   #+BEGIN_SRC csharp
+   using System;
+   using System.Collections.Generic;
+   using System.ComponentModel;
+   using System.Linq;
+   using System.Text;
+   using System.Threading.Tasks;
+
+   namespace MusicClient.ViewModel
+   {
+       public class ViewModelBase : INotifyPropertyChanged
+       {
+           public event PropertyChangedEventHandler PropertyChanged;
+           public virtual void OnPropertyChanged(string property)
+           {
+               if (this.PropertyChanged != null)
+                   this.PropertyChanged(this,
+                   new PropertyChangedEventArgs(property));
+           }
+       }
+   }
+   #+END_SRC
+*** ViewModelManageSong
+1. In dem Ordner ,,ViewModel'' eine neue C#-Datei namens ,,RelayCommand.cs''
+   anlegen
+2. Die Datei sollte dann so umgeschrieben werden (Hinweis: die Klasse
+   ,,RelayCommand'' ist immer gleich!):
+   #+BEGIN_SRC csharp
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
+   using System.Threading.Tasks;
+   using System.Windows.Input;
+
+   namespace MusicClient.ViewModel
+   {
+       public class RelayCommand : ICommand
+       {
+           private Action<object> execute;
+           private Predicate<object> canExecute;
+
+           public RelayCommand(Action<object> execute,
+                               Predicate<object> canExecute = null)
+           {
+               this.execute = execute;
+               this.canExecute = canExecute;
+           }
+
+           public bool CanExecute(object parameter)
+           {
+               if (this.canExecute != null)
+                   return this.canExecute(parameter);
+               return true;
+           }
+
+           public event EventHandler CanExecuteChanged
+           {
+               add { CommandManager.RequerySuggested += value; }
+               remove { CommandManager.RequerySuggested -= value; }
+           }
+
+           public void Execute(object parameter)
+           {
+               this.execute(parameter);
+           }
+       }
+   }
+   #+END_SRC
+3. In dem Ordner ,,ViewModel'' eine neue C#-Datei namens ,,ViewModelManageSong''
+   anlegen, mit dem folgenden Inhalt:
+   #+BEGIN_SRC csharp
+   using MusicDataLayer;
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
+   using System.Threading.Tasks;
+
+   namespace MusicClient.ViewModel
+   {
+       public class ViewModelManageSong : ViewModelBase
+       {
+           // To estimate the right port run your project!
+           private RESTRepository rest =
+               new RESTRepository("http://localhost:6008/api/");
+
+           private ViewModelBase vmParent;
+           public ViewModelBase ViewModelParent
+           {
+               set { vmParent = value; }
+           }
+
+           private SongDTO song = new SongDTO();
+           public SongDTO Song
+           {
+               get { return song; }
+               set { song = value ?? new SongDTO(); }
+           }
+
+           public string Name
+           {
+               get { return song.Name; }
+               set { song.Name = value; }
+           }
+
+           public int Duration
+           {
+               get { return song.Duration; }
+               set { song.Duration = value; }
+           }
+
+           public int InterpreterId
+           {
+               get { return song.InterpreterId; }
+               set { song.InterpreterId = value; }
+           }
+
+           public int AlbumId
+           {
+               get { return song.AlbumId; }
+               set { song.AlbumId = value; }
+           }
+
+           public AlbumDTO Album
+           {
+               get { return song.Album; }
+               set { song.Album = value; }
+           }
+
+           // The next to properties enable editing those
+           // values in a user control (seeh ManageSongUserControl.xml)
+           public IEnumerable<AlbumDTO> Albums
+           {
+               get
+               {
+                   return rest.Get<AlbumDTO>();
+               }
+           }
+
+           public IEnumerable<InterpreterDTO> Interpreters
+           {
+               get
+               {
+                   return rest.Get<InterpreterDTO>();
+               }
+           }
+
+           public ICommand Save
+           {
+               get
+               {
+                   return new RelayCommand(
+                       p =>
+                       {
+                           rest.Update<SongDTO>(song, song.SongId);
+
+                           if (vmParent != null)
+                               vmParent.OnPropertyChanged("Songs");
+                       }
+                   );
+               }
+           }
+
+           public ICommand Delete
+           {
+               get
+               {
+                   return new RelayCommand(
+                       p =>
+                       {
+                           rest.Delete<SongDTO>(song, song.SongId);
+
+                           if (vmParent != null)
+                               vmParent.OnPropertyChanged("Songs");
+                       }
+                   );
+               }
+           }
+
+           public ICommand Create
+           {
+               get
+               {
+                   return new RelayCommand(
+                       p =>
+                       {
+                           rest.Create<SongDTO>(song);
+
+                           if (vmParent != null)
+                               vmParent.OnPropertyChanged("Songs");
+                       }
+                   );
+               }
+           }
+       }
+   }
+   #+END_SRC
+*** ViewModelList hinzufügen
+Diese Klasse dient um Listen von Datenobjekten XAML
+bereitzustellen. Außerdem dient es als Speicher für in XAML
+selektierte Daten. Dabei löst eine Selektion der Daten mit der Methode
+,,OnPropertyChanged()'' eine andere Funktionskette aus.
+#+BEGIN_LATEX
+\\
+#+END_LATEX
+1. In dem Ordner ,,ViewModel'' eine neue C#-Datei namens
+   ,,ViewModelSongList.cs'' anlegen
+2. Die Datei sollte dann so aussehen:
+   #+BEGIN_SRC csharp
+   using MusicDataLayer;
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
+   using System.Threading.Tasks;
+
+   namespace MusicClient.ViewModel
+   {
+       public class ViewModelSongList : ViewModelBase
+       {
+           private RESTRepository rest =
+               new RESTRepository("http://localhost:24135/api/");
+
+           public IEnumerable<InterpreterDTO> Interpreters
+           {
+               get
+               {
+                   return rest.Get<InterpreterDTO>();
+               }
+           }
+
+           public IEnumerable<SongDTO> Songs
+           {
+               get
+               {
+                   return selectedInterpreter != null ?
+                       rest.Get<SongDTO>("?interpreterid=" +
+                         selectedInterpreter.InterpreterId.ToString()) :
+                       new SongDTO[0];
+               }
+           }
+
+           // stores a selection coming from the XAML
+           private InterpreterDTO selectedInterpreter;
+           public InterpreterDTO SelectedInterpreter
+           {
+               get { return selectedInterpreter; }
+               set
+               {
+                   selectedInterpreter = value;
+                   OnPropertyChanged("SelectedInterpreter");
+                   OnPropertyChanged("Songs");
+               }
+           }
+
+           // stores a selection coming from the XAML
+           private SongDTO selectedSong;
+           public SongDTO SelectedSong
+           {
+               get { return selectedSong; }
+               set
+               {
+                   selectedSong = value;
+                   OnPropertyChanged("SelectedSong");
+                   OnPropertyChanged("ViewModelManageSong");
+               }
+           }
+
+           public ViewModelManageSong ViewModelManageSong
+           {
+               get
+               {
+                   var vmpm = Factory.Get<ViewModelManageSong>();
+                   vmpm.Song = selectedSong;
+                   vmpm.ViewModelParent = this;
+                   return vmpm;
+               }
+           }
+       }
+   }
+   #+END_SRC
+** XAML - MainWindow
+1. Die ,,MainWindow.xaml'' soll nun umgeändert werden. Anmerkung: Die
+   XAML Datei bindet mit ,,local:ManageSongUserControl'' eine andere
+   XAML-Datei namens ,,ManageSongUserControl.xaml'' ein. Diese wird im
+   Kapitel [[sec:managesongusercontrol]] erstellt.
+   #+BEGIN_SRC csharp
+   <Window x:Class="MusicClient.MainWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:vm="clr-namespace:MusicClient.ViewModel"
+           xmlns:local="clr-namespace:MusicClient"
+           Title="MusicManager" Height="350" Width="525">
+       <DockPanel>
+           <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+               <Label>Interpreters</Label>
+               <ComboBox DisplayMemberPath="Name"
+                          SelectedValuePath="InterpreterId"
+                          ItemsSource="{Binding Interpreters}"
+                          SelectedItem="{Binding SelectedInterpreter}">
+                </ComboBox>
+           </StackPanel>
+           <local:ManageSongUserControl DockPanel.Dock="Right" Width="250"
+                                        DataContext="{Binding ViewModelManageSong}">
+           </local:ManageSongUserControl>
+           <DataGrid AutoGenerateColumns="False" IsReadOnly="True"
+                     ItemsSource="{Binding Songs}"
+                     SelectedItem="{Binding SelectedSong}"
+                     MouseDoubleClick="DataGrid_MouseDoubleClick">
+               <DataGrid.Columns>
+                   <DataGridTextColumn Header="Name" Binding="{Binding Name}">
+                   </DataGridTextColumn>
+                   <DataGridTextColumn Header="Duration"
+                                       Binding="{Binding Duration}">
+                   </DataGridTextColumn>
+               </DataGrid.Columns>
+           </DataGrid>
+       </DockPanel>
+   </Window>
+   #+END_SRC
+2. Die ,,MainWindow.xaml.cs'' soll nun auch angepasst
+   werden. Anmerkung: Diese C#-Klasse verwendet die Klasse
+   ,,ManageSongDialog'', die zu diesem Zeitpunkt noch nicht
+   existiert. Diese wird erst im Kapitel [[sec:managesongdialog]]
+   angelegt.
+   #+BEGIN_SRC csharp
+   using MusicClient.ViewModel;
+   using MusicDataLayer;
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using System.Text;
+   using System.Threading.Tasks;
+   using System.Windows;
+   using System.Windows.Controls;
+   using System.Windows.Data;
+   using System.Windows.Documents;
+   using System.Windows.Input;
+   using System.Windows.Media;
+   using System.Windows.Media.Imaging;
+   using System.Windows.Navigation;
+   using System.Windows.Shapes;
+
+   namespace MusicClient
+   {
+       /// <summary>
+       /// Interaction logic for MainWindow.xaml
+       /// </summary>
+       public partial class MainWindow : Window
+       {
+           public MainWindow()
+           {
+               InitializeComponent();
+               DataContext = Factory.Get<ViewModel.ViewModelSongList>();
+           }
+
+           private void DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+           {
+               ManageSongDialog dlg = new ManageSongDialog
+               {
+                   DataContext =
+                   ((ViewModelSongList)DataContext).ViewModelManageSong
+               };
+               dlg.ShowDialog();
+           }
+       }
+   }
+   #+END_SRC
+** XAML - ManageSongUserControl
+# <<sec:managesongusercontrol>>
+1. Beim Projekt ,,MusicClient'' \rightarrow ,,Add'' \rightarrow ,,New
+   Item...''
+2. ,,Visual C#'' \rightarrow ,,WPF'' \rightarrow ,,User Control
+   (WPF)''
+3. Variablen setzen:
+   1. Name = ManageSongUserControl
+4. ,,Add''
+5. Die neu erstellte ,,ManageSongUserControl.xaml'' sollte nun so
+   umgeändert werden:
+   #+BEGIN_SRC csharp
+   <UserControl x:Class="MusicClient.ManageSongUserControl"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                mc:Ignorable="d"
+                d:DesignHeight="300" d:DesignWidth="300">
+       <Grid>
+           <Grid.ColumnDefinitions>
+               <ColumnDefinition></ColumnDefinition>
+               <ColumnDefinition></ColumnDefinition>
+           </Grid.ColumnDefinitions>
+           <Grid.RowDefinitions>
+               <RowDefinition Height="Auto"></RowDefinition>
+               <RowDefinition Height="Auto"></RowDefinition>
+               <RowDefinition Height="Auto"></RowDefinition>
+               <RowDefinition Height="Auto"></RowDefinition>
+               <RowDefinition Height="Auto"></RowDefinition>
+               <RowDefinition Height="Auto"></RowDefinition>
+           </Grid.RowDefinitions>
+
+           <Label Grid.Row="0" Grid.Column="0">Name</Label>
+           <TextBox Grid.Row="0" Grid.Column="1" Margin="3"
+                    Text="{Binding UpdateSourceTrigger=PropertyChanged, Path=Name}">
+           </TextBox>
+
+           <Label Grid.Row="1" Grid.Column="0">Duration</Label>
+           <TextBox Grid.Row="1" Grid.Column="1" Margin="3"
+           Text="{Binding UpdateSourceTrigger=PropertyChanged, Path=Duration}">
+           </TextBox>
+
+           <Label Grid.Row="2" Grid.Column="0">Album</Label>
+           <ComboBox Grid.Row="2" Grid.Column="1" Margin="3"
+                     DisplayMemberPath="Name" SelectedValuePath="AlbumId"
+                     ItemsSource="{Binding Albums}"
+                     SelectedValue="{Binding Song.AlbumId}">
+           </ComboBox>
+
+           <Label Grid.Row="3" Grid.Column="0">Interpreter</Label>
+           <ComboBox Grid.Row="3" Grid.Column="1" Margin="3"
+                     DisplayMemberPath="Name" SelectedValuePath="InterpreterId"
+                     ItemsSource="{Binding Interpreters}"
+                     SelectedValue="{Binding Song.InterpreterId}">
+           </ComboBox>
+
+           <StackPanel Grid.Row="4" Grid.ColumnSpan="2"
+                       Orientation="Horizontal" HorizontalAlignment="Right">
+               <Button Margin="3" Command="{Binding Save}" Width="93">Save</Button>
+               <Button Margin="3" Command="{Binding Delete}" Width="93">Delete</Button>
+               <Button Margin="3" Command="{Binding Create}" Width="93">Add</Button>
+           </StackPanel>
+       </Grid>
+   </UserControl>
+   #+END_SRC
+** XAML - ManageSongDialog
+# <<sec:managesongdialog>>
+1. Beim Projekt ,,MusicClient'' \rightarrow ,,Add'' \rightarrow ,,New
+   Item...''
+2. ,,Visual C#'' \rightarrow ,,WPF'' \rightarrow ,,Window (WPF)''
+3. Variablen setzen:
+   1. Name = ManageSongDialog
+4. ,,Add''
+5. Die neu erstellte ,,ManageSongDialog.xaml'' sollte nun so
+   umgeändert werden:
+   #+BEGIN_SRC csharp
+   <Window x:Class="MusicClient.ManageSongDialog"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:local="clr-namespace:MusicClient"
+           Title="ManageSongDialog" Height="300" Width="300">
+       <local:ManageSongUserControl></local:ManageSongUserControl>
+   </Window>
+   #+END_SRC
+* Fehlerlösungen
+** Update-Database funktioniert nicht
+1. ,,CTRL + R'' \rightarrow ,,cmd'' \rightarrow ,,OK''
+2. SqlLocalDb stop v11.0
+3. SqlLocalDb delete v11.0

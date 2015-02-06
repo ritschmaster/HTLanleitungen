@@ -1,0 +1,13 @@
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\MusicDataLayer.dll.config
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\MusicDataLayer.dll
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\MusicDataLayer.pdb
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\EntityFramework.dll
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\Ninject.dll
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\EntityFramework.xml
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\bin\Debug\Ninject.xml
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\obj\Debug\MusicDataLayer.Migrations.MusicDb.resources
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\obj\Debug\MusicDataLayer.csproj.GenerateResource.Cache
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\obj\Debug\MusicDataLayer.dll
+C:\Users\ritsch_master\Desktop\MusicManager\MusicDataLayer\obj\Debug\MusicDataLayer.pdb
