@@ -1,0 +1,413 @@
+# Copyright (C)  2014 Richard Bäck.
+# Permission is granted to copy, distribute and/or modify this document
+# under the terms of the GNU Free Documentation License, Version 1.3 or
+# any later version published by the Free Software Foundation; with no
+# Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+# copy of the license is included in the section entitled "GNU Free
+# Documentation License".
+
+#+TITLE:     Rechtsformen von Unternehmen
+#+AUTHOR:    Richard Bäck
+#+EMAIL:     ritschmaster1@gmail.com
+#+DATE:      2014-11-21 Fri
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  de
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+XSLT:
+
+#+startup: beamer
+#+startup: beamer
+#+BEAMER_FRAME_LEVEL: 2
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+LATEX_HEADER: \mode<beamer>{\usetheme{Dresden}\usecolortheme{whale}}
+#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Aktuelles Thema}\tableofcontents[currentsection]\end{frame}}
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+
+* Einleitung
+** Überlick über die Rechtsformen
+#+ATTR_LaTeX: scale=0.3
+[[file:Rechtsformen_Ueberblick.jpg]]
+# Anmerkung über den Unterschied Gesellschaftsvertrag und Satzung:
+# - Gesellschaftsvertrag bei Personengesellschaften
+# - Satzung bei Kapitalgesellschaften und Genossenschaften
+** Firmenname
+- Bedeutet eine Eintragung ins Firmenbuch
+- Darf nicht täuschend sein
+  - Eine Baufirma darf nicht "Perger Hardware" heißen
+- Es muss der jeweilige Gesellschaftsformzusatz angehängt sein
+  - Habau *GmbH*, Raiffeisen Bank International *AG*
+- Lokale Unterscheidungskraft muss gewährleistet werden
+  - Es darf keine zwei "Zum weißen Rössel" im gleichen Ort geben
+- Sonst ist der Name frei wählbar!
+** Umsatzschwellenwert
+- Eintritt bei:
+  - Jährlicher Umsatz von € 700.000 in zwei Geschäftsjahren
+  - Jährlicher Umsatz von € 1.000.000 in einem Geschäftsjahr
+- Verpflichtungen bei Eintritt:
+  - Eintragung ins Firmenbuch
+  - Bilanzierungspflicht \rightarrow Verwendung der Doppelten
+    Buchführung
+* Einzelunternehmen
+** Einzelunternehmer
+- Sind eine natürliche Person
+- Haften uneingeschränkt
+- Einzelunternehmer muss selbst die Gewerbeberechtigung besitzen
+  - Bsp.: Tischlermeister
+  - keine Gewerbeberechtigung für ein Softwareunternehmen nötig!
+- Unternehmen wird auf eigenen Namen geführt
+** Eingetragener Einzelunternehmer
+- Eintragung ist bis zum Umsatzschwellenwert freiwillig
+- Ein Firmenname kann angegeben werden
+  - Zusätze: e.U., eingetragener Unternehmer
+* Personengesellschaften
+** Merkmale
+- Zusammenschluss von 2+ juristischen/natürlichen Personen
+- Kapital wird durch die Teilnehmer aufgebracht
+- Bilanzierungspflicht erst bei Umsatzschwellenwert
+- Haftung geht auf Privatvermögen
+** Gesellschaft nach bürgerlichem Recht - GesnbR
+\scriptsize
+- Stillschweigende Zusammenarbeit gilt als Gründung
+  # Bsp.: Zwei Softwarefirmen ar- beiten gemeinsam an einer neuen
+  # Technologie. Es wurde kein Vertrag geschlossen, dennoch ist das
+  # Ergebnis als Produkt einer GesnbR zu sehen. Somit erfolgt auch
+  # dessen Gewinnverteilung laut den Gesetzen für GesnbR.
+- Haftung
+  - \scriptsize persönlich
+  - unbeschränkt
+  - subsidiär
+  - primär
+- Jeder Teilnehmer benötigt eine Gewerbeberechtigung
+  # Bsp.: Bei einer GesnbR die Möbel herstellt, die aus zwei
+  # natürlichen Personen besteht, müssen beide Gesellschafter
+  # Tischlermeister sein.
+- Geschäftsführung nach Kapitalanteil oder Gesellschaftsvertrag
+- Verteilung von GuV nach Leistung oder Gesellschaftsvertrag
+- Keine Firmenbucheintragung möglich!
+  - \scriptsize Es müssen im Unternehmensnamen die Namen aller
+    Teilnehmer vorkommen
+- Bei einer andauernden Tätigkeit (nicht nur für ein Projekt) gilt der
+  Umsatzschwellenwert
+  - \scriptsize GesnbR \rightarrow Offene Gesellschaft
+** Offene Gesellschaft - OG, & Co, & Partner
+\scriptsize
+- Bei der Gründung entstehen zwei Verhältnisse:
+  - Innenverhältnis :: Gesellschaftsvertrag (mündlich auch erlaubt!)
+       \rightarrow Verhältnis der Gesellschafter unteinander (Wer
+       haftet wieviel etc.)
+  - Außenverhältnis :: Firmenbucheintrag \rightarrow Verhältnis der
+       Firma zur Außenwelt (\rightarrow die Firma haftet)
+- Haftung
+  - \scriptsize persönlich
+  - unbeschränkt
+  - solidarisch
+  - primär
+- Alle Gesellschafter sind geschäftsführungs- und vertretungsbefugt
+  (Ausnahme: Gesellschaftsvertrag)
+# - Verteilung des GuV \rightarrow Gesellschaftsvertrag sonst
+#   folgendermaßen:
+#   - Angemessener Betrag an die Arbeitsgesellschafter
+#   - Rest im Verhätlnis der Beteiligung
+- Gewerbeberechtigung muss gewährleistet werden durch:
+  - \scriptsize Mindestens einen Gesellschafter
+  - Einen Arbeitnehemer
+    # ein voll versicherungspflichtiger Arbeitnehmer, der mindestens die
+    # Hälfte der wöchentlichen Normalarbeitszeit im Betrieb beschäftigt
+    # ist
+- Wettbewerbsverbot \rightarrow Gesellschafter darf nicht in der
+  selben Branche wo anders tätig sein
+  # - Arbeitnehmer sein
+  # - Uneingeschränkter Gesellschafter sein
+** Kommanditgesellschaft - KG
+\scriptsize
+- mindestens ein Gesellschafter übernimmt die volle Haftung (=
+  Komplementär)
+- mindestens ein Gesellschafter haftet nur mit der Einlage (=
+  Kommanditist)
+- Haftung
+  - \scriptsize unbeschränkt
+  - solidarisch
+  - direkt
+  - Kommanditisten nur bis zur Hafteinlage!
+    # Hafteinlage (-betrag) kann höher sein als die tatsächliche
+    # Einlage!
+- Komplementäre sind geschäftsführungs- und vertretungsbefugt
+  - \scriptsize Mitspracherecht der Kommanditisten nur
+    bei *ungewöhnlichen* Geschäftsfällen
+** Stille Gesellschaft - stG
+\scriptsize
+- Eine natürliche/juristische Person beteiligt sich an einer
+  Gesellschaft mit einer Vermögenseinlage
+  # Wichtig: Art der Einlage spielt keine Rolle!
+- Beteiligung am Verlust ist kein Muss, am Gewinn schon
+  (oder Gesellschaftsvertrag)
+  # Kaptialertragssteuer bei Gewinn, Keine Abschreibung des Verlusts!
+- Kontrollrecht wie eines Kommanditisten
+- Schuldverhältnis \rightarrow wird zum Gläubiger bei einer Insolvenz
+- Atypische stille Beteiligung \rightarrow stG wird zum
+  /Mitunternehmer/
+** Europäische wirtschaftliche Interessensvereinigung - EWIV
+\scriptsize
+- Zwei verschiedene Personen in zwei verschiedenen EU-Staaten
+- Ähnlich einer GesnbR
+- Kapital ist kein Muss
+- Jahresabschluss muss durchgeführt werden
+- Geschäftsführung durch eine natürliche Person (Externe auch erlaubt)
+- Haftung
+  - \scriptsize subsidiär
+  - unbeschränkt
+  - solidarisch
+- Gewinn wird auf die Teilnehmer aufgeteilt
+* Kapitalgesellschaften
+** Einleitung - Merkmale
+- Mindestens eine juristische/natürliche Person
+- Bilanzierungspflicht
+- Müssen im Firmenbuch eingetragen sein
+- Gesellschafter haften nur mit ihrem eingebrachten Kapital
+- Vorgesellschaft
+  - Gesellschaft vor der Firmenbucheintragung
+  - Uneingeschränkte Haftung der Gesellschafter
+** Gesellschaft mit beschränkter Haftung - GmbH
+Die GmbH ist eine Gesellschaft, bei der das Stammkapital in
+Geschäftsanteile in Stammeinlagen zerlegt ist.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Die Stammeinlagen sind die Beiträge der Gesellschafter.
+** GmbH - Gründung I - Gesellschaftsvertrag
+- Gesellschaftsvertrag in Notariatsaktform
+- Pflichtinhalte:
+  - Firmenname
+  - Gegenstand des Unternehmens
+  - Höhe des Stammkapitals/Stammeinlage
+- Optionale Inhalte:
+  - Beschluss zur Bestellung des Geschäftsführers
+  - Nutzung des Gründungsprivilegs
+  - Regelungen zu Geschäftsführung, Vertretung, Generalversammlung,
+    Gewinnverteilung
+** GmbH - Gründung II
+- Gründung durch Firmenbucheintragung abgeschlossen
+- Das ist mit zu bringen:
+  - Gesellschaftvertrag
+  - Gesellschafterliste
+  - Geschäftsführerverzeichnis
+  - Bestellungsbeschluss des Geschäftsführers
+  - Bankbestätigung der Bareinzahlung
+  - Unbedenklichkeitsbescheinigung des Finanzamts
+    # "Bestätigung" des Finanzamts, dass anfallende Steuern entrichtet
+    # wurden
+** GmbH - Gründungsprivleg
+- Stammkapital beträgt € 35.000
+- Gesellschaftsvertrag kann eine Stammeinlage von nur € 10.000 fordern
+  - 1/2 davon muss Bar sofort bezahlt werden
+- Innerhalb von 10 Jahren muss das Stammkapital erreicht werden
+- GmbH kann de facto mit einem Stammkapital von € 10.000 gegründet
+  werden
+** GmbH - Haftung
+- GmbH selbst haftet mit dem gesamten Geschäftsvermögen
+- Gesellschafter haften nur mit ihrer Stammeinlage
+- Geschäftsführer kann unbeschränkt persönlich haften
+  - Bei Pflichtverletzung der /Sorgfalt eines ordentlichen
+    Geschäftsmannes/
+** GmbH - Gewerbeberechtigung
+- Benötigt Gewerbeberechtigung für die Gesellschaft selbst
+- Nach Firmenbucheintragung erhalt von:
+  - Gewerbeschein
+  - Gewerbeanmeldung
+- Gewerberechtlicher Geschäftsführer erforderlich:
+  - Handelsrechtlicher im Betrieb tätiger Geschäftsführer
+  - Mindestens halbwöchentlicher Normalzeit beschäftigeter voll
+    sozialversicherungspflichter Arbeitnehmer
+** GmbH - Verteilung des GuV
+- Gewinnverteilung nach Anteilen an die Gesellschafter
+- Verlust wird ausschließlich von der Gesellschafte getragen
+- Nachschusspflicht nur bei einer entsprechenden Regelung
+- Abwandlungen durch den Gesellschaftsvertrag möglich
+** GmbH - Organisationsüberblick
+[[file:GmbH-Organisation_Uebersicht.png]]
+# Die GmbH wird durch mindestens einen Geschäftsführer gerichtlich und
+# außerordentlich vertreten.
+** GmbH - Aufsichtsrat
+\scriptsize
+- Nur bei einem bestimmten Schwellenwert
+  - \scriptsize Stammkapital > € 70.000 und > 50 Gesellschafter
+  - Im Durchschnitt der letzten 12 Monate > 300 Arbeitnehmer
+  - Der Gesellschaftsvertrag einen fordert
+- Besteht aus mindestens 3 Kapitalvertretern
+- Bei Betriebsrat: Auf 2 Kapitalvertertern 1 Arbeitnehmervertreter
+  # Bei ungerader Zahl noch zusätzlich einen Arbeitnehmervertreter
+- Keine Geschäftsführer, natürliche, handelsfähige Personen
+- Wahl eines Kapitalvertreters
+  - \scriptsize Durch die Generalversammlung
+  - Gerichtlich bestellte Vertreter
+  - Gesellschaftsvertrag
+- Aufgaben:
+  - \scriptsize Überwachung der Geschäftsführung
+  - Überprüfung des Jahresabschlusses
+  - Vertretung der GmbH bei Rechtsstreite
+** GmbH - Generalversammlung
+- Besteht aus der Gesamtheit der Gesellschaftern
+- ,,Unternehmensleitung'' \rightarrow beschließt, in welche Richtung
+  ein Unternehmen gelenkt wird
+- Aufgaben:
+  - Prüfung des Jahresabschlusses
+  - Einforderung von ausstehenden Stammeinlagen
+  - Geltenendmachung von Schadensersatzansprüche gegen die
+    Geschäftsführer und den Aufsichtrat
+  - Abschluss von Großinvestitionen (= Investition mit mehr als 20 %
+    des Gesamtkapitals)
+  - Bestellung und Abberufung von Geschäftsführern und
+    Aufsichtratmitgliedern
+  - Änderungen des Gesellschaftsvertrags
+    # 3/4 Mehrheit erforderlich!
+** Aktiengesellschaft - AG
+Eine Aktiengesellschaft ist eine eine juristische Person und
+Gesellschaft, deren Kapital sich aus Aktien (Einlagen)
+zusammensetzt. Die Aktionäre (Gesellschafter) sind mit ihren Aktien an
+der Gesellschafter beteiligt.
+** AG - Gründung
+- Mindestens eine natürliche/juristische Person als Aktionär
+- Nominale von € 70.000
+- Kontrollliste für eine AG-Gründung:
+  - Gesellschaftsvertrag in Notariatsaktsform
+  - Bestellung eines Aufsichtsrates
+  - Bestellung eines Vorstandes
+** AG - Haftung
+- Aktionäre
+  - Haften nur mit ihrer Einlage
+    # Ausnahme: Einlage nicht gänzlich eingezahlt: bei Insolvenz
+    # unbeschränkte persönliche Haftung!
+- Vorstandsmitglieder
+  - Gleiche Haftung wie bei der GmbH
+  - Vorstandsmitglieder können eine Organhaftpflichtverischerung
+    abschließen
+    # (Engl.: Directors-and-Officers-Insurance) ist eine
+    # Vermögensschadenhaftpflichtversicherung, die ein Unternehmen für
+    # seine Organe und leitende Angestellten abschließen kann.
+** AG - Organisationsüberblick
+[[file:AG-Organisation_Uebersicht.png]]
+** AG - Vorstand
+- Leitung der AG
+- Wird vom Aufsichtsrat gewählt
+- Kann einen Vorsitzenden besitzen (wird auch vom Aufsichtsrat
+  gewählt)
+- Ist nicht weisungsberechtigt
+- Gesamtgeschäftsführungsbefugnis und Gesamtvertretungsvollmacht
+- Mitglieder dürfen nicht gleichzeitig Aufsichtsratmitglieder sein
+- Stellt Jahresabschluss und Geschäftsbericht auf
+- Vorstandsmitglieder sind beim Unternehmen angestellt
+** AG - Aufsichtsrat
+- Wird von der Hauptversammlung gewählt
+- Besteht aus Aktionären
+- Darf maximal auf 4 Jahre gewählt sein
+- Keine Geschäftsführungsbefugnis
+  - Vorstand muss Zustimmung bei bestimmten Fällen einholen
+    (z.B. Großinvestition)
+- Aufgabe: Kontrolle des Vorstands
+- Kann den Vorstand wieder abberufen
+  # z.B. bei Pflichtverletztung oder offensichtliche Unfähigkeit
+- Arbeitnehmervertreter werden wie bei der GmbH eingebunden
+** AG - Hauptversammlung - Allgemeines
+- Besteht aus allen Aktionären
+  # Ausnahme: Vorzugsaktie - Verzicht auf Stimmrecht, aber dafür eine
+  # höhere Dividenedenausschüttung
+- Wird jährlich, spätestens nach dem 8. Monat des Geschäftsjahres
+  durch Vorstand oder Aufsichtsrat einberufen
+- Aktionäre können auch unter besonderen Fällen eine
+  Hauptversammlung einberufen
+- Alle Aktionäre müssen physisch anwesend sein (Telefonkonverenz ist
+  erlaubt), außer:
+  - Gesellschaftsvertrag sieht Briefteilnahme vor
+  - Nennung und Anwesenheit eines Vetreters
+** AG - Hauptversammlung Tagesordnung & Rechte
+\footnotesize
+- An der Tagesordnung die Begutachtung folgender Dokumente:
+  - \footnotesize Jahres-/Konzernabschluss
+  - Lagebericht
+  - Vorschlag zur Gewinnverteilung
+  - Beschlussfassung über die Entlastung der Mitglieder des Vorstands
+    und des Aufsichtsrats
+- Rechte der Hauptsversammlung
+  - \footnotesize Entscheidung des Gesellschaftsvertrages
+    bzw. Änderungen die sich darauf auswirken
+  - Bestellung und Abberufung von Aufsichtsratsmitgliedern
+  - Entlastung des Vorstandes & Aufsichtsrats
+  - Bestellung von Abschlussprüfern
+  - Auflösung der Gesellschaft
+** AG - Aktionäre
+\footnotesize
+- Keine Mitarbeitspflicht
+- Recht auf Dividende
+- Recht auf Wahrung des Anteils
+  # Bei Ausgabe neuer Aktien müssen diese zuerst den bestehenden
+  # Aktionären angeboten werden
+- Recht auf Liquidationserlös
+- Teilnahmerecht an der Hauptversammlung
+  - \footnotesize Stimmrecht
+  - Auskunftsrecht zu Gesellschaftsangelegenheiten, die für die Be-
+    urteilung von Punkten bei der Haupversammlung nötig sind
+- Anfechtungsrecht bei Verdacht auf nicht
+  Gesellschaftsvertrags-konformen Beschlussfassung auf der
+  Hauptversammlung
+** Kombinationsformen
+GmbH & Co KG oder AG & Co KG:
+[[file:GmbH-KG-Veranschaulichung.png]]
+** Zusammenarbeit von Kapitalgesellschaften
+[[file:GesnbR_aus_Kapitalgesellschaften-Veranschaulichung.png]]
+* Sonstige Juristische Personen des Privatrechts
+** Genossenschaft
+- Juristische Person mit nicht geschlossener Mitgliederzahl
+- Mitglieder können juritische/natürliche Personen sein
+- Ziel: Förderung des Erwerbs der Mitglieder
+- Mitglieder müssen eine Einlage leisten
+  - Genossenschaft mit beschränkter Haftung - GenmbH
+  - Genossenschaft mit unbeschränkter Haftung - GenumbH
+- Eintragung ins Firmenbuch nötig
+- Bilanzierungspflicht erst bei dem Umsatzschwellenwert
+- Organisation ist ähnlich der AG
+** Verein
+- Zusammenschluss von mindestens zwei Personen, der nicht auf Gewinn
+  ausgerichtet ist
+- Bilanzierungspflicht erst bei dem Umsatzschwellenwert
+- Angemeldeter Verein wird im Vereinsregister eingetragen
+- Bei Gemeinnützigkeit, Mildtätigkeit oder kirchlichen Zwecken
+  Steuermilderung bei Spenden
+  # Muss im Vereinstatut angeführt sein! Beispiel des gemeinnützigen
+  # Vereins im Mühlviertel
+- Organisierte, fortbestehende Personengruppen und nicht
+  rechtskräftige Vereine müssen auch Steuern zahlen!
+** Stiftung
+- Einrichtung die mit einem gestifteten Geld einen Zweck verfolgt
+- Sind entweder gemein- oder eigennützig
+- Privatstiftungen müssen einen Vorstand besitzen
+  - Dürfen keine Begünstige, Ehegatten oder Angehörige sein!
+- Stiftungseingangsteuer und Kapitalertragssteuer für Privatstiftungen
+  # Stiftungseingangssteuer ist eine Steuer für die Übertragung von
+  # Geld auf eine Stiftung.
+* Ende
+** Fragezeit
+Stellen Sie noch offene Fragen.
+** Ende der Präsentation
+Danke für Ihre Aufmerksamkeit!
+** Arbeitsauftrag
+\footnotesize
+- Bilden Sie Gruppen zu je 5 Personen
+- Suchen Sie Vor- und Nachteile über die folgenden Rechtsformen:
+  - \footnotesize Offene Gesellschaft
+  - Kommanditgesellschaft
+  - GmbH
+  - Aktiengesellschaft
+- Binden Sie die Idee der Kombination von Personen- und
+  Kapitalgesellschaften ein!
+- Überlegen Sie sich mindestens 2 Beispiele (mit Begründung), für die
+  Ihre Rechtsform am besten wäre!
+- Fleißaufgabe: Finden Sie im Internet eine insolvente Firma, für die
+  Ihre Rechtsform besser gewesen wäre

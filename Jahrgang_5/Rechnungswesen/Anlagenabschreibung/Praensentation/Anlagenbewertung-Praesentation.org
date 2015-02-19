@@ -1,0 +1,353 @@
+# Copyright (C)  2014 Richard Bäck.
+# Permission is granted to copy, distribute and/or modify this document
+# under the terms of the GNU Free Documentation License, Version 1.3 or
+# any later version published by the Free Software Foundation; with no
+# Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+# copy of the license is included in the section entitled "GNU Free
+# Documentation License".
+
+#+TITLE:     Das Anlagevermögen & die Anlagenbewertung
+#+AUTHOR:    Richard Bäck
+#+EMAIL:     ritschmaster1@gmail.com
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  de
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:t ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+LATEX_HEADER: \mode<beamer>{\usetheme{Berlin}}
+#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Aktuelles Thema}\tableofcontents[currentsection]\end{frame}}
+#+LATEX_HEADER: \usepackage{anyfontsize}
+#+LATEX_HEADER: \usepackage[normalem]{ulem}
+#+BEAMER_FRAME_LEVEL: 2
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+
+* Das Anlagevermögen
+** Gliederung
+Laut UGB:
+- immaterielle Vermögensgegenstände
+- Sachanlagen
+- Finanzanlagen
+
+Laut Bewertungsvorschriften (UGB & EStG):
+- abnutzbares Anlagevermögen
+  *abschreibbar*!
+- nicht abnutzbares Anlagevermögen
+Diese werden je zu beweglich und unbeweglich untergegliedert.
+** Anschaffungswert - Berechnung
+|   | Einkaufspreis                            |
+| + | sämtliche Bezugskosten                   |
+| + | Steuern und sonstige Abgaben             |
+| + | Kosten der Aufstellung, Inbetriebnahme   |
+| + | Kosten der Überprüfung der Anlage        |
+| - | Anschaffungspreisminderungen             |
+|---+------------------------------------------|
+|   | Anschaffungswert bzw. Anschaffungskosten |
+** Anschaffungswert - Verbuchung
+Buchungsatz:
+\begin{equation*}
+  \label{eq:anschaffungsbuchung}
+  \begin{array}{l}
+    \text{0??? Anlagenkonto}\\
+    \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+  \begin{array}{l}
+    \text{33??? Liefer. (2800 Bank etc.)}\\
+  \end{array}
+\right.
+\end{equation*}
+Bei Preisminderung \rightarrow Umkehrung (Achtung Vorsteuer!)
+* Ermittlung der Abschreibung
+** Betriebliche Nutzungsdauer
+- Zeitraum der Nutzung in Jahren
+- Meist kürzer als die technische Lebensdauer
+- Je kürzer die Nutzungsdauer, desto größer der jährliche ,,Verlust''
+- Vorgaben des Finanzamts sind zu beachten!
+- Mit der *Inbetriebnahme* startet die Nutzungsdauer!
+** Die Halbjahresregel
+Gibt die Höhe der Abschreibung an. Bei Inbetriebnahme im:
+- ersten Halbjahr: volle Abschreibung
+- zweiten Halbjahr: halbe Abschreibung
+  \rightarrow im letzten Jahr auch die Halbe!
+** Lineare Abschreibung
+- Abschreibungsbetrag ändert sich nicht
+- Letzte Abschreibung:
+  - bei Ausscheidung \rightarrow Abschreibung auf € 0,-
+  - bei Weiterverwendung \rightarrow Abschreibung auf € 1,-
+- Ist vom Steuerrecht vorgeschrieben!
+
+\begin{equation}
+  \text{Abschreibungsbetrag} = {\text{Anschaffungswert} \over
+  \text{Nutzungsdauer} }
+\end{equation}
+** Substanzabschreibung
+- Wert eines Grundstücks kann auch vermindert werden (Substanz wird
+  weniger)
+  - Bsp.: Bergbauunternehmen, Steinbrüche
+- Die abbaufähige Substanz wird geschätzt
+- Die Fördermenge ist bekannt
+
+\begin{equation}
+  { \text{Anschaffungswert} \over \text{abbaufähige
+Substanz} } \cdot \text{Fördermenge} = \text{Abschreibungsbetrag}
+\end{equation}
+* Anlagenbuchführung
+** Nutzen
+Einzelerfassung der Anlagen bringt:
+- Kontrolle des Anlagenbestandes
+- Ermittlung der Abschreibung
+- Informationen für die Kostenrechnung
+** Anlagenverzeichnis & -datei
+- Anlagenverzeichnis \rightarrow manuelle Buchführung
+  - sehr einfach und kostengünstig
+  - besonders für Kleinunternehmen geeignet
+- Anlagendatei \rightarrow elektronische Buchführung
+  - Große Datenvielfalt \rightarrow mehr Wissen \rightarrow besser für
+    das Unternehmen
+  - Komplexe Suchfunktionen
+  - Besonders für Großunternehmen geeignet
+  - Hohe Kosten
+* Verbuchung der Abschreibung
+** Direkte Abschreibung
+Die Abschreibung erfolgt direkt auf das Anlagenkonto:
+\begin{equation*}
+  \begin{array}{l}
+    \text{7010 Abschreibungen von Sachanlagen}\\
+  \end{array}
+  \left\slash
+  \begin{array}{l}
+    \text{0??? Anlagenkonto}\\
+  \end{array}
+  \right.
+\end{equation*}
+[[file:../Schwerpunktsarbeit/Bilder/Abschreibung-Konten_der_Bilanz.jpg]]
+** Indirekte Abschreibung
+Die Abschreibung erfolgt auf einem Stellvertreterkonto:
+\begin{equation*}
+  \begin{array}{l}
+    \text{7010 Abschr. von Sachan.}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0??? Kumulierte Abschr. zu 0???}\\
+    \end{array}
+  \right.
+\end{equation*}
+[[file:../Schwerpunktsarbeit/Bilder/IndirekteAbschreibung-Konten_der_Bilanz.jpg]]
+** Geringwertige Wirtschaftsgüter I
+Laut EStG Anlagegüter bis € 400,- Anschaffungswert.
+
+Sofortige Abschreibung:
+\begin{equation*}
+  \begin{array}{l}
+    \text{7030 Absch. geringw. Wirt.}\\
+    \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+  \begin{array}{l}
+    \text{33??? Liefer. (2800 Bank etc.)}\\
+  \end{array}
+  \right.
+\end{equation*}
+** Geringwertige Wirtschaftsgüter II
+Abschreibung zum Jahresende:
+\begin{equation*}
+  \begin{array}{l}
+    \text{0??? Geringwertige ...}\\
+    \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+  \begin{array}{l}
+    \text{33??? Liefer. (2800 Bank etc.)}\\
+  \end{array}
+  \right.
+\end{equation*}
+\begin{equation*}
+  \begin{array}{l}
+    \text{7030 Absch. geringw. Wirt.}\\
+  \end{array}
+  \left\slash
+  \begin{array}{l}
+    \text{0??? Geringwertige ...}\\
+  \end{array}
+  \right.
+\end{equation*}
+* Andere Buchungen
+** Selbst erstellte Anlagen
+Normale Aufwandsverbuchung \rightarrow nach Fertigstellung Aktiverung
+der Herstellkosten:
+\begin{equation*}
+  \begin{array}{l}
+    \text{0??? Anlagenkonto}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{4850 Aktivierte Eigenleistungen}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[height=5cm]{../Schwerpunktsarbeit/Bilder/Eigenleistung-Konten_der_Bilanz}
+\end{figure}
+** In Bau befindliche Anlagen
+\uline{Buchung einer Teilzahlung:}
+\begin{equation*}
+  \begin{array}{l}
+    \text{0710 Anlagen im Bau}\\
+    \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0710 Anlagen im Bau}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\uline{Buchung bei selbst erstellten Teilen:}
+\begin{equation*}
+  \begin{array}{l}
+    \text{4850 Aktivierte Eigenleistungen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{33??? Liefer. (2800 Bank etc.)}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\uline{Buchung nach der Fertigstellung:}
+\begin{equation*}
+  \begin{array}{l}
+    \text{0??? Anlagenkonto}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0710 Anlagen im Bau}\\
+    \end{array}
+  \right.
+\end{equation*}
+* Instandhaltung von Anlagen
+** Instandhaltung
+wenn:
+- der ordnungsgemäße Zustand erhalten wird
+- die Wesensart der Anlage nicht verändert wird
+
+\rightarrow Aufwendung ist noch im Jahr voll ,,abschreibar'':
+\begin{equation*}
+  \begin{array}{l}
+    \text{7200 Instandh. durch
+Dritte}\\
+     \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{33??? Liefer. (2800 Bank etc.)}\\
+    \end{array}
+  \right.
+\end{equation*}
+* Erweiterung von Anlagen
+** Erweiterung
+Aktivierungspflicht wenn:
+- die Anlage durch eine Aufwendung in seiner Substanz vermehrt wird
+- die Gebrauchsmöglichkeit einer Anlage wesentlich verändert wird
+
+Aktivierungsbuchung \rightarrow wie beim Anschaffungswert
+\newline\newline
+Berechnung des neuen Abschreibungsbetrages:
+\begin{equation}
+  { {Anschaff. + Erweiter. } \over Restnutzungsdauer
+  } = Abschreibungsbetrag
+\end{equation}
+* Ausscheiden einer Anlage
+** Verkauf & dessen Saldierung
+Erlöse werden auf einem Ertragskonto erfasst:
+\begin{equation*}
+  \begin{array}{l}
+    \text{20??? Forder. (2800 Bank etc.)}\\
+  \end{array}
+  \left\slash
+  \begin{array}{l}
+    \text{4600 Erlöse aus dem}\\
+    \text{ Abgang von Anlagen}\\
+    \text{3500 Umsatzsteuer}\\
+  \end{array}
+  \right.
+\end{equation*}
+
+\uline{Ausbuchung der Anlage:}
+\begin{equation*}
+  \begin{array}{l}
+    \text{7820 Buchwert abgegangener Anlagen}\\
+  \end{array}
+  \left\slash
+  \begin{array}{l}
+    \text{0??? Anlagenkonto}\\
+  \end{array}
+  \right.
+\end{equation*}
+
+\uline{Saldierung:}
+|   | Verkaufserlös |
+| - | Buchwert      |
+|---+---------------|
+|   | Saldo         |
+** Verkauf - Gewinnbuchung bei positivem Saldo
+[[../Schwerpunktsarbeit/Bilder/Gewinnumbuchung-Konten_der_Bilanz.jpg]]
+** Verkauf - Verlustbuchung bei negativem Saldo
+[[../Schwerpunktsarbeit/Bilder/Verlustsumbuchung-Konten_der_Bilanz.jpg]]
+** Schadensfall & dessen Saldierung
+Erlös aus einer etwaigen Versicherung:
+\begin{equation*}
+  \begin{array}{l}
+    \text{2800 Bank (2700 etc.)}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{4610 Versicherungsent. für Anlagenabgänge}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+Die Ausbuchung der Anlage erfolgt wie beim Verkauf, nur:
+7820 Buchwert abgegangener Anlagen \rightarrow 7819 Sonstige
+Schadensfälle
+\newline\newline
+\uline{Saldierung:}
+|   | Versicherungsentschädigung |
+| - | Schaden (Buchwert)         |
+|---+----------------------------|
+|   | Saldo                      |
+** Schadensfall - Gewinn- & Verlustbuchung
+Das selbe wie beim Verkauf, nur:
+- 7820 Buchwert abgegangener Anlagen \rightarrow 7819 Sonstige
+Schadensfälle
+- 4600 Erlöse aus dem Abgang von Anlagen \rightarrow 4610
+  Versicherungsent. für Anlagenabgänge
+** Natürliche Ausscheidung
+Der Erinnerungseuro muss ausgebucht werden:
+\begin{equation*}
+  \begin{array}{l}
+    \text{7010 Abschr. von Sachan.}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0??? Anlagenkonto € 1,00}\\
+    \end{array}
+  \right.
+\end{equation*}
+* Ende
+** Sehr geehrtes Publikum
+Vielen Dank für Ihre Aufmerksamkeit und Ihr Interesse!
+

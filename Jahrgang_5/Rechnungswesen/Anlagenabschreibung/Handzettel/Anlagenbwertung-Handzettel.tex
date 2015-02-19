@@ -1,0 +1,400 @@
+% Copyright (C)  2014 Richard Bäck.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3 or
+% any later version published by the Free Software Foundation; with no
+% Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+% copy of the license is included in the section entitled "GNU Free
+% Documentation License".
+
+\documentclass[a4paper,9pt]{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{palatino}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage[german]{babel}
+\usepackage[margin=1.5cm,vmargin={0pt,1cm}]{geometry}
+
+\DeclareGraphicsExtensions{.pdf}
+
+\setlength{\headheight}{2.5cm}
+\setlength{\headsep}{0.5cm}
+\setlength{\textheight}{25.2cm}
+
+\pagestyle{fancy}
+\lhead{Richard Bäck}
+\chead{}
+\rhead{\today}
+\lfoot{Das Anlagevermögen \& die Anlagenabschreibung}
+\cfoot{}
+\rfoot{Seite \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand\tkonto[3]{
+\begin{tabular}{l|l}
+  \multicolumn{2}{c}{#1}\\
+  \hline
+  #2 & #3
+\end{tabular}}
+
+\title{Das Anlagevermögen \& die Anlagenabschreibung}
+\author{Richard Bäck}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\section{Anlagenaktivierung}
+\label{sec:anlagenaktivierung}
+\begin{equation*}
+  \label{eq:anschaffungsbuchung}
+  \begin{array}{l}
+    \text{0??? Anlagenkonto}\\
+    \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+  \begin{array}{l}
+    \text{33??? Lieferantenkonto (oder 2800 Bank etc.)}\\
+  \end{array}
+\right.
+\end{equation*}
+\\
+Die Nebenkosten werden gleich verbucht. Bei Preisminderungen ist der
+Buchungsatz genau umgedreht.
+
+\section{Abschreibung}
+\subsection{Nutzungsdauer}
+Die Höhe des Abschreibungsbetrags hängt von der länge der
+Nutzungsdauer ab. Die Nutzungsdauer ist für jede Anlage
+verschieden. Am besten holt man entweder Rat bei einem Steuerberater
+oder von dem Finanzamt eine Tabelle für die Nutzungsdauer
+verschiedener Anlagenarten. Den Beginn der Nutzungsdauer markiert die
+\textbf{Inbetriebnahme} der Anlage.
+\begin{equation}
+  Abschreibungsbetrag = { Anschaffungswert \over Nutzungsdauer }
+\end{equation}
+
+\subsection{Halbjahresregel}
+Wird die Anlage im ersten Halbjahr in Betrieb genommen, wird für
+dieses Jahr der volle Betrag abgeschrieben. Ist die Inbetriebnahme
+erst im zweiten Halbjahr, wird nur der halbe Betrag für dieses und
+folglich auch für das letzte Jahr abgeschrieben.
+
+\subsection{Lineare Abschreibung}
+Es wird jährlich der Abschreibungsbetrag von der Anlage
+abgebucht. Wenn die Anlage am Ende der Nutzungsdauer im Betrieb
+bleibt, wird Abschreibungsbetrag - 1 abgebucht um den
+,,Erinnerungseuro'' am Anlagenkonto zu erhalten.
+
+\subsection{Substanzabschreibung}
+Bei förderbaren Grundstücken verliert auch das Grundstück mit der
+geförderten Substanz an Wert (= ein Vorkommen wird weniger, weil es
+abgebaut wird). Man benötigt für die Abschreibung eine Schätzung der
+abbaufähigen Substanz.
+
+\begin{equation}
+  Abschreibungsbetrag = { \textit{Anschaffungswert} \over
+\textit{abbaufähige Substanz} } \cdot \textit{Fördermenge}
+\end{equation}
+
+\section{Anlagenbuchführung}
+Im Anlagenverzeichnis (händische Aufzeichnung) bzw. in der
+Anlagendatei (elektronische Aufzeichnung) werden die Anlagen, ihr
+Anschaffungswert, die Abschreibungsbeträge und die folglichen
+Buchwerte erfasst. Die Führung dieses Buches ist vom Steuerrecht
+vorgeschrieben.
+
+\section{Verbuchung der Abschreibung}
+\subsection{Direkte Abschreibung}
+Der Abschreibungsbetrag wird direkt von der Anlage abgebucht.
+
+\begin{equation*}
+  \begin{array}{l}
+    \text{7010 Abschreibungen von Sachanlagen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0??? Anlagenkonto}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\subsection{Indirekte Abschreibung}
+Der Abschreibungsbetrag wird auf ein Stellvertreterkonto des
+Anlagenkontos gebucht und auf die Passiva abgeschlossen (= der
+Anlagenwert wird indirekt vermindert).
+
+\begin{equation*}
+  \begin{array}{l}
+    \text{7010 Abschreibungen von Sachanlagen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0??? Kumulierte Abschreibungen zu 0???}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\subsection{Geringwertige Wirtschaftsgüter}
+Anlagen mit einem Anschaffungswert von weniger oder gleich \euro{}
+400,- (exkl. USt.) können nach dem Kauf sofort abgeschrieben werden.
+
+\begin{equation*}
+  \begin{array}{l}
+    \text{7030 Abschreibung geringwertiger Wirtschaftsgüter}\\
+    \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{33??? Lieferantenkonto (oder 2800 Bank etc.)}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+Es ist auch möglich die Anlage, wie die normalen, erst am Jahresende
+abzuschreiben:
+\begin{itemize}
+\item { Sofortige Buchung beim Kauf:\\
+    \begin{equation*}
+      \begin{array}{l}
+        \text{0??? Geringwertige ...}\\
+        \text{2500 Vorsteuer}\\
+      \end{array}
+      \left\slash
+        \begin{array}{l}
+          \text{33??? Lieferantenkonto (oder 2800 Bank etc.)}\\
+        \end{array}
+      \right.
+    \end{equation*}
+  }
+\item { Buchung am Jahresende:\\
+    \begin{equation*}
+      \begin{array}{l}
+        \text{7030 Abschreibung geringwertiger Wirtschaftsgüter}\\
+      \end{array}
+      \left\slash
+        \begin{array}{l}
+          \text{0??? Geringwertige ...}\\
+        \end{array}
+      \right.
+    \end{equation*}
+  }
+\end{itemize}
+
+\section{Andere Buchungen}
+\subsection{Selbst erstellte Anlagen}
+Anstatt der Anschaffungskosten, werden die Herstellkosten aktiviert.
+\begin{equation*}
+  \begin{array}{l}
+    \text{0??? Anlagenkonto}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{4850 Aktivierte Eigenleistungen}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\subsection{In Bau befindliche Anlagen}
+Wenn eine Anlage über das Geschäftsjahr hinweg weiter gebaut wird,
+greift dieses Thema. In Bau befindliche Anlagen können
+\textbf{abgeschrieben} werden.\\
+\\
+Buchung einer Teilzahlung:
+\begin{equation*}
+  \begin{array}{l}
+    \text{0710 Anlagen im Bau}\\
+    \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{4850 Aktivierte Eigenleistungen}\\
+    \end{array}
+  \right.
+\end{equation*}
+\\
+Buchung bei selbst erstellten Teilen:
+\begin{equation*}
+  \begin{array}{l}
+    \text{0710 Anlagen im Bau}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{33??? Lieferantenkonto (oder 2800 Bank etc.)}\\
+    \end{array}
+  \right.
+\end{equation*}\\
+\\
+Nach der Fertigstellung:
+\begin{equation*}
+  \begin{array}{l}
+    \text{0??? Anlagenkonto}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0710 Anlagen im Bau}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\section{Instandhaltung von Anlagen}
+Man spricht von einer Instandhaltung, wenn:
+\begin{itemize}
+  \item der ordnungsgemäße Zustand erhalten wird
+  \item die Wesensart der Anlage nicht verändert wird
+\end{itemize}
+
+Die Kosten werden so verbucht:
+\begin{equation*}
+  \begin{array}{l}
+    \text{7200 Instandhaltung durch
+Dritte}\\
+     \text{2500 Vorsteuer}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{33??? Lieferantenkonto (oder 2800 Bank etc.)}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\section{Erweiterung einer Anlage}
+Von einer Erweiterung spricht man, wenn:
+\begin{itemize}
+  \item die Anlage durch eine Aufwendung in seiner Substanz vermehrt wird
+  \item die Gebrauchsmöglichkeit einer Anlage wird wesentlich verändert
+\end{itemize}
+
+Es wird die Erweiterung aktiviert, wie
+in~\autoref{sec:anlagenaktivierung} -~\nameref{sec:anlagenaktivierung}
+und ein neuer Abschreibungsbetrag berechnet.
+
+\begin{equation}
+  { {Anschaffungskosten + Erweiterungskosten } \over Restnutzungsdauer
+  } = neuer Abschreibungsbetrag
+\end{equation}
+
+\section{Ausscheiden einer Anlage}
+\subsection{Ausscheidung bei einem Verkauf}
+\label{subsec:verkauf}
+Zuerst wird der Erlös verbucht. Danach wird die Anlagen
+ausgebucht. Bei einer Kapitalgesellschaft wird bei den
+Abschlussarbeiten saldiert: $ \textit{Verkaufserlöse} - Buchwerte = Saldo$. Bei
+$\geq 0$/<0 wandern die Erlöse und die Buchwerte auf ein eigenes
+Ertragskonto/Verlustkonto.
+
+Erlösbuchung:
+\begin{equation*}
+  \begin{array}{l}
+    \text{20??? Forderungskonto (oder 2800 Bank etc.)}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{4600 Erlöse aus dem Abgang von Anlagen}\\
+      \text{3500 Umsatzsteuer}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+Ausbuchung der Anlage:
+\begin{equation*}
+  \begin{array}{l}
+    \text{7820 Buchwert abgegangener Anlagen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0??? Anlagenkonto}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+Saldo $\geq 0$:
+Umbuchung des Verkaufserlöses:
+\begin{equation*}
+  \begin{array}{l}
+    \text{4600 Erlöse aus dem Abgang von Anlagen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{4630 Erträge aus dem Abgang von Anlagen}\\
+    \end{array}
+  \right.
+\end{equation*}\\
+\\
+Umbuchung des Buchwertes:
+\begin{equation*}
+  \begin{array}{l}
+    \text{4630 Erträge aus dem Abgang von Anlagen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{7820 Buchwert abgegangener Anlagen}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+Saldo <0:
+Umbuchung des Verkaufserlöses:
+\begin{equation*}
+  \begin{array}{l}
+    \text{4600 Erlöse aus dem Abgang von Anlagen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{7830 Verluste aus dem Abgang von Anlagen}\\
+    \end{array}
+  \right.
+\end{equation*}\\
+\\
+Umbuchung des Buchwertes:
+\begin{equation*}
+  \begin{array}{l}
+    \text{7830 Verluste aus dem Abgang von Anlagen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{7820 Buchwert abgegangener Anlagen}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+\subsection{Ausscheidung bei einem Schadensfall}
+Erlös aus einem etwaigen Versicherungbetrag:
+\begin{equation*}
+  \begin{array}{l}
+    \text{2800 Bank (2700 Kassa etc.)}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{4610 Versicherungsentschädigungen für Anlagenabgänge}\\
+    \end{array}
+  \right.
+\end{equation*}\\
+\\
+Die Ausbuchung und die Saldierungsbuchung ist gleich wie
+in~\autoref{subsec:verkauf} -~\nameref{subsec:verkauf}. Der
+Unterschied liegt nur darin, dass das Konto \textit{7820 Buchwert
+abgegangener Anlagen} zu \textit{7819 Sonstige Schadensfälle} wird.
+
+\subsection{Ausscheidung nach voller Abschreibung}
+Wird eine vollabgeschriebene Anlage aus dem Betrieb entfernt, so wird
+der Erinnerungseuro ausgebucht.
+
+\begin{equation*}
+  \begin{array}{l}
+    \text{7010 Abschreibungen von Sachanlagen}\\
+  \end{array}
+  \left\slash
+    \begin{array}{l}
+      \text{0??? Anlagenkonto 1,00}\\
+    \end{array}
+  \right.
+\end{equation*}
+
+
+\end{document}

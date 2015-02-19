@@ -1,0 +1,847 @@
+# Copyright (C)  2014 Richard Bäck.
+# Permission is granted to copy, distribute and/or modify this document
+# under the terms of the GNU Free Documentation License, Version 1.3 or
+# any later version published by the Free Software Foundation; with no
+# Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+# copy of the license is included in the section entitled "GNU Free
+# Documentation License".
+
+#+TITLE:     Rechtsformen von Unternehmen
+#+AUTHOR:    Richard Bäck
+#+EMAIL:     ritschmaster1@gmail.com
+#+DATE:      2014-11-14 Fri\pagebreak\thispagestyle{empty}
+#+DESCRIPTION: 
+#+KEYWORDS:
+#+LANGUAGE:  de
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage[german]{babel}
+#+LATEX: \listoffigures
+#+LATEX: \pagebreak
+
+* Einleitung
+** Anmerkungen zum Dokument
+*** Das Wort ,,Gesellschaftsvertrag''
+Es wird in diesem Dokument nicht zwischen den beiden Vokabeln
+,,Gesellschaftsvertrag'' und ,,Satzung'' unterschieden. Somit wird
+einfachheithalber nur ,,Gesellschaftsvertag'' verwendet. Rechtlich
+gesehen ist zwischen diesen zwei Wörtern auch kein Unterschied. In der
+Praxis wird aber bei *Personengesellschaften* immer vom
+/Gesellschaftsvertrag/ und bei *Kapitalgesellschaften*
+und *Genossenschaften* immer von der /Satzung/ gesprochen.
+*** Fachbegriffe
+Fachbegriffe sind im Glossar (siehe Kapitel [[sec:glossar]] ) genauer
+erklärt. Dieser sollte stets herangezogen werden.
+*** Ausgelaufene Rechtsformen
+Einige Rechtsformen sind mit dem 31.12.2006 ausgelaufen und sind aus
+diesem Grund in diesem Dokument nicht beschrieben.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Diese Rechtsformen sind:
+- Offene Handelsgesellschaft
+- Offene Erwerbsgesellschaft
+- Kommanditerwerbsgesellschaft
+*** Schwerpunkt
+Der Schwerpunkt dieses Dokuments liegt auf Kapitalgesellschaften
+(siehe Kapitel [[sec:kapitalgesellschaften]]). Die juristischen Personen
+des öffentlichen Rechts werden nicht beschrieben.
+** Einteilung der Rechtsformen
+#+CAPTION: Kurzüberblick über die Rechtsformen
+[[file:Rechtsformen_Ueberblick.jpg]]
+- Einzelunternehmen
+  - Es gibt nur einen Unternehmer
+  - Der Unternehmer ist unbeschränkt persönlich haftbar
+- Personengesellschaften
+  - Das Kapital wird von den einzelnen Teilnehmern aufgebracht
+    \rightarrow Uneingeschränkte Haftung mit dem Privatvermögen der
+    Gesellschafter
+  - Bilanzierungspflicht erst bei einem bestimmten Umsatzschwellwert
+  - Es wird zu meist mit dem Privatvermögen der Gesellschafter gehaftet
+- Kapitalgesellschaften
+  - Bilanzierungspflicht (Doppelte Buchführung)
+  - Gesellschafter haften nur mit dem eingebrachten Kapital
+  - In der Vorgesellschaft haften alle Gesellschafter noch
+    unbeschränkt
+- Genossenschaften
+  - Haben Förderung und nicht Gewinn als Ziel
+  - Können beschränkt und unbeschränkt haftbar sein
+  - Bilanzierungspflicht erst bei einem bestimmten Umsatzschwellwert
+- Vereine
+  - Bilanzierungspflicht bei einem bestimmten Umsatzschwellwert
+- Stiftungen
+  - Sind entweder gemein- oder eigennützig
+** Firmenname
+# <<firmenname>>
+Es kann jeder beliebiger Firmenname gewählt werden, so lange er nicht
+täuschend ist. Zusätzlich muss er aber einen Hinweis auf die
+Rechtsform enthalten. Dies wird als /Zusatz/ bezeichnet. Außerdem muss
+eine Unterscheidungskraft (z.B. zwei Unternehmen dürfen im selben Ort
+nicht den gleichen Namen haben) vorhanden sein.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+** Umsatzschwellenwert in Österreich
+# <<sec:umsatzsschwellenwert>>
+Die Bilanzierungspflicht in Österreich liegt bei einem jährlichen
+Umsatz von € 700.000 in zwei folgenden Geschäftsjahren oder bei
+einmalig über € 1.000.000. Die Bilanzierungspflicht schreibt unter
+anderem die Verwendung der Doppelten Buchführung und die Eintragung
+ins Firmenbuch
+vor.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Unternehmen, die nicht bilanzierunspflichtig sind, können natürlich
+trotzdem die Doppelte Buchführung nutzen.
+* Einzelunternehmen
+** Einzelunternehmer
+Ein Einzelunternehmer ist eine natürliche Person, die ein Unternehmen
+auf eigenen Namen und Rechnung führt. Dies bedeutet, dass diese Person
+auch mit seinem Privatvermögen für etwaige unternehmerischen Kosten
+haftet. Dem Unternehmer stehen alle Gewerbearten offen. Für die
+Firmengründung muss die Person jedoch zuerst selbst die
+Gewerbeberechtigung für das Gewerbe (z.B. Meisterprüfung für Tischler)
+erlangt haben.
+** Eingetragener Einzelunternehmer
+Eingetragene Einzelunternehmer sind Einzelunternehmer, die im
+Firmenbuch eingetragen sind. Die Eintragung ist generell freiwillig,
+außer es wird ein bestimmter Umsatzschwellenwert (siehe Kapitel
+[[sec:umsatzsschwellenwert]]) überschritten. Wird dieser Betrag
+überschritten, muss sich laut UGB der Unternehmer eintragen
+lassen. Nach der Eintragung muss die Firma zum Firmennamen den
+Rechtsformzusatz ,,eingetragener Unternehmer'' - /e.U./ anhängen.
+* Personengesellschaften
+** Gesellschaft nach bürgerlichem Recht - GesnbR
+*** Definition
+# <<sec:gesnbr-definition>>
+Eine Gesellschaft nach bürgerlichem Recht ist ein Zusammenschluss von
+zwei oder mehreren natürlichen oder juristischen Personen.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Beispiel: Arbeitsgemeinschaften (ARGE)
+*** Gründung
+Der Gesellschaftsvertrag ist nicht geregelt. Da auch eine
+stillschweigende Zusammenarbeit von mindestens zwei juristisch oder
+natürlichen Personen schon als Gründung angesehen werden kann, ist es
+ratsam einen schriftlichen Vertrag festzulegen. Außerdem muss für die
+Gründung kein Geld aufgebracht werden, es reicht die Einbringung der
+Arbeitskraft.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Ein Beispiel für die stillschweigende Zusammenarbeit: Zwei
+Softwarefirmen arbeiten gemeinsam an einer neuen Technologie. Es wurde
+kein Vertrag geschlossen, dennoch ist das Ergebnis als Produkt einer
+GesnbR zu sehen. Somit erfolgt auch dessen Gewinnverteilung laut den
+Gesetzen für GesnbR.
+*** Haftung
+Die Gesellschafter haften:
+- persönlich
+- unbeschränkt
+- subsidiär
+- primär
+*** Gewerbeberechtigung
+Jeder Gesellschafter muss die erforderlichen Gewerbeberechtigungen für
+das Gewerbe erlangen.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Ein Beispiel: Bei einer GesnbR die Möbel herstellt, die aus zwei
+natürlichen Personen besteht, müssen beide Gesellschafter
+Tischlermeister sein.
+*** Geschäftsführung
+Die Geschäftsführung steht jedem nach der Mehrheit des Kapitalanteils
+zu. Durch den Gesellschaftsvertrag kann es aber auch zu einer anderen
+Regelung der Geschäftsführung kommen. Es kann auch eine Bestellung
+eines externen Verwalters erfolgen.
+*** Verteilung des GuV
+Wenn die Verteilung des Gewinnes- und Verlustes nicht im
+Gesellschaftsvertrag geregelt ist, dann erfolgt sie an Hand der
+Leistungen der Gesellschafter statt.
+*** Firmenbuch und Obergrenze
+Eine GesnbR kann nicht im Firmenbuch eingetragen werden. Aus diesem
+Grund kann sie auch keinen eigenen Namen haben. Daher muss im
+Gesellschaftsnamen alle Namen der Gesellschafter vorkommen. Außerdem
+kann der Rechtsformzusatz ,,GesnbR'' weggelassen werden.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Ist eine GesnbR nicht nur für ein bestimmtes Projekt ausgelegt, so
+gilt der Umsatzschwellenwert (siehe Kapitel
+[[#sec:umsatzsschwellenwert]]). Wird er erreicht, wird die GesnbR aufgelöst
+und in eine Offene Gesellschaft (siehe Kapitel [[sec:og]]) oder in eine
+Kommanditgesellschaft (siehe Kapitel [[sec:kg]]) überführt, da diese ins
+Firmenbuch eingetragen werden können.
+*** Steuer & Versicherung
+Die Steuern und Versicherungen werden nicht als ganzes umgesetzt,
+sondern für jeden Gesellschafter eigenständig. Somit benötigen alle
+Gesellschafter eine Steuernummer.
+** Offene Gesellschaft - OG
+# <<sec:og>>
+*** Definition
+Eine Offene Gesellschaft ist eine Gesellschaft, die aus zwei oder
+mehreren natürlichen oder juristischen Personen bestehen kann. Der
+Zweck ist frei wählbar und darf somit auch gemeinnützig sein.
+*** Gründung
+# <<sec:og-gruendung>>
+Für die Gründung muss ein Gesellschaftsvertrag abgeschlosen werden. Da
+keine bestimmte Form vorgesehen ist, kann er auch mündlich sein. Die
+Eintragung im Firmenbuch ist notwendig und markiert auch die Geburt
+der Gesellschaft. Die Eintragung im Firmenbuch muss von jeden
+Gesellschafter unterschrieben und notariell beglaubigt werden.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Man spricht bei den vorher beschriebenen Vorgängen von Verhältnissen:
+- Innenverhältnis :: Der formfreie Gesellschaftsvertrag (Beispiel: ist
+     eine GmbH Mitgesellschafter, wird die Gesellschaft als /GmbH &
+     Co. OG/ bezeichnet)
+- Außenverhältnis :: Der Firmenbucheintrag und die damit resultierende
+     gesamthandschaftliche Verbindung (Haftung etc.)
+*** Haftung
+Die Gesellschafter haften:
+- persönlich
+- unbeschränkt
+- solidarisch
+- primär
+*** Geschäftsführung
+Alle Gesellschafter sind geschäftsführungs- und
+vertretungsbefugt. Spezielle Regelungen im Gesellschaftsvertrag müssen
+im Firmenbuch eingetragen sein, damit sie im Außenverhältnis gültig
+sind.
+*** Verteilung des GuV
+Die Verteilung erfolgt entweder auf Grund des Gesellschaftsvertrags
+oder andernfalls nach dem UGB.  Laut UGB wird den
+Arbeitsgesellschaftern ein entsprechend angemessener Betrag
+zugeteilt. Der Rest wird den restlichen Gesellschaftern im Verhältnis
+zu ihren Beteiligungen zugewiesen. Eine Verweigerung der Auszahlung
+ist gülitg, wenn die Auszahlung dem Unternehmen einen Schaden zufügen
+würde oder der betreffende Gesellschafter vereinbarungswidrig seine
+Leistungen nicht erbracht hat.
+*** Gewerbeberechtigung
+Eine OG muss einen gewerberechtlichen Geschäftsführer
+bestellen. Dieser muss die Gewerbeberechtigung besitzen und eine der
+foglenden zwei Personen sein:
+- Gesellschafter
+- ein voll versicherungspflichtiger Arbeitnehmer, der mindestens die
+  Hälfte der wöchentlichen Normalarbeitszeit im Betrieb beschäftigt
+  ist
+*** Firmenname
+Die Zusätze lauten entweder ,,OG'', ,,& Co'' oder ,,& Partner''.
+*** Wettbewerbsverbot
+Ein Gesellschafter darf nur mit Zustimmung aller anderen
+Gesellschaftern in dem gleichen Gewerbe außerhalb der Gesellschaft
+tätig sein. Das gleiche gilt bei Mitglieschaft bei einer anderen
+Gesellschaft im selben Gewerbe als uneingeschränkter Gesellschafter.
+** Kommanditgesellschaft - KG
+# <<sec:kg>>
+*** Definition
+Die Kommanditgesellschaft ist ein Unternehmen, bei dem mindestens ein
+Gesellschafter die Haftung nur für seine Vermögenseinalge übernimmt
+(\rightarrow Kommanditist) und mindestens einen zweiten, der
+uneingeschränkt haftet (\rightarrow Komplementär). Dabei können
+Kommanditist und Komplementär eine natürliche oder eine juristische
+Person sein.
+*** Gründung & Firmenname
+Die Gründung läuft wie bei einer Offenen Gesellschaft ab (siehe
+Kapitel [[sec:og-gruendung]]). Wenn der Komplementär eine GmbH ist,
+spricht man von einer ,,GmbH & Co KG''. Aus diesem Grund ergeben sich
+folgendene KG-Arten und verpflichtende Firmennamenzusätze:
+- KG
+- GmbH & Co KG
+- AG & Co KG
+*** Haftung
+Komplementäre haften:
+- unbeschränkt
+- solidarisch
+- direkt
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Kommanditisten haften bis zu der Kommanditeinlage (alt.:
+/Hafteinlage/). Diese ist im Firmenbuch eingetragen. Die Hafteinlage
+(bessere Bezeichnung: Haftbetrag) kann höher sein als die tatsächliche
+Einlage des Kommanditen. Dabei haftet der Kommandit die Differenz dem
+Gläubiger direkt und nicht mehr der Gesellschaft.
+*** Geschäftsführung
+# <<sec:kg-geschaeftsfuehrhung>>
+Es sind Komplementäre, für sich allein, geschäftsführungs- und
+vertretungsbefugt. Hier sind auch wieder Abweichungen durch den
+Gesellschaftsvertrag möglich, müssen aber im Firmenbuch eingetragen
+werden.\\
+Das Mitspracherecht der Kommanditisten ergibt sich aus der Art der Geschäften:
+- gewöhnlich :: kein Mitspracherecht
+- ungewöhnlich :: Ablehnungsrecht
+Kommanditisten sind berechtigt einen Jahresabschluss bzw. eine
+Abrechnung einzufordern und die Korrektheit unter Einsicht der Bücher
+der Gesellschaft zu prüfen. Somit kann ein Kommanditist auch die
+Offenlegung der benötigten Büchern einfordern.
+*** Gewerbeberechtigung
+In einer KG muss nicht jeder Komplementär eine Gewerbeberechtigung
+besitzen. Es reicht wenn es einen gewerberechtlichen Geschäftsführer
+gibt (dieser muss natürliche die Gewerbeberechtigung
+besitzen!). Dieser muss nicht einmal ein Komplementär sein. Er muss
+eine der zwei folgenden Punkte erfüllen:
+- Ein persönlich haftender Gesellschafter, der laut
+  Gesellschaftsvertrag zur geschäftsführungs- und vertretungsbefugt
+  ist
+- ein voll versicherungspflichtiger Arbeitnehmer, der mindestens die
+  Hälfte der wöchentlichen Normalarbeitszeit im Betrieb beschäftigt
+  ist
+*** Verteilung des GuV
+Die Gewinnverteilung sind im Gesellschaftsvertrag zu regeln.
+** Stille Gesellschaft - stG
+# <<sec:stg>>
+*** Definition
+Die Stille Gesellschaft ist eine Sonderform der Personenvereinigung
+und ist *keine* Handelsgesellschaft. Ohne weiterer Vereinbarung ähnelt
+es eher einem Schuldverhältnis als einem Gesellschaftsverhältnis.
+*** Gründung
+Eine stille Gesellschaft entsteht automatisch, sobald sich eine
+natürliche oder juristische Person an einer anderen
+Handeslgesellschaft durch eine Vermögenseinlage beteiligt. Dabei
+spielt die Art keine Rolle (= Geld-, Sach- oder Dienstleistungen). Die
+stG ist eine reine Innengesellschaft, womit sie normalerweise für
+Außenstehende nicht erkennbar ist. Eine Ausnahme bildet eine Einlage
+bei einer AG, dort muss die Beteiligung veröffentlicht werden.
+*** Gewinn und Verlust
+Im Gesellschaftsvertrag wird festgelegt, wie Hoch die Beteiligung der
+stG an dem GuV ist. Die stG muss nicht am Verlust, jedoch am Gewinn
+beteiligt sein. Sollte keine Festlegung getroffen worden sein, wird
+ein /angemessener/ Anteil (= z.B. Prozent der Beteiligung am
+Gesamtkapital) dafür herangezogen. Die stG haftet maximal mit ihrem
+bereit gestellten Betrag.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Für den Gewinn einer stG fällt eine Kapitalertragssteuer an. Ein
+Verlust kann nicht abgeschrieben werden.
+*** Rechte
+Die stG nimmt an der Geschäftsführung der beteiligten Gesellschaft
+nicht teil, außer es ist anders vereinbart. Sie hat wie ein
+Kommanditist (siehe Kapitel [[sec:kg-geschaeftsfuehrhung]]) ein
+Kontrollrecht. Sollte die Gesellschaft in Insolvenz gehen, nimmt die
+stG die Rechtstellung eines Gläubigers ein.
+*** Atypische stille Beteiligung
+Wenn einer stG so viele Rechte eingeräumt werden, dass sie als
+/Mitunternehmer/ bezeichnet werden kann, spricht man von einer
+atypischen stillen Gesellschaft. Dabei ist die stG auch am Vermögen
+beteiligt und/oder an der Geschäftsführung.
+** Europäische wirtschaftliche Interessensvereinigung - EWIV
+# <<ewiv>>
+*** Defintion
+Die EWIV ist eine Personengesellschaft, die als Handelsgesellschaft
+gilt. Sie muss aus mindestens zwei natürlichen oder juristischen
+Mitgliedern aus zwei verschiedenen Mitgliedsstaaten bestehen. Sie kann
+außerdem in Verbindung zwischen EU- und einem nationalen Recht
+entweder nach Privatrecht oder nach öffentlichen Recht stehen. Das
+Gesellschafterlimit liegt bei 500 Personen. Man kann sie mit einer
+GesnbR vergleichen.
+*** Gründung
+Im Gesellschaftsvertrag müssen folgende Dinge vorhanden sein:
+- Unternehmensitz (muss im Europäischen Wirtschaftsraum liegen)
+- Unternehmensgegenstand
+- Von jeden Gesellschafter:
+  - Name
+  - Nummer und Ort der Firmenbucheintragung
+- Dauer der Vereinigung (kann auch unbefristet sein)
+
+Der Vertrag wird danach in jeden Firmenbuch der EU eingetragen.
+*** Geschäftsführung
+Die Geschäftsführung übernimmt eine oder mehrere natürliche Personen
+(= Externe Personen sind auch erlaubt), die entweder durch den
+Gesellschaftsvertrag, sonst durch den Beschluss der Mitglieder
+bestellt werden. Die Geschäftsführung ist vetretungsbefugt.
+*** Rechte
+Jeder Gesellschafter besitzt normalerweise nur eine Stimme, dies kann
+jedoch durch den Gesellschaftsvertrag anders geregelt sein. Hier ist
+jedoch zu beachten, dass kein Gesellschafter ein Stimmrecht von mehr
+als 50 % oder 0 % besitzt. Die EWIV kann auch Gesellschafter aus nicht
+EU-Ländern beziehen. Diese haben de jure kein Stimmrecht. De facto
+werden aber meist von den anderen Mitgliedern die Abstimmungen von
+nicht Wahlberechtigten zu Protokoll genommen.
+*** Kapital & Buchführung
+Eine EWIV muss nicht mit einem Kapital ausgestattet sein. Außerdem
+muss eine ordnungsgemäße Buchführung und die Aufstellung eines
+Jahresabschlusses erfolgen.
+*** Gewinnverteilung
+Die EWIV hat nicht das Ziel einen Gewinn für sich selbst zu
+erzielen. Der Gewinn wird entweder nach Anteilen oder nach dem
+Gesellschaftsvertrag aufgeteilt. Aus diesem Grund bezahlt auch jeder
+Gesellschafter selbst eine etwaige Kapitalertragssteuer.
+*** Haftung
+Die Gesellschafter haften:
+- subsidiär
+- unbeschränkt
+- gesamtschulderisch
+* Kapitalgesellschaften
+# <<sec:kapitalgesellschaften>>
+** Gesellschaft mit beschränkter Haftung - GmbH
+# <<sec:gmbh>>
+*** Definition
+Die GmbH ist eine Gesellschaft, deren Stammkapital in Geschäftsanteile
+mit Stammeinlagen zerlegt ist. Die Stammeinlagen sind die Beiträge der
+Gesellschafter. Die GmbH ist eine juristische Person und benötigt zur
+Gründung auch nur eine Person. Das Stammkapital muss zur Gründung
+aufgebracht werden (mehr im Kapitel [[sec:gmbh-gruendung]]).
+*** Gründung
+# <<sec:gmbh-gruendung>>
+Der Abschluss des Gesellschaftsvertrages erfolgt als
+Notariatsaktform.
+#+BEGIN_LATEX
+\\
+#+END_LATEX
+Der Mindestinhalt:
+- Firmenname (siehe Kapitel [[firmenname]], verpflichtende Zusätze:
+  ,,GmbH'', ,,Ges.m.b.H.'' oder ,,Gesellschaft m.b.H.'') und Sitz der
+  Gesellschaft
+- Gegenstand des Unternehmens
+- Höhe des Stammkapitals
+- Höhe der Stammeinlage
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Optionaler Inhalt:
+- Gründungsprivileg
+- Regelungen zur Geschäftsführung und Vertretung
+- Regelungen zur Generalversammlung
+- Regelungen zur Beschlussfassung der Gesellschafter
+- Regelungen zur Gewinnverteilung
+- Regelungen zu den Aufgriffsrechten der Geschäftsanteilen
+- Beschluss über die Bestellung eines Geschäftsführer - dies muss auf
+  jeden Fall erfolgen, er kann jedoch im Gesellschaftsvertrag schon
+  beschlossen sein
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Die Gründung endet mit dem Eintrag ins Firmenbuch. Dabei müssen die
+Unterschriften aller Geschäftsführer, Gesellschafter begelegt und
+beglaubigt sein. Außerdem müssen folgende Dokumente auch noch
+beigelegt werden:
+- Gesellschaftsvertrag
+- Gesellschafterliste
+- Geschäftsführerverzeichnis
+- Bestellungsbeschluss der Geschäftsführer (wenn dieser nicht bereits
+  im Gesellschaftsvertrag vorhanden ist)
+- Bankbestätigung der Bareinzahlung
+- Unbedenklichkeitsbescheinigung des Finanzamts
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Das Stammkapital zur Gründung ist mit € 35.000 dotiert. Im
+Gesellschaftsvertrag kann aber geregelt sein, dass eine Stammeinlage
+nur bei € 10.000 liegt (davon muss die Hälfte in Bar sofort eingezahlt
+werden). Somit kann eine GmbH de facto schon mit einem Startkapital
+von € 10.000 gegründet werden. Dieser Vorteil wird
+als *Gründungsprivileg* bezeichnet.
+*** Haftung
+# <<sec:gmbh-haftung>>
+Grunsätzlich wird nur mit dem gesamten Gesellschaftsvermögen gehaftet,
+nicht mit dem Privatvermögen der Gesellschafter. Die einzige Ausnahme
+bildet der Geschäftsführer. Dieser muss /Sorgfalt eines ordentlichen
+Geschäftsmannes/ anwenden. Wenn er diese Pflicht verletzt, dann haftet
+er auch mit seinen Privatvermögen gegen die Gesellschaft.
+*** Gewerbeberechtigung
+Es ist eine für die Gesellschaft lautende Gewerbeberechtigung
+erforderlich. Dies erfolgt mit dem Erhalt eines
+Gewerbescheins, mit einer Gewerbeanmeldung nach dem
+Firmenbucheintrag. Außerdem muss ein gewerberechtlicher
+Geschäftsführer bestellt werden. Dieser muss entweder der
+handelsrechtliche Geschäftsführer (muss im Betrieb tätig sein!) oder
+ein mindestens zur Hälfte der wöchentlichen Normalarbeitszeit im
+Betrieb beschäftigter voll sozialversicherungspflichtiger Arbeitnehmer
+sein.
+*** Gewinnverteilung
+Wenn nicht anders im Gesellschaftsvertrag vereinbart, wird der Gewinn
+im Verhältnis der Anteile an die Gesellschafter aufgeteilt. Der
+Verlust wird ausschließlich durch die Gesellschaft getragen. Eine
+Nachschusspflicht besteht nur, wenn diese im Gesellschaftsvertrag
+geregelt ist.
+*** Organisation
+# <<sec:gmbh-organisation>>
+#+CAPTION: Übersicht der Organisation einer GmbH
+[[file:GmbH-Organisation_Uebersicht.png]]
+**** Geschäftsführung
+Die GmbH wird durch mindestens einen Geschäftsführer gerichtlich und
+außerordentlich vertreten.
+**** Aufsichtsrat
+In dem eine GmbH nur mit ihrem Kapital haftet, ist die Bildung eines
+Aufsichtsrates ab einem gewissen Schwellwert Pflicht, vorher
+freiwillig. Dieser Schwellwert wird erreicht, wenn einer der folgenden
+Punkten zutrifft:
+- Stammkapital > € 70.000 und > 50 Gesellschafter
+- Im Durchschnitt der letzten 12 Monate > 300 Arbeitnehmer
+- Der Gesellschaftsvertrag einen fordert
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Ein Aufsichtsrat besteht aus mindestens 3 Kapitalvertretern und bei
+betriebsratfplichtigen Betrieben zusätzlich noch mindestens zwei
+Arbeitnehmervertreter. Dabei dürfen die Aufsichtsratmitglieder keine
+Geschäftsführer in der Gesellschaft und müssen natürliche,
+handelsfähige Personen sein. Die Kapitalverterter werden in der Regel
+von den Gesellschaftern gewählt. Ausnahmen sind gerichtlich bestellte
+Kapitalvertreter, oder wenn es im Gesellschaftsvertrag anders geregelt
+ist.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Seine Aufgabe ist die Überwachung der Geschäftsführung (für manche
+Tätigkeiten benötigt diese die Zustimmung des Aufsichtrates). Weitere
+Aufgaben sind die Überprüfung des Jahresabschlusses und Vertretung der
+GmbH bei Rechtsstreite.
+**** Generalversammlung
+Die Generallversammlung besteht aus allen Gesellschaftern und bildet
+die ,,Unternehmensleitung'', da es beschließt, in welche Richtung ein
+Unternehmen gelenkt wird. Eine Entscheidung wird mit einem Beschluss
+abgestimmt. Für eine einfache Mehrheit reichen 50 % und eine
+Stimme. Ihre Aufgaben sind:
+- Prüfung des Jahresabschlusses
+- Einforderung von ausstehenden Stammeinlagen
+- Etwaige Schadensersatzansprüche gegen die Geschäftsführer und den
+  Aufsichtrat geltend machen
+- Abschluss von /Großinvestitionen/ (= Investition mit mehr als 20 %
+  des Gesamtkapitals)
+- Bestellung und Abberufung von Geschäftsführern und
+  Aufsichtratmitgliedern
+- Änderungen des Gesellschaftsvertrags (3/4 Mehrheit erforderlich!)
+** Aktiengesellschaft - AG
+*** Definition
+Eine Aktiengesellschaft ist eine eine juristische Person und
+Gesellschaft, deren Kapital sich aus Aktien (Einlagen)
+zusammensetzt. Die Aktionäre (Gesellschafter) sind mit ihren Aktien an
+der Gesellschafter beteiligt.
+*** Gründung & Firmenname
+Für die Gründung muss mindestens eine natürliche oder juristische
+Person Aktionär sein. Es muss eine Nominale von € 70.000
+aufgebracht werden. Eine AG gilt nach dem Firmenbucheintrag als
+gegründet. Im Vorfeld muss für diesen einen Gesellschaftsvertrag
+bestimmt (= Notariatsakt) und ein Vorstand und ein Aufsichtsrat
+bestellt werden.
+#+BEGIN_LATEX
+////
+#+END_LATEX
+Die Firmennamenzusätze lauten ,,AG'' und AG & Co KG.
+*** Haftung
+**** Aktionäre
+Die Haftung nimmt grundsätzlich die Gesellschaft. Die Aktionäre haften
+nur mit ihren Einlagen, außer sie zahlen ihre Einlage nicht
+vollständig ein. Sollte dies passieren, können sie im Falle der
+Insolvenz auch unbeschränkt persönlich haften.
+**** Vorstandsmitglieder
+Wie der/die Geschäftsführer einer GmbH (Siehe
+Kapitel [[sec:gmbh-haftung]]), haften auch die Vorstandsmitglieder einer AG
+unbeschränkt persönlich, wenn sie die Sorgfaltspflicht missachten. Zum
+Schutz vor leichte Fahrlässigkeiten können die Vorstandsmitglieder
+eine Organhaftpflichtversicherung abschließen.
+*** Organisation
+# <<sec:ag-organisation>>
+#+CAPTION: Übersicht der Organisation einer AG
+[[file:AG-Organisation_Uebersicht.png]]
+**** Vorstand
+Der Vorstand stellt die Leitung der AG dar, ist aber nicht
+weisungsberechtigt. Er wird durch den Aufsichtsrat
+kontrolliert. Normalerweise besteht er aus mehreren Personen, die
+nicht gleichzeitig Aufsichratsmitglieder sind, und kann einen
+Vorstandvorsitzenden haben, der jedoch vom Aufsichtsrat gewählt
+wird. Die Vorstandsmitglieder sind beim Unternehmen angestellt. Der
+Vorstand als ganzes hat die Gesamtgeschäftsführungsbefugnis und die
+Gesamtvertretungsmacht. Auf Grund des letzteren stellt der Vorstand
+auch den Jahresabschluss und den Geschäftsbericht auf.
+**** Aufsichtsrat
+# <<sec:ag-organisation-aufsichtsrat>>
+Der Aufsichtsrat wird von der Hauptversammlung gewählt (\rightarrow
+Aktionäre = Kapitalvertretern) und darf maximal auf 4 Jahre gewählt
+sein. Er hat zwar keine Geschäftsführungsbefugnis, jedoch muss die
+Zustimmung des Aufsichtsrats bei bestimmten gesetzlichen und vorher
+definierten Fällen eingeholt werden. Die Hauptaufgabe liegt in der
+Überwachung des Vorstandes. Der Aufsichtrat bestellt ihn und kann ihn
+bei z.B. Pflichtverletztung oder offensichtliche Unfähigkeit wieder
+abberufen.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Das Gesetz sieht auch die Einbindung der Arbeitnehmerschaft vor. So
+müssen für je zwei Mitglieder des Aufsichtsrats, ein
+Arbeitnehmervertreter im Aufsichtsrat aufgenommen werden. Bei einer
+ungeraden Anzahl von Kapitalvertretern muss ein weiterer
+Arbeitnehmervertreter aufgenommen werden.
+**** Hauptversammlung
+Die Hauptsversammlung besteht aus allen Aktionären und wird jährlich,
+jedoch spätestens nach dem 8. Monat des Geschäftsjahres, durch den
+Vorstand oder Aufsichtsrat einberufen. Es können auch Aktionäre unter
+besonderen Fällen eine Hauptversammlung einberufen.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Die Tagesordnung einer ordentlichen Hauptversammlung müssen mindestens
+folgende Dokumente vorgelegt werden:
+- Jahres-/Konzernabschluss
+- (Konzern-)Lagebricht
+- Vorschlag zur Gewinnverwendung
+- Beschlussfassung über die Entlastung der Mitglieder des Vorstands
+  und des Aufsichtsrats
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Für die Versammlung selbst müssen nicht alle Aktionäre physisch
+anwesend sein. Die Kommunikation kann auch über eine Telefonkonverenz
+stattfinden. Wenn im Gesellschaftsvertrag erlaubt, dann kann auch eine
+Briefteilnahme zulässig sein. Es kann auch immer ein Vertreter ernannt
+werden.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Eine Aktie erhält eine Stimme. Dies kann jedoch mit der Ausgabe von
+/Vorzugsaktien/ vermieden werden.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Rechte der Hauptversammlung:
+- Entscheidungen über Änderungen des Gesellschaftsvertrags
+  bzw. Änderungen die sich auf den Gesellschaftsvertrag auswirken
+- Bestellung und Abberufung von Aufsichtsratsmitgliedern
+- Entlastung des Vorstandes & Aufsichtsrats
+- Bestellung von Abschlussprüfern
+- Auflösung der Gesellschaft
+**** Aktionäre
+Ein Aktionär hat keine Mitarbeitspflicht. Aktionäre haben folgende Rechte:
+- Recht auf Dividende
+  - wird in Prozent des Grundkapitals oder pro Aktie angegeben
+  - Gewinne werden überwiesen
+- Wahrung des Anteils
+  - wenn neue Aktien ausgegeben werden, müssen diese zuerst den
+    vorhandenen Aktionären angeboten werden (damit diese ihren Anteil
+    an der AG bewahren können, wenn sie wollen)
+- Liquidationserlös
+  - bei einer Auflösung gibt es einen prozentualen ,,Resterlös''-Anspruch
+- Teilnahmerecht an Hauptversammlungen
+  - Stimmrecht
+  - Auskunftsrecht zu Gesellschaftsangelegenheiten, die für die
+    Beurteilung von Punkten bei der Haupversammlung nötig sind
+- Anfechtungsrecht bei Verdacht auf nicht
+  Gesellschaftsvertrags-konformen Beschlussfassung auf der
+  Hauptversammlung
+** Kombinationen von Personen- und Kapitalgesellschaften
+*** GmbH & Co KG oder AG & Co KG
+Eine GmbH & CO KG oder AG & Co KG ist eine bestimmte Art der KG, bei
+der der Komplementär eine Kapitalgesellschaft darstellt. Damit wird
+der negative Faktor der unbeschränkten Haftung ausgeschaltet. Zwar
+können die Gesellschafter/Aktionäre auch Kommanditisten sein, jedoch
+nur, wenn sie natürliche Personen sind.
+
+#+CAPTION: Veranschaulichung einer GmbH & Co KG bzw. AG & Co KG
+[[file:GmbH-KG-Veranschaulichung.png]]
+*** Zusammenarbeit von zwei Kapitalgesellschaften
+Zwei oder mehrere Kapitalgesellschaften können auch in Form einer
+GesnbR zusammenarbeiten, da Gesellschafter einer GesnbR auch
+juristische Personen sein dürfen (siehe Kapitel
+[[sec:gesnbr-definition]]). Es haftet zwar jeder unbeschränkt, in dem die
+Mitglieder aber Kapitalgesellschaften sind, haften etwaige
+Gesellschafter dieser Kapitalgesellschaften nicht unbeschränkt.
+
+#+CAPTION: Veranschaulichung einer GesnbR aus Kapitalgesellschaften
+[[file:GesnbR_aus_Kapitalgesellschaften-Veranschaulichung.png]]
+* Sonstige Juristische Personen des Privatrechts
+** Genossenschaft
+*** Definition
+Eine Genossenschaft ist eine juristische Person mit nicht
+geschlossener Mitgliederzahl. Die Mitglieder können natürliche oder
+juristische Personen sein. Das Ziel einer Genossenschaft liegt in der
+Förderung des Erwerbs oder der Wirtschaft ihrer Mitglieder. Im
+Gesellschaftsvertrag wird die Einlage für die Mitglieder festgelegt.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Die Art der Genossenschaft, hängt vom Förderungszweck ab:
+- Einkaufsgenossenschaft
+- Verkaufsgenossenschaft
+- Verwertungsgenossenschaft
+- Nutzungsgenossenschaft
+- Produktionsgenossenschaft
+- Kreditgenossenschaft
+- Bau- und Siedlungsgenossenschaft
+*** Gründung
+Eine Genossenschaft muss in das Firmenbuch eingetragen werden.
+*** Firmenname
+Die Zusätze lauten ,,GenbH'' bzw. ,,GenubH''.
+*** Gewinne & Bilanzierung
+Da ein Gewinn kein Ziel einer Genossenschaft ist, werden etwaige
+Gewinne sofort an ihre Mitglieder anteilsmäßig (Ausnahmen im
+Gesellschaftsvertrag) abgegeben. Es wird nur dann kein Gewinn
+ausgegeben, wenn eine notwendige Investition anfällt.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Bei der Genossenschaft gilt wieder der Umsatzschwellenwert (siehe
+Kapitel [[sec:umsatzsschwellenwert]]) als Indikator für die
+Bilanzierungpflicht.
+*** Haftung
+**** Genossenschaft mit beschränkter Haftung - GenmbH
+Die Mitglieder haften nur mit ihrer Einlage und zusätzlich mit einem
+bestimmten Betrag, der im Gesellschaftsvertrag beschlossen worden
+ist. Eine Beschränkung auf die Einlage ist nur bei der
+/Konsumgenossenschaft/ möglich.
+**** Genossenschaft mit unbeschränkter Haftung - GenumbH
+Die Mitglieder haften:
+- unbeschränkt
+- solidarisch
+*** Organisation
+Die Organisation einer Genossenschaft ähnelt der einer
+Kapitalgesellschaft (siehe Kapitel [[sec:gmbh-organisation]] &
+[[sec:ag-organisation]]).
+**** Mitglieder
+Ein Genossenschaftsmitglied hat folgende Rechte:
+- Inanspruchnahme der geschäftsgegenständlichen Förderleistungen
+- Stimmrecht bei der Generalversammlung
+- Aktive und passive Wahlrecht bei der Wahl von Organen
+**** Generalversammlung
+Die Generalversammlung ist die Versammlung aller Mitglieder. Jedes
+Mitglied hat dabei eine Stimme, außer es ist im Gesellschaftsvertrag
+anders geregelt. Sie wählt den Aufsichtsrat.
+**** Aufsichtsrat
+Der Aufsichtsrat ist das Kontrollorgan der Genossenschaft und
+kontrolliert den Vorstand. Er ist nicht vorgeschrieben, außer bei
+einer dauernden Beschäftigung von mindestens 40 Arbeitnehmern. Es
+müssen, wie bei der AG (siehe Kapitel
+[[sec:ag-organisation-aufsichtsrat]]), Arbeitnehmervertreter im
+Aufsichtsrat aufgenommen werden.
+werden.
+**** Vorstand
+Der Vorstand stellt die Geschäftsführung dar. Die
+Vorstandsmitglieder *müssen* Mitglieder der Genossenschaft sein.
+** Verein
+*** Definition
+Ein Verein ist ein Zusammenschluss von mindestens zwei Personen mit
+gemeinsamen, ideelen Zielen, die nicht auf Gewinn ausgerichtet sind.
+*** Gründung & Bilanzierungspflicht
+Um einen angemeldeten Verein zu gründen, muss man ihn beim
+Vereinsregister registrieren lassen. Eine Bilanzierungspflicht
+entsteht wie bei Personengesellschaften (siehe Kapitel
+[[sec:umsatzsschwellenwert]]).
+*** Steuern
+Bei Gemeinnützigkeit, Mildtätigkeit oder kirchlichen Zwecken sieht das
+Finanzamt eine Begünstigung für eine Steuermilderung bei
+Spenden. Diese Tätigkeit muss aber in als Vereinstatut angeführt sein
+(siehe Kapitel [[sec:anhang-vereinssteuern]]). Personengruppen und nicht
+rechtskräftige Vereine, die aber organisiert und fortbestehend sind,
+müssen auch Steuern zahlen.
+** Stiftung
+*** Definition
+Eine Stiftung sit eine Einrichtung, die mit Hilfe eines Vermögens
+einen vom Stifter festgelegten Zweck verfolgt. Sie dürfen dabei keine
+gewerbsmäßige Tätigkeit betreiben. Wenn eine Stiftung gemein- und
+eigennützig ist, nennt man sie /doppelnützig/.
+*** Organisation
+Privatstiftungen müssen einen Vorstand besitzen, bestehend aus
+mindestens drei Personen. Begünstigte, deren Ehegatten und Angehörige
+können nicht Mitglied des Vorstands werden.
+*** Steuern
+Bei Privatstiftungen wird eine Stiftungseingangsteuer und bei
+Ausschüttung an Begünstigten eine Kapitalertragssteuer fällig.
+*** Arten von Stiftungen
+**** Stiftung nach dem Bundes-Stiftungs- und Fondsgesetz
+Stiftungen nach diesem Gesetz müssen per Gesetz gemeinnützig sein.
+**** Stiftung nach einem der 9 Landes-Stiftungs- und Fondgesetze
+Stiftungen nach diesem Gesetz müssen per Gesetz gemeinnützig sein.
+**** Privatstiftung
+Stiftungen nach diesem Gesetz können gemeinnützig sein, müssen es aber
+nicht.
+* Glossar
+# <<sec:glossar>>
+- Handelsgesellschaft :: ist eine Personen- oder Kapitalgesellschaft,
+     die ein Handelsgewerbe betreibt.
+- subsidiäre Haftung :: jeder Gesellschafter haftet für seine Schuld
+- primäre Haftung :: der Gläubiger kann sofort einen Gesellschafter
+     klagen, anstatt zuerst die Gesellschaft klagen zu müssen (auch
+     wenn diese die Schuld begleichen könnte)
+- solidarische Haftung :: jeder Gesellschafter haftet für die ganze
+     Schuld
+- direkte/unmittelbare Haftung :: ein Gläubiger kann sich direkt an
+     den Gesellschafter halten und einen Schuldausgleich verlangen
+- Unbedenklichkeitsbescheinigung des Finanzamts :: "Bestätigung" des
+     Finanzamts, dass anfallende Steuern entrichtet wurden
+- Nachschusspflicht :: die Verpflichtung der Gesellschafter,
+     anteilsmäßig das Gesellschaftskapital zu erhöhen bzw. für
+     enstandene Verluste zu haften
+- Organhaftpflichtversicherung :: (Engl.:
+     /Directors-and-Officers-Insurance/) ist eine
+     Vermögensschadenhaftpflichtversicherung, die ein Unternehmen für
+     seine Organe und leitende Angestellten abschließen kann.
+- Vorzugsaktie :: Aktie mit einer höhren Divdendenausschüttung aber
+                  mit Verzicht auf das Stimmrecht für die Aktie
+- Großaktionär :: Person die > 5 % Aktienanteile besitzt
+- Dividende :: Teil des Gewinns, die eine AG oder eine Genossenschaft
+               an die Aktionäre ausschüttet.
+- Vorgesellschaft :: Die Gesellschaft vor der Eintragung ins
+     Firmenbuch
+- Nominale :: Grundkaptial
+- Stückaktie :: Die Höhe des Anteils bestimmt sich mit der Anzahl an
+                ausgegebenen Aktien. Jede Stückaktie ist am
+                Grundkapital im gleichen Umfang beteiligt, dabei muss
+                der Anteil mindestens einen Euro betragen.
+- Nennbetragsaktie :: hat mindestens einen Wert von einem Euro oder
+     ein Vielfaches davon (= volle Euro!). Der Anteil am Grundkapital
+     ist gleich dem Verhältnis des Nennbetrags zum Grundkapital.
+- Innengesellschaft :: ist eine Gesellschaft, die nach außen nicht als
+     solche hervortritt.Es findet keine Vertretung der
+     Innengesellschaft nach außen statt.
+- Stiftungseingangssteuer :: ist eine Steuer für die Übertragung von
+     Geld auf eine Stiftung.
+* Anhang
+** Beispiel für Vereinssteuern
+# <<sec:anhang-vereinssteuern>>
+Ein Verein wurde angezeigt um Steuern zu zahlen, da sie eine hohe
+Spendensumme erreicht haben und nicht versteuerten. Wenn sie den
+sozialen Aspekt im Vereinsstatut angeführt hätten, hätten sie auch
+keine Steuern zahlen müssen.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Link zum Zeitungsartikel:
+http://www.meinbezirk.at/pabneukirchen/politik/anzeige-bei-finanz-jugendverein-muss-knapp-4000-euro-zahlen-d1119513.html
+** Quellen
+- http://de.wikipedia.org/wiki/Rechtsform
+- http://de.wikipedia.org/wiki/Gesellschaft_nach_b%C3%BCrgerlichem_Recht_%28%C3%96sterreich%29
+- http://de.wikipedia.org/wiki/Offene_Gesellschaft_%28%C3%96sterreich%29
+- https://www.wko.at/Content.Node/Service/Wirtschaftsrecht-und-Gewerberecht/Gesellschaftsrecht/Unternehmensrecht/Gesellschaftsformen/Offene_Gesellschaft_%28OG%29.html
+- https://www.wko.at/Content.Node/Service/Wirtschaftsrecht-und-Gewerberecht/Gesellschaftsrecht/Unternehmensrecht/Gesellschaftsformen/Kommanditgesellschaft_%28KG%29.html
+- http://de.wikipedia.org/wiki/Kommanditgesellschaft_%28%C3%96sterreich%29
+- http://forum.oeh-wu.at/threads/43722-prim%C3%A4re-unmittelbare-Haftung
+- http://de.wikipedia.org/wiki/Hafteinlage
+- https://www.wko.at/Content.Node/Service/Wirtschaftsrecht-und-Gewerberecht/Gesellschaftsrecht/Unternehmensrecht/Gesellschaftsformen/Gesellschaft_mit_beschraenkter_Haftung_%28GmbH%29.html
+- https://www.help.gv.at/Portal.Node/hlpd/public/content/99/Seite.990077.html
+- http://de.wikipedia.org/wiki/Nachschusspflicht
+- http://de.wikipedia.org/wiki/Gesellschaft_mit_beschr%C3%A4nkter_Haftung_%28%C3%96sterreich%29
+- http://de.wikipedia.org/wiki/Aktiengesellschaft_%28%C3%96sterreich%29
+- http://wirtschaftslexikon.gabler.de/Definition/aktiengesellschaft-ag.html
+- https://www.wko.at/Content.Node/Service/Wirtschaftsrecht-und-Gewerberecht/Gesellschaftsrecht/Unternehmensrecht/Gesellschaftsformen/Welche_Gesellschaftsformen_gibt_es_in_Oesterreich_.html
+- http://de.wikipedia.org/wiki/Aktiengesellschaft_%28Deutschland%29
+- http://de.wikipedia.org/wiki/D%26O-Versicherung
+- https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10002070
+- http://www.vertragswerk24.info/gesellschaftsvertrag/gesellschaftsvertrag-satzung-unterschied/
+- http://de.wikipedia.org/wiki/Dividende
+- https://www.wko.at/Content.Node/Service/Wirtschaftsrecht-und-Gewerberecht/Gewerberecht/Gewerbeanmeldung/Wer_kann_ein_Gewerbe_anmelden_.html
+- http://de.wikipedia.org/wiki/Stille_Gesellschaft
+- http://de.wikipedia.org/wiki/Handelsgesellschaft
+- http://www.jusline.at/Unternehmensgesetzbuch_%28UGB%29_Langversion.html
+- http://de.wikipedia.org/wiki/Innengesellschaft
+- http://www.jusline.at/166_Kontrollrecht_UGB.html
+- http://de.wikipedia.org/wiki/Europ%C3%A4ische_wirtschaftliche_Interessenvereinigung
+- http://de.wikipedia.org/wiki/Verein
+- http://de.wikipedia.org/wiki/Genossenschaft
+- https://www.usp.gv.at/Portal.Node/usp/public/content/gruendung/gruendungsfahrplan_gesellschaften/gesellschaftsformen/genossenschaften/83113.html
+- https://www.usp.gv.at/Portal.Node/usp/public/content/steuern_und_finanzen/betriebliches_rechnungswesen/finanzbuchfuehrung/50514.html
+- http://de.wikipedia.org/wiki/Stiftung
+- MANZ - Betriebliche Organisation für HTL/EDV und Organisation - Band
+  I
