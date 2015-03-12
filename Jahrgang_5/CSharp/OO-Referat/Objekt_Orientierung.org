@@ -1,0 +1,245 @@
+# Copyright (C)  2015 Richard Bäck.
+# Permission is granted to copy, distribute and/or modify this document
+# under the terms of the GNU Free Documentation License, Version 1.3 or
+# any later version published by the Free Software Foundation; with no
+# Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+# copy of the license is included in the section entitled "GNU Free
+# Documentation License".
+
+#+TITLE:     Objekt Orientierung
+#+AUTHOR:    Richard Bäck
+#+EMAIL:     richard.baeck@openmailbox.org
+#+DATE:      2015-03-08 Mon
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  de
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+XSLT:
+
+#+startup: beamer
+#+startup: beamer
+#+BEAMER_FRAME_LEVEL: 2
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+#+LATEX_HEADER: \mode<beamer>{\usetheme{Goettingen}\usecolortheme{fly}}
+#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Thema}\tableofcontents[currentsection]\end{frame}}
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+
+* Einleitung
+** Defintion der OOP von Alan Kay
+# Erfinder von Smalltalk
+1. Alles ist ein Objekt
+   # Ist bei vielen allen dynamisch interpretierten Sprachen (Python,
+   # Ruby, Common Lisp) der Fall. C# bildet bei den statisch kompilierten
+   # Sprachen eine Ausnahme. In Java und C++ sind die Basisdatentypen
+   # kein Objekt (in Java gibt es aber die Basisdatentypenklassen).
+2. Objekte kommunizieren in dem sie Nachrichten hin und her schicken
+   # Dies ist eher Smalltalk spezifisch. Objekte kommunizieren in den
+   # meisten häutigen Sprachen miteinander über deren Attributen und
+   # Methoden.
+3. Objekte haben ihren eigenen Speicher
+   # = Heap
+4. Jedes Objekt ist eine Instanz einer Klasse, das wiederum ein Objekt
+  ist
+   # Eine Klassenobjekt wird mit Hilfe der Programmiersprache definiert
+   # (mit diesen kommt der Programmierer nicht in Berührung).
+5. Eine Klasse beinhaltet das Verhalten ihrer Instanzen
+   # = Methoden
+* Klassen
+** Übersicht
+- Klassen sind abstrakte Modelle bzw. Baupläne für Dinge (= Objekte).
+- Dieser legt fest:
+  - ob und welche Attribute (= Eigenschaften) ein Objekt besitzt
+  - welche Methoden (= Verhalten) auf ein Objekt anwendbar sind
+# Anmerkung: Das gleiche ist bei relationalen Datenbanken der Fall mit
+# Tabellen & Tupeln.
+** Klassen in einer Quelldatei
+\scriptsize
+#+BEGIN_SRC java
+public class Asset {
+    public float acquisitionCosts;
+    public String name;
+    public float yearsOfService;
+}
+#+END_SRC
+* Objekte
+** Übersicht
+- Objekte sind bestimmte Ausprägungen (= Instanzen) einer Klasse.
+- Objekte bestehen aus Attributen
+- Zugriff auf Objekt meist nur durch eine Referenz (=
+  sprachenabhängig)
+- Objekte liegen im RAM auf dem Heap
+** ,,Objekt'' in einer Quelldatei
+#+BEGIN_SRC java
+public static void main(String[] args) {
+    Asset a = new Asset();
+    a.acquisitionCosts = 1000;
+    a.name = "PC1";
+    a.yearsOfService = 3;
+    System.out.println(a);
+}
+#+END_SRC
+** Wert?
+- Ein elementarer Datentyp
+  - Ganzzahl
+  - Fließkommazahl
+  - ,,Buchstabe''
+- Eine Struktur (in C/C++)
+  #+BEGIN_SRC c
+  typdef struct vector_s
+  {
+    int length;
+    void **data;
+  } vector_t
+  #+END_SRC
+- Liegt im RAM auf dem Stapel
+- Man kann nichts falsch machen
+** Referenz?
+- Eine Referenz ist ein Zeiger auf ein Objekt im Heap
+- Der Referenzwert liegt (*Wert*) auf dem Stapel
+- Eine Referenz ist um einiges kleiner als das Objekt selbst
+  - In C eine Ganzzahl in der Länge eines CPU-Registers (32/64 Bit)
+  - Verhindert hohe Speicherübergabe bei Funktionsaufrufe
+- Eine Referenz ist für den Menschen schwieriger zu verwenden (eher in
+  C/C++)
+* Methoden
+** Methoden - Überblick
+- ,,Klassen beinhalten das Verhalten ihrer Instanzen''
+- Häufigste Umsetzung:
+  - Einer Funktion wird implizit ein Objekt übergeben
+    # z.B. in Perl muss dieses Objekt von der Parameterliste der
+    # Funktion ausgelesen werden
+  - Dieses Objekt wird als ,,this'' oder ,,self'' bezeichnet
+  - Dieses implizit übergebene Objekt kann dann be-
+    bzw. verarbeitet werden
+- Es wird meist eine weitere Variable names "super" bereitgestellt
+  - Beinhaltet die Instanz der Generalisierung (= Objekt der
+    überliegenden Klasse)
+** ,,this'' & ,,super'' - Code Beispiele
+*** Beispiel für ,,this''
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_env: block
+:END:
+\scriptsize
+#+BEGIN_SRC java
+public float
+getDeprication() {
+   return this.acquisitionCosts
+          / this.yearsOfService;
+}
+#+END_SRC
+*** Beispiel für ,,super''
+:PROPERTIES:
+:BEAMER_col: 0.5
+:BEAMER_env: block
+:END:
+\scriptsize
+#+BEGIN_SRC java
+public class MachineAsset {
+   public float
+   getDeprication() {
+      float deprication =
+            super.getDeprication();
+      deprication /= 5;
+      return deprication;
+   }
+}
+#+END_SRC
+** Spezielle Methoden
+\footnotesize
+- Konstruktoren
+  #+BEGIN_SRC java
+  public Asset(float acquisitionCosts,
+               String name,
+               float yearsOfService) {
+      this.acquisitionCosts = acquisitionCosts;
+      this.name = new String(name);
+      this.yearsOfService = yearsOfService;
+  }
+  #+END_SRC
+- Destruktoren
+  #+BEGIN_SRC java
+  ...
+      // Java spezifisch:
+      Runtime.runFinalizersOnExit(true);
+  ...
+  protected void finalize() {
+      System.out.println(
+       "Objekt wurde vom Heap gelöscht.");
+  }
+  #+END_SRC
+** Verkettung der Kon- & Destruktoren
+- Konstruktorenverkettung
+  #+BEGIN_SRC java
+  public Asset() {
+      this(0, "", 0);
+  }
+  #+END_SRC
+- Destruktoren
+  #+BEGIN_SRC java
+  protected void finalize() {
+      super.finalize();
+      System.out.println(
+       "Objekt wurde vom Heap gelöscht.");
+  }
+  #+END_SRC
+* Kapselung
+** Definition
+Der direkte Zugriff auf die interne Datenstruktur eines Objekts wird
+unterbunden. Stattdessen werden spezielle Schnittstellen für den
+Zugriff bereitgestellt.
+** Zugriffsarten
+- public :: Alle Objekte/(auch andere) Klassen haben Zugriff
+- private :: Nur die eigene Instanz/Klasse
+- protected :: Nur die eigene Instanz/Klasse und Spezialisierungen
+               davon haben Zugriff
+- package :: Zugriff ist nur für das eigene Paket erlaubt
+** Quellcodebeispiel
+#+BEGIN_SRC java
+public class Asset {
+    private String name;
+
+    public String getName() {
+        return this.name;
+    }
+}
+#+END_SRC
+** Problemlösung der Referenzübergabe
+#+BEGIN_SRC java
+public class Asset {
+    private String name;
+
+    public String getSaveName() {
+        return new String(this.name);
+    }
+}
+#+END_SRC
+** Vor- & Nachteile
+- Vorteile
+  - Klassenimplementierungen können ohne Beinträchtigungen verändert
+    werden
+  - Besser Übersichtlichkeit - es müssen nur die Schnittstellen einer
+    Klasse betrachtet werden
+  - Einschränkung des Zugriffs = Einschränkung der Fehleranfälligkeit
+    durch Veränderung der Attribute
+- Nachteile
+  - Meistens Geschwindigkeitskeitseinbußen durch den Aufruf der
+    Zugriffsfunktion
+  - Zusäztlicher Programmieraufwand
+* Quellen
+\scriptsize
+- http://de.wikipedia.org/wiki/Klasse_%28Objektorientierung%29
+- http://de.wikipedia.org/wiki/Objekt_%28Programmierung%29
+- http://bzr.savannah.gnu.org/lh/assets/trunk/annotate/head:/src/asset.h
+- http://bzr.savannah.gnu.org/lh/assets/trunk/annotate/head:/src/asset.c
+- http://de.wikipedia.org/wiki/Objektorientierte_Programmierung
+- http://www.wellho.net/resources/ex.php4?item=j714/Thing.java
+- http://howtodoinjava.com/2012/10/31/why-not-to-use-finalize-method-in-java/
+- http://de.wikipedia.org/wiki/Datenkapselung_%28Programmierung%29

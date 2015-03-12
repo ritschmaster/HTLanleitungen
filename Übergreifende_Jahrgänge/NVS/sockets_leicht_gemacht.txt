@@ -1,0 +1,39 @@
+TCP:
+----
+Server:
+1. int serverfd = socket(SOCK_STREAM);
+2. bind(serverfd, serveradresse)
+3. listen(serverfd);
+4. int clientfd = accept(serverfd);
+// ein TCP-Socket kann eine Verbindung zu mehreren Klienten haben, ein Prozess nicht! -> lösung: "ClientHandling" wird in einem Thread abgewickelt
+5. write(clientfd, charArray); read(clientfd, charArray);
+6. close(clientfd)
+7. close(serverfd) // meist nicht nötig, da der Server ohnehin als Dämon läuft
+
+Client:
+1. int serverfd = socket(SOCK_STREAM);
+2. serveradresse = getbyhostname(ip);
+3. bind(serverfd, serveradresse)
+4. write(serverfd, charArray); read(serverfd, charArray);
+5. close(serverfd);
+
+Anmerkungen:
+- Serveradresse ist eine Struktur beinhaltet beim Server die eigene
+  IP-Adresse und den Servereingangsport und beim Klienten die
+  Server-IP und den Klienteneingangsport
+
+
+UDP:
+----
+- Bei UDP fällt bei Server & Client jeweils Schritt 3 weg.
+- Bei Schritt 2 vom Klienten wird nicht mehr die Partner IP, sondern die eigene verwendet
+
+Außerdem:
+- write wird zu sendto(local_socket, charArr, remoteIP); // remoteIP ist eine Struktur -> beinhaltet IP+Socket vom Partner
+- read wird zu recvfrom(local_socket, charArr, remoteIP); // remoteIP wird beim Empfangen gefüllt
+
+
+JAVA TCP:
+---------
+- Server Schritt 1, 2 & 3 wird durch "new ServerSocket()" abgehandelt
+- Client Schritt 1 & 2 wird durch "new Socket()" abgehandelt
