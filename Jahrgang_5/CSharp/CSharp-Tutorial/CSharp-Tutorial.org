@@ -6,7 +6,7 @@
 # copy of the license is included in the section entitled "GNU Free
 # Documentation License".
 
-#+TITLE:     C# Anleitung - REST + Klient
+#+TITLE:     C# Anleitung - REST + Klienten
 #+AUTHOR:    Richard Bäck
 #+EMAIL:     richard.baeck@openmailbox.org
 #+DATE:      2015-01-31 Sa\pagebreak
@@ -25,8 +25,9 @@
 
 * Vorwort
 Diese Anleitung beschreibt, wie man eine Datenschicht, einen
-REST-Dienst und einen WPF-Klienten anlegt. Als Beispiel dient eine
-Musikverwaltung mit Interpret, Album und Liedern.
+REST-Dienst, einen WPF-Klienten und ein ASP.NET MVC4 Klienten mit
+JavaScript anlegt. Als Beispiel dient eine Musikverwaltung mit
+Interpret, Album und Liedern.
 * Datenschicht
 ** Lösung anlegen
 1. Visual Studio starten
@@ -581,6 +582,7 @@ Datenbank aufgebaut werden.
    #+END_SRC
 * REST-Dienst
 ** Neues Project anlegen
+# <<sec:restnewproject>>
 1. Rechtsklick auf Lösung
 2. ,,Add'' \rightarrow ,,New'' \rightarrow ,,Project...''
 3. ,,Visual C#'' \rightarrow ,,Web'' \rightarrow ,,ASP.NET MVC 4 Web
@@ -847,7 +849,7 @@ namespace MusicService.Controllers
     }
 }
 #+END_SRC
-* WPF-Klienten
+* WPF-Klient
 ** Neues Project anlegen
 1. Rechtsklick auf Lösung
 2. ,,Add'' \rightarrow ,,New'' \rightarrow ,,Project...''
@@ -1403,6 +1405,373 @@ selektierte Daten. Dabei löst eine Selektion der Daten mit der Methode
        <local:ManageSongUserControl></local:ManageSongUserControl>
    </Window>
    #+END_SRC
+* ASP.NET MVC4 Klient
+** Aufgabe
+Die Aufgabenstellung ist eine Webapplikation zu erstellen, die
+dynamisch mit JavaScript Interpreten nach ihren Liedern abfragen
+kann. Danach sollte das Lied ausgewählt werden können und dessen Daten
+bearbeitet werden können. Dies alles soll innerhalb einer HTML-Datei
+passieren.
+** Projekterstellung
+Es wird Einfachheit halber im bereits bestehenden Projekt
+,,MusicService'' weitergearbeitet. Es kann ansonsten auch ein neues
+Projekt hierfür wie im Kapitel [[sec:restnewproject]] beschrieben angelegt
+werden.
+** Ändern der Steuerungnamens von ,,Home'' auf ,,Music''
+Mit der Erstellung des Projekts wurden die Dateien
+,,Controllers/HomeController.cs'' und ,,Views/Home/Index.cshtml''
+automatisch generiert. Somit kann der virtuelle URL-Pfad
+http://localhost/Home/Index angesprochen werden. Um nun ,,Home''
+mit ,,Music'' zu ersetzen, muss folgendes erledigt werden:
+1. Öffnen der Datei ,,Controllers/HomeController.cs''
+2. Refakturierung des Klassennamens:
+   1. Rechtsklick auf die Zeichenkette ,,HomeController''
+   2. ,,Refactor'' \rightarrow ,,Rename''
+   3. Variablen setzen:
+      1. New name = MusicController
+   4. ,,Ok''
+3. Die Datei ,,Controllers/HomeController.cs'' selbst zu
+   ,,Controllers/MusicController.cs'' umbennen
+4. Den Ordner ,,Views/Home'' zu ,,Views/Music'' umbennen.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Nun kann der URL-Pfad http://localhost/Music/Index angesprochen
+werden.
+** Vorbereiten der Index.cshtml
+Der Inhalt der Date ,,Views/Music/Index.cshtml'' wird durch dem
+folgenden Code ersetzt:
+#+BEGIN_SRC html
+<h2>Interpreterlist</h2>
+
+<div>
+    <label>Interpreters</label>
+    <select id="selInterpreter"></select>
+</div>
+
+<div style="float:left; width:400px; min-height: 300px">
+    <table id="tableSongs">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Duration
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div>
+    <div>
+        <label>Name</label>
+        <input id="name" type="text" />
+    </div>
+   <div>
+        <label>Duration</label>
+        <input id="duration" type="text" />
+    </div>
+    <input id="saveButton" type="button" value="Save" />
+</div>
+#+END_SRC
+** Anlegen der JavaScript-Quelldatei
+1. Rechtsklick auf den Ordner ,,Scripts''
+2. ,,Add'' \rightarrow ,,New Folder'' \rightarrow benennen mit
+   ,,MusicScripts''
+3. Rechtsklick auf den neu erstellten Ordner
+4. ,,Add'' \rightarrow ,,New Item...'' \rightarrow ,,Web'' \rightarrow
+   ,,JavaScript File''
+5. Variablen setzen
+   1. Name = MusicController.js
+6. ,,Ok''
+** JavaScript-Quelldatei als Skriptbündel registrieren
+Um eine bestimmte JavaScript-Quelldatei an den Browserklienten senden
+zu können, muss es in der ,,BundleConfig.cs'' registriert sein:
+1. Öffnen der Datei ,,App_Start/BundleConfig.cs''
+2. In der Methode ,,RegisterBundles()'' muss nun der folgende Code
+   eingefügt werden (am besten nach den Registrierungen von
+   Bibliotheken \rightarrow nach jquery):
+   #+BEGIN_SRC csharp
+   bundles.Add(new ScriptBundle("~/bundles/music").Include(
+                        "~/Scripts/MusicScripts/MusicController.js"));
+   #+END_SRC
+** Das Skriptbündel übertragen lassen
+Abschließend muss das Skriptbündel noch bei einer Ansichtsdatei
+angegeben werden, damit diese auch tastächlich übertragen wird. Dies
+wird durch die Codezeile:
+#+BEGIN_SRC csharp
+@Scripts.Render("~/bundles/music")
+#+END_SRC
+ermöglicht. Wichtig ist aber, wo diese Zeile plaziert wird. Dazu gibt
+es zwei mögliche Übertragungsarten:
+1. Skript nur für eine Ansichtsdatei übertragen:
+   Für dies wird die Zeile in der speziellen Ansichtsdatei (hier:
+   ,,Views/Music/Index.cshtml'') plaziert.
+2. Skript global für alle Ansichtsdateien übertragen:
+   Für dies wird die Zeile in der Ansichtsdatei
+   ,,Views/Share/_Layout.cshtml'' innerhalb des HTML-Abgrenzers
+   ,,body'' eingetragen.
+Auf jeden Fall ist die Reihenfolge der Skriptbündel zu beachten! Wenn
+zB jQuery eine Abhängigkeit von meiner eigenen JavaScript-Datei ist,
+dann muss zuerst jQuery eingebunden werden. Daraus lässt sich
+schließen, dass benötigte Bibliotheken als ersters und die
+Hauptfunktion als letzters eingebunden werden muss.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Für dieses Beispiel würde das bei den Dateien nun so aussehen:
+- \_Layout.cshtml
+  #+BEGIN_SRC html
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>@ViewBag.Title</title>
+      @Styles.Render("~/Content/css")
+      @Scripts.Render("~/bundles/modernizr")
+  </head>
+  <body>
+      @Scripts.Render("~/bundles/jquery")
+
+      @RenderBody()
+
+      @RenderSection("scripts", required: false)
+  </body>
+  </html>
+  #+END_SRC
+- Index.cshtml
+  #+BEGIN_SRC csharp
+  @Scripts.Render("~/bundles/music")
+
+  <h2>Interpreterlist</h2>
+
+  <div>
+      <label>Interpreters</label>
+      <select id="selInterpreter"></select>
+  </div>
+
+  <div style="float:left; width:400px; min-height: 300px">
+      <table id="tableSongs">
+          <thead>
+              <tr>
+                  <th>
+                      Name
+                  </th>
+                  <th>
+                      Duration
+                  </th>
+              </tr>
+          </thead>
+      </table>
+  </div>
+
+  <div>
+      <div>
+          <label>Name</label>
+          <input id="name" type="text" />
+      </div>
+     <div>
+          <label>Duration</label>
+          <input id="duration" type="text" />
+      </div>
+      <input id="saveButton" type="button" value="Save" />
+  </div>
+  #+END_SRC
+** Die JavaScript-Quelldatei
+*** Die gesamte Quelldatei
+Es wird nun nacheinander abgearbeitet, wie der Code die HTML-Datei
+beeinflusst bzw. wie der Code zusammenspielt. Die gesamte Quelldatei
+sieht dann wiefolgt aus:
+#+BEGIN_SRC js
+var selectedSong = null;
+var baseurl = 'http://localhost:6008/api/';
+
+$(function () {
+    loadInterpreters('#selInterpreter');
+    $('#selInterpreter').change(function () {
+        loadSongs(this.value);
+    });
+    $('#saveButton').click(function () {
+        selectedSong.Name = $('#name').val();
+        selectedSong.Duration = $('#duration').val();
+        saveSong(selectedSong);
+    });
+})
+
+function loadInterpreters(select) {
+    $.getJSON(baseurl + 'interpreter', function (data) {
+        $.each(data, function (index, item) {
+            $('<option value = ' +
+              item.InterpreterId +
+              '>' +
+              item.Name +
+              '</option>')
+                .appendTo(select);
+        });
+    });
+}
+
+function loadSongs() {
+    $('#tableSongs tbody tr').remove();
+    $.getJSON(baseurl + 'song?interpreterid=' + $('#selInterpreter').val(),
+      function (data) {
+        $.each(data, function (index, item) {
+            $('<tr><td>' + item.Name +
+                '</td><td>' + item.Duration +
+                '</td><td>' + //item.Ablum.Name +
+                '</td></tr>')
+                .appendTo('#tableSongs')
+                .hover(function () {
+                    $(this).css('background-color', 'lightblue');
+                }, function () {
+                    $(this).css('background-color', '');
+                })
+                .click(function () {
+                    editSong(item);
+                });
+        });
+    });
+}
+
+function editSong(song) {
+    selectedSong = song;
+    $('#name').val(song.Name);
+    $('#duration').val(song.Duration);
+}
+
+function saveSong(song) {
+    var url = baseurl + 'song/' + song.SongId;
+    $.ajax({
+        url: url,
+        type: 'PUT',
+        data: song,
+        success: function () {
+            loadSongs($('#selInterpreters').val());
+        },
+        error: function (xhr, status, msg) {
+            alert(msg);
+        }
+    });
+}
+#+END_SRC
+*** Die Konstanten
+#+BEGIN_SRC js
+var selectedSong = null;
+var baseurl = 'http://localhost:6008/api/';
+#+END_SRC
+- selectedSong :: Dies ist das aktive Lied, das von einem Interpreten
+                  ausgewählt ist und editiert werden kann.
+- baseurl :: Dies ist die Basis URL, von der Webdienststelle.
+*** Laden von Interpreten
+Es wird das JSON-Objekt für die Liste von Interpreten geladen. In der
+Zeile 4 wird dann ein neuer HTML-Abgrenzer erzeugt und danach an eine
+HTML-Liste angehängt:
+#+BEGIN_SRC js
+function loadInterpreters(select) {
+    $.getJSON(baseurl + 'interpreter', function (data) {
+        $.each(data, function (index, item) {
+            $('<option value = ' +
+              item.InterpreterId +
+              '>' +
+              item.Name +
+              '</option>')
+                .appendTo(select);
+        });
+    });
+}
+#+END_SRC
+** Laden von Liedern
+Es wird zuerst die HTML-Tabelle für die Lieder gelöscht (Zeile
+2). Danach wird wieder ein JSON-Objekt mit der Liste von Liedern zu
+dem ausgewählten Interpreten im HTML-Abgrenzer
+,,selInterpreter''. Schlussendlich wird die Liste durchgelaufen und
+jedes Lied nacheinander der Tabelle als Tabellenzeile angehängt. In
+Zeile 11 bis 15 folgt eine Stileinbettung statt. Mit der Funktion in
+Zeile 16 und folgende wird bei einem Anklicken eines Liedes
+automatisch die Funktion ,,editSong()'' aufgerufen.
+#+BEGIN_SRC js
+function loadSongs() {
+    $('#tableSongs tbody tr').remove();
+    $.getJSON(baseurl + 'song?interpreterid=' + $('#selInterpreter').val(),
+      function (data) {
+        $.each(data, function (index, item) {
+            $('<tr><td>' + item.Name +
+                '</td><td>' + item.Duration +
+                '</td><td>' + item.Ablum.Name +
+                '</td></tr>')
+                .appendTo('#tableSongs')
+                .hover(function () {
+                    $(this).css('background-color', 'lightblue');
+                }, function () {
+                    $(this).css('background-color', '');
+                })
+                .click(function () {
+                    editSong(item);
+                });
+        });
+    });
+}
+#+END_SRC
+** Die Liededitierung
+Zuerst wird das aktuell ausgewählte Lied gesetzt. Dies wird später für
+die Speicherung der Änderungen benötigt.  Mit der folgenden Funktion
+wird ein ausgewähltes Lied in das Formular geladen.
+#+BEGIN_SRC js
+function editSong(song) {
+    selectedSong = song;
+    $('#name').val(song.Name);
+    $('#duration').val(song.Duration);
+}
+#+END_SRC
+** Die Speicherung
+Die folgende Funktion ruft die REST-URL zur Aktualiserung eines Liedes
+auf. Bei einer erfolgreichen HTTP-Verbindung wird anschließend die
+Liederliste neu geladen, um die Änderung gleich für den Benutzer
+anzuzeigen (Zeile 8). Sollte ein Fehler auftreten wird die
+Fehlermeldung ausgegeben (Zeile 11).
+#+BEGIN_SRC js
+function saveSong(song) {
+    var url = baseurl + 'song/' + song.SongId;
+    $.ajax({
+        url: url,
+        type: 'PUT',
+        data: song,
+        success: function () {
+            loadSongs($('#selInterpreters').val());
+        },
+        error: function (xhr, status, msg) {
+            alert(msg);
+        }
+    });
+}
+#+END_SRC
+*** Die Hauptfunktion
+Die Hauptfunktion stellt den Einsprungspunkt für den ganzen
+JavaScript-Code der Seite dar. Außerdem verbindet es die ganzen
+Funktionen miteinander. In der Zeile 2 wird zuerst die Liste der
+Interpreten gefüllt. Mit der Funktionsverknüpfung in Zeile 3 erfolgt
+ein automatisches Laden der Lieder eines Interpreten, wenn dieser in
+der Interpetenliste ausgewählt wird. Zuletzt wird mit der
+Funktionsverknüpfung in Zeile 6 gewährleistet, dass das drücken des
+Speichernknopfes die veränderten Daten von HTML in das JavaScript
+Liederobjekt geschrieben werden und dann die Aktualisierungsfunktion
+aufgerufen wird.
+#+BEGIN_SRC js
+$(function () {
+    loadInterpreters('#selInterpreter');
+    $('#selInterpreter').change(function () {
+        loadSongs(this.value);
+    });
+    $('#saveButton').click(function () {
+        selectedSong.Name = $('#name').val();
+        selectedSong.Duration = $('#duration').val();
+        saveSong(selectedSong);
+    });
+})
+#+END_SRC
 * Fehlerlösungen
 ** Update-Database funktioniert nicht
 1. ,,CTRL + R'' \rightarrow ,,cmd'' \rightarrow ,,OK''
