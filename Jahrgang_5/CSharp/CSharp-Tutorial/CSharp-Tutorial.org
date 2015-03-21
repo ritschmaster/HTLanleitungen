@@ -1683,7 +1683,7 @@ function loadInterpreters(select) {
     });
 }
 #+END_SRC
-** Laden von Liedern
+*** Laden von Liedern
 Es wird zuerst die HTML-Tabelle für die Lieder gelöscht (Zeile
 2). Danach wird wieder ein JSON-Objekt mit der Liste von Liedern zu
 dem ausgewählten Interpreten im HTML-Abgrenzer
@@ -1715,7 +1715,7 @@ function loadSongs() {
     });
 }
 #+END_SRC
-** Die Liededitierung
+*** Die Liededitierung
 Zuerst wird das aktuell ausgewählte Lied gesetzt. Dies wird später für
 die Speicherung der Änderungen benötigt.  Mit der folgenden Funktion
 wird ein ausgewähltes Lied in das Formular geladen.
@@ -1726,7 +1726,7 @@ function editSong(song) {
     $('#duration').val(song.Duration);
 }
 #+END_SRC
-** Die Speicherung
+*** Die Speicherung
 Die folgende Funktion ruft die REST-URL zur Aktualiserung eines Liedes
 auf. Bei einer erfolgreichen HTTP-Verbindung wird anschließend die
 Liederliste neu geladen, um die Änderung gleich für den Benutzer
