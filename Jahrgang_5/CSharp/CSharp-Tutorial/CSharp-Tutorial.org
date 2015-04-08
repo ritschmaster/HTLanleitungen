@@ -512,8 +512,8 @@ anzulegen.
    #+END_SRC
 4. ,,add-migration'' eingeben. Wenn eine Parameter Aufforderung kommt,
    einfach ,,MusicDb'' eintippen. Mit diesem Kommando wird eine neue
-   Klasse generiert, mit der die Datenbank dann schlussendlie erstellt
-   werden kann.
+   Klasse generiert, mit der die Datenbank dann schlussendlich
+   erstellt werden kann.
 5. ,,update-database'' eingeben. Nun wird die Datenbank generiert und
    unter ,,C:/users/youruser/MusicDb.mdf'' gespeichert.
 ** Datebankverbindung
@@ -1405,7 +1405,7 @@ selektierte Daten. Dabei löst eine Selektion der Daten mit der Methode
        <local:ManageSongUserControl></local:ManageSongUserControl>
    </Window>
    #+END_SRC
-* ASP.NET MVC4 Klient
+* ASP.NET MVC4 Klient - dynamisch
 ** Aufgabe
 Die Aufgabenstellung ist eine Webapplikation zu erstellen, die
 dynamisch mit JavaScript Interpreten nach ihren Liedern abfragen
@@ -1415,8 +1415,8 @@ passieren.
 ** Projekterstellung
 Es wird Einfachheit halber im bereits bestehenden Projekt
 ,,MusicService'' weitergearbeitet. Es kann ansonsten auch ein neues
-Projekt hierfür wie im Kapitel [[sec:restnewproject]] beschrieben angelegt
-werden.
+Projekt hierfür, wie im Kapitel [[sec:restnewproject]] beschrieben,
+angelegt werden.
 ** Ändern der Steuerungnamens von ,,Home'' auf ,,Music''
 Mit der Erstellung des Projekts wurden die Dateien
 ,,Controllers/HomeController.cs'' und ,,Views/Home/Index.cshtml''
@@ -1489,10 +1489,10 @@ folgenden Code ersetzt:
 ** JavaScript-Quelldatei als Skriptbündel registrieren
 Um eine bestimmte JavaScript-Quelldatei an den Browserklienten senden
 zu können, muss es in der ,,BundleConfig.cs'' registriert sein:
-1. Öffnen der Datei ,,App_Start/BundleConfig.cs''
+1. Öffnen der Datei ,,App\_Start/BundleConfig.cs''
 2. In der Methode ,,RegisterBundles()'' muss nun der folgende Code
    eingefügt werden (am besten nach den Registrierungen von
-   Bibliotheken \rightarrow nach jquery):
+   Bibliotheken \rightarrow hier: nach jQuery):
    #+BEGIN_SRC csharp
    bundles.Add(new ScriptBundle("~/bundles/music").Include(
                         "~/Scripts/MusicScripts/MusicController.js"));
@@ -1511,10 +1511,10 @@ es zwei mögliche Übertragungsarten:
    ,,Views/Music/Index.cshtml'') plaziert.
 2. Skript global für alle Ansichtsdateien übertragen:
    Für dies wird die Zeile in der Ansichtsdatei
-   ,,Views/Share/_Layout.cshtml'' innerhalb des HTML-Abgrenzers
+   ,,Views/Share/\_Layout.cshtml'' innerhalb des HTML-Abgrenzers
    ,,body'' eingetragen.
 Auf jeden Fall ist die Reihenfolge der Skriptbündel zu beachten! Wenn
-zB jQuery eine Abhängigkeit von meiner eigenen JavaScript-Datei ist,
+zB jQuery eine Abhängigkeit von einer eigenen JavaScript-Datei ist,
 dann muss zuerst jQuery eingebunden werden. Daraus lässt sich
 schließen, dass benötigte Bibliotheken als ersters und die
 Hauptfunktion als letzters eingebunden werden muss.
