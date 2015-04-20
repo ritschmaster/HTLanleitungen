@@ -1,0 +1,37 @@
+(TeX-add-style-hook "Mathematik-Normalverteilung"
+ (lambda ()
+    (LaTeX-add-labels
+     "sec:normalverteilung"
+     "sec:variabliensuchebinomialverteilunggrundlegendes"
+     "sec:chiquadratverteilunggrundlegendes"
+     "sec:bestimmtewahrscheinlichkeitsdichte"
+     "sec:kumulativewahrscheinlichkeitsdichte"
+     "sec:chisuchenachs"
+     "sec:chisuchenachp"
+     "sec:konfidenzintervall"
+     "sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge")
+    (TeX-run-style-hooks
+     "geometry"
+     "vmargin={0pt,1cm}"
+     "margin=1.5cm"
+     "babel"
+     "german"
+     "mhchem"
+     "version=3"
+     "hyperref"
+     "fancyhdr"
+     "listings"
+     "fixltx2e"
+     "eurosym"
+     "amsmath"
+     "graphicx"
+     "palatino"
+     ""
+     "inputenc"
+     "utf8"
+     "latex2e"
+     "art10"
+     "article"
+     "10pt"
+     "a4paper")))
+
