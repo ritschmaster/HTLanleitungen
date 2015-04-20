@@ -3,13 +3,13 @@
     (LaTeX-add-labels
      "sec:normalverteilung"
      "sec:variabliensuchebinomialverteilunggrundlegendes"
+     "sec:konfidenzintervall"
+     "sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge"
      "sec:chiquadratverteilunggrundlegendes"
      "sec:bestimmtewahrscheinlichkeitsdichte"
      "sec:kumulativewahrscheinlichkeitsdichte"
      "sec:chisuchenachs"
-     "sec:chisuchenachp"
-     "sec:konfidenzintervall"
-     "sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge")
+     "sec:chisuchenachp")
     (TeX-run-style-hooks
      "geometry"
      "vmargin={0pt,1cm}"

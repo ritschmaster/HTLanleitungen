@@ -103,7 +103,7 @@ folgende Werte gesucht werden:
   Grundgesamtheit n zu erhalten
 \end{description}
 Wichtig ist, dass die folgenden Vorgehensweisen sich nicht auf die
-Binomialverteilung beschränken. Es muss nur $ \mu $ und $ \sigma $
+Binomialverteilung beschränkt. Es muss nur $ \mu $ und $ \sigma $
 gegeben sein! Für all die nachstehenden Suchen sind diese beide
 definiert durch:
 \begin{itemize}
@@ -130,7 +130,7 @@ Gegebene Variablen:
 \item p\textsubscript{2}
 \end{itemize}
 \begin{equation}
-  qnorm(p_2, 1, 0) = \frac{x -\mu}{\sigma} \text{solve, n} \rightarrow
+  qnorm(p_2, 0, 1) = \frac{x -\mu}{\sigma} \text{solve, n} \rightarrow
 \end{equation}
 
 \subsection{Suche nach p}
@@ -145,6 +145,154 @@ Wenn es sich um eine Binomialverteilung handelt, dann gilt: $ \sigma =
   pnorm(x, \mu, \sigma) = p_2
 \end{equation}
 
+\section{Zweiseitiger Zufallsstreubereich}
+\subsection{Grundlegendes}
+Beim zweiseitigen Zufallsstreubereich wird ermittelt, welche Unter-
+und Obergrenze die Werte in einem bestimmten Bereich symmetrisch
+verteilt um den Erwartungswert besitzt.
+\\
+Gegebene Variablen:
+\begin{description}
+\item[$ \mu $]
+\item[$ \sigma $]
+\item[p] Die Wahrscheinlichkeit (Größe) des Streubereichs symmetrisch
+  um den Erwartungswert $ \mu $
+\end{description}
+
+\subsection{Berechnung von x\textsubscript{u,o}}
+\begin{equation}
+  \alpha = 1 - p
+\end{equation}
+\begin{equation}
+  x_u = \mu - qnorm(1 - \frac{\alpha}{2}, 0, 1) * \sigma
+\end{equation}
+\begin{equation}
+  x_o = \mu + qnorm(1 - \frac{\alpha}{2}, 0, 1) * \sigma
+\end{equation}
+
+\subsection{Berechnung von x\textsubscript{u,o} bei Stichproben}
+Es kommt nun zustätzlich die gegebene Variable der Stichprobenanzahl
+\textbf{n} hinzu.
+\begin{equation}
+  \alpha = 1 - p
+\end{equation}
+\begin{equation}
+  \overline{\sigma} = \frac{\sigma}{\sqrt{n}}
+\end{equation}
+\begin{equation}
+  x_u = \mu - qnorm(1 - \frac{\alpha}{2}, 0, 1) * \overline{\sigma}
+\end{equation}
+\begin{equation}
+  x_o = \mu + qnorm(1 - \frac{\alpha}{2}, 0, 1) * \overline{\sigma}
+\end{equation}
+
+
+\section{Konfidenzintervall}
+\label{sec:konfidenzintervall}
+\subsection{Grundlegendes}
+Das Konfidenzintervall gibt an, in welchen Intervall die Standardabweichung am
+ehestens bei gegebenen Stichproben liegt. Das bedeutet, dass $ \sigma $ selbst
+nicht ermittelt werden kann, jedoch der Bereich, in der sich $ \sigma $ bewegt.
+
+Gegeben Variablen müssen sein:
+\begin{description}
+\item[m] Ein einzeiliger Stichprobenvektor
+\item[s] Die Standardabweichung s berechnet aus m errechnet mit $
+  Stdev() $ bzw. $ stdev() $
+\item[p] Das Konfidenznevau (meistens 95 \%)
+\end{description}
+
+\subsection{Suche nach dem Konfidenzintervall}
+Es werden folgende Variablen gesucht:
+\begin{description}
+\item[$ \sigma_u $] Die untere Grenze des Vertrauensbereichs
+\item[$ \sigma_o $] Die obere Grenze des Vertrauensbereichs
+\end{description}
+
+Berechnung:
+\begin{equation}
+  \alpha = 1 - p
+\end{equation}
+\begin{equation}
+  p_u = 1 - \frac{\alpha}{2}
+\end{equation}
+\begin{equation}
+  p_o = \frac{\alpha}{2}
+\end{equation}
+\begin{equation}
+  \sigma_u = s * \sqrt{\frac{f}{qchisq(p_u , f)}}
+\end{equation}
+\begin{equation}
+  \sigma_o = s * \sqrt{\frac{f}{qchisq(p_o , f)}}
+\end{equation}
+
+Der p \%ige Vertrauensbereich für $
+\sigma $ liegt dann bei: $ [
+\sigma_u ; \sigma_o] $
+
+\section{Ermittlung von $ \mu $}
+\subsection{Ermittlung basierend auf Stichproben}
+\label{sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge}
+Es wird, ähnlich wie bei ~\autoref{sec:konfidenzintervall}
+-~\nameref{sec:konfidenzintervall}, die Erwartungswert $ \mu $ zu Stichproben in
+einem Intervall errechnet. Es ist dabei $ \sigma $ gegeben!
+\\\\
+Gegebene Variablen:
+\begin{description}
+\item[m] Ein einzeiliger Stichprobenvektor
+\item[n] Die Länge von m
+\item[$ \sigma $] Die Standardabweichung
+\item[$ \alpha $] Die Signifikanz in Prozent
+\end{description}
+
+\subsubsection{Berechnung von $ \mu $}
+\begin{equation}
+  \overline{x} = mean(m)
+\end{equation}
+\begin{equation}
+  u = qnorm(1 - \frac{\alpha}{2}, 0, 1)
+\end{equation}
+\begin{equation}
+  \mu_u = \overline{x} - u * \frac{\sigma}{\sqrt{n}}
+\end{equation}
+\begin{equation}
+  \mu_o = \overline{x} + u * \frac{\sigma}{\sqrt{n}}
+\end{equation}
+
+\subsection{Studentsche Verteilung}
+\subsubsection{Grundlegendes}
+Es wird der Erwartungswert $ \mu $ auf Grund einer Stichprobe ermittelt. Hier
+ist jedoch $ \sigma $ nicht bekannt und muss selbst errechnet werden. Der Rest
+deckt sich mit Kapitel
+~\autoref{sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge}
+-~\nameref{sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge}.
+\\
+Gegebene Variablen:
+\begin{description}
+\item[m] Ein einzeiliger Stichprobenvektor
+\item[n] Die Länge von m
+\item[s] Die Standardabweichung s berechnet aus m errechnet mit $
+  Stdev() $ bzw. $ stdev() $
+\item[$ \alpha $] Die Signifikanz in Prozent
+\end{description}
+
+\subsubsection{Berechnung von $ \mu $}
+\begin{equation}
+  \overline{x} = mean(m)
+\end{equation}
+\begin{equation}
+  s = Stdev(m) bzw. stdev(m)
+\end{equation}
+\begin{equation}
+  f = n -1
+\end{equation}
+\begin{equation}
+  \mu_u = \overline{x} - qt(1 - \frac{\alpha}{2}, f) * \frac{s}{\sqrt{n}}
+\end{equation}
+\begin{equation}
+  \mu_o = \overline{x} + qt(1 - \frac{\alpha}{2}, f) * \frac{s}{\sqrt{n}}
+\end{equation}
+
 \section{$ \chi ^2 $-Verteilung}
 \subsection{Grundlegendes}
 \label{sec:chiquadratverteilunggrundlegendes}
@@ -155,6 +303,8 @@ Die $ \chi ^2 $-Verteilung wird verwendet um zu Überpüfen:
 \item Zu einer Wahrscheinlichkeit p wird welche Standardabweichung s
   erwartet? (Kapitel ~\autoref{sec:chisuchenachs}
   -~\nameref{sec:chisuchenachs})
+\item Eine alternierende Standardabweichung s ist zur
+  Standardabweichung $ \sigma $ gesucht.
 \end{itemize}
 
 Wichtig dabei ist, dass es sich bei der Standardabweichung s um eine
@@ -162,8 +312,8 @@ Standardabweichung gegeben von bestimmten Werten handelt. Somit wird s
 entweder durch einen externen Rechner gegeben oder selbst mit den
 folgenden Funktionen ermittelt:
 \begin{description}
-\item[$ Stdev(m) $] m ist ein einzeiliger Vektor mit Stichproben
-\item[$ stdev(m) $] m ist ein einzeiliger Vektor mit der Grundgesamtheit
+\item[$ Stdev(m) $] m ist ein einzeiliger Vektor mit der Grundgesamtheit
+\item[$ stdev(m) $] m ist ein einzeiliger Vektor mit Stichproben
 \end{description}
 
 \subsection{Freiheitsgrade}
@@ -231,112 +381,5 @@ Es wird somit die Berechnung des Kapitels
 ~\autoref{sec:kumulativewahrscheinlichkeitsdichte}
 -~\nameref{sec:kumulativewahrscheinlichkeitsdichte}
 verwendet.
-
-\section{Konfidenzintervall}
-\label{sec:konfidenzintervall}
-\subsection{Grundlegendes}
-Das Konfidenzintervall gibt an, in welchen Intervall die Standardabweichung am
-ehestens bei gegebenen Stichproben liegt. Das bedeutet, dass $ \sigma $ selbst
-nicht ermittelt werden kann, jedoch der Bereich, in der sich $ \sigma $ bewegt.
-
-Gegeben Variablen müssen sein:
-\begin{description}
-\item[m] Ein einzeiliger Stichprobenvektor
-\item[s] Die Standardabweichung s berechnet aus m errechnet mit $
-  Stdev() $ bzw. $ stdev() $
-\item[p] Das Konfidenznevau (meistens 95 \%)
-\item[$ \alpha $] Die Signifikanz in Prozent
-\end{description}
-
-\subsection{Suche nach dem Konfidenzintervall}
-Es werden folgende Variablen gesucht:
-\begin{description}
-\item[$ \sigma_u $] Die untere Grenze des Vertrauensbereichs
-\item[$ \sigma_o $] Die obere Grenze des Vertrauensbereichs
-\end{description}
-
-Berechnung:
-\begin{equation}
-  \alpha = 1 - p
-\end{equation}
-\begin{equation}
-  p_u = 1 - \frac{\alpha}{2}
-\end{equation}
-\begin{equation}
-  p_o = \frac{\alpha}{2}
-\end{equation}
-\begin{equation}
-  \sigma_u = s * \frac{f}{qchisq(p_u , f)}
-\end{equation}
-\begin{equation}
-  \sigma_o = s * \frac{f}{qchisq(p_o , f)}
-\end{equation}
-
-Der p \%ige Vertrauensbereich für $
-\sigma $ liegt dann bei: $ [
-\sigma_u ; \sigma_o] $
-
-\section{Ermittlung von $ \mu $}
-\subsection{Ermittlung basierend auf Stichproben}
-\label{sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge}
-Es wird, ähnlich wie bei ~\autoref{sec:konfidenzintervall}
--~\nameref{sec:konfidenzintervall}, die Erwartungswert $ \mu $ zu Stichproben in
-einem Intervall errechnet. Es ist dabei $ \sigma $ gegeben!
-\\\\
-Gegebene Variablen:
-\begin{description}
-\item[m] Ein einzeiliger Stichprobenvektor
-\item[n] Die Länge von m
-\item[$ \sigma $] Die Standardabweichung
-\item[$ \alpha $] Die Signifikanz in Prozent
-\end{description}
-
-\subsubsection{Berechnung von $ \mu $}
-\begin{equation}
-  \overline{x} = mean(m)
-\end{equation}
-\begin{equation}
-  u = qnorm(1 - \frac{\alpha}{2}, 0, 1)
-\end{equation}
-\begin{equation}
-  \mu_u = \overline{x} + u * \frac{\sigma}{\sqrt{n}}
-\end{equation}
-\begin{equation}
-  \mu_o = \overline{x} - u * \frac{\sigma}{\sqrt{n}}
-\end{equation}
-
-\subsection{Studentsche Verteilung}
-\subsubsection{Grundlegendes}
-Es wird der Erwartungswert $ \mu $ auf Grund einer Stichprobe ermittelt. Hier
-ist jedoch $ \sigma $ nicht bekannt und muss selbst errechnet werden. Der Rest
-deckt sich mit Kapitel
-~\autoref{sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge}
--~\nameref{sec:ermittlungvonmuermittlungbasierendaufeinergrundmenge}.
-\\
-Gegebene Variablen:
-\begin{description}
-\item[m] Ein einzeiliger Stichprobenvektor
-\item[n] Die Länge von m
-\item[s] Die Standardabweichung s berechnet aus m errechnet mit $
-  Stdev() $ bzw. $ stdev() $
-\item[$ \alpha $] Die Signifikanz in Prozent
-\end{description}
-
-\subsubsection{Berechnung von $ \mu $}
-\begin{equation}
-  \overline{x} = mean(m)
-\end{equation}
-\begin{equation}
-  s = Stdev(m) bzw. stdev(m)
-\end{equation}
-\begin{equation}
-  f = n -1
-\end{equation}
-\begin{equation}
-  \mu_u = \overline{x} + qt(1 - \frac{\alpha}{2}, f) * \frac{s}{\sqrt{n}}
-\end{equation}
-\begin{equation}
-  \mu_o = \overline{x} - qt(1 - \frac{\alpha}{2}, f) * \frac{s}{\sqrt{n}}
-\end{equation}
 
 \end{document}
