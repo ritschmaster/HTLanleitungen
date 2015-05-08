@@ -1,0 +1,253 @@
+% Copyright (C)  2015 Richard Bäck.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3 or
+% any later version published by the Free Software Foundation; with no
+% Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+% copy of the license is included in the section entitled "GNU Free
+% Documentation License".
+
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc} % enable umlauts in the source files
+\usepackage{palatino}
+\usepackage{graphicx} % use of graphics
+\usepackage{amsmath} % for equotation*
+\usepackage{eurosym} % the euro symbol
+\usepackage{fixltx2e} % super-/subscript
+\usepackage{listings} % code listings
+\usepackage{fancyhdr} % headers
+\usepackage{hyperref} % to create references to chapters etc.
+\usepackage[version=3]{mhchem} % chemical formulas
+\usepackage[german]{babel} % use german headings
+\usepackage[margin=1.5cm,vmargin={0pt,1cm}]{geometry}
+
+\DeclareGraphicsExtensions{.pdf}
+
+\setlength{\headheight}{2.5cm}
+\setlength{\headsep}{0.5cm}
+\setlength{\textheight}{26cm}
+
+\pagestyle{fancy}
+\lhead{Richard Bäck}
+\chead{}
+\rhead{\today}
+\lfoot{}
+\cfoot{}
+\rfoot{Seite \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{Zusammenschrift zur Kombinatorik}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\section{Permutation}
+\subsection{ohne Wiederholung}
+\subsubsection{Definition}
+Eine Permutation ohne Wiederholung ist der Austausch von \bf{n}
+verschiedenen Dingen untereinander. Also können \bf{n} Dinge nacheinander
+in einer beliebigen Reihenfolge angeordnet werden.
+
+\begin{equation}
+  \label{eq:1}
+  n!
+\end{equation}
+
+\subsubsection{Mathcad}
+In Mathcad gibt es für die Permutation ohne Wiederholung keinen Befehl.
+
+\subsubsection{Beispiel}
+\begin{itemize}
+\item {
+    10 Leute gehen nacheinander durch eine Türe. Anzahl von Möglichkeiten,
+    wie sie durch die Türe gehen können:
+    \begin{equation}
+      \label{eq:3}
+      10! = 3628800
+    \end{equation}
+  }
+\item {
+    Ein Alphabet besteht aus den Buchstaben 'ABC'. Wieviele Wörter
+    können entstehen, wenn keine Wiederholungen enthalten sein dürfen?
+    \begin{equation}
+      \label{eq:4}
+      3! = 6
+    \end{equation}
+  }
+\end{itemize}
+
+\subsection{mit Wiederholung}
+\subsubsection{Defintion}
+Eine Permutation mit Wiederholung ist der Austausch von \bf{n}
+verschiedenen Dingen untereinander. Dabei können aber \bf{m} verschiedene
+Teilmengen von *n* doppelt auftreten. *n\textsubscript{m}* stellt die
+Anzahl der *m*-ten Teilmenge.
+
+\begin{equation}
+  \label{eq:2}
+  \frac{n!}{n_0! \cdot n_1! \cdot n_m!}
+\end{equation}
+
+\subsubsection{Mathcad}
+In Mathcad gibt es für die Permutation mit Wiederholung keinen Befehl.
+
+\subsubsection{Beispiel}
+\begin{itemize}
+\item {
+    Ein Alphabet besteht aus den Buchstaben 'ABBCC'. Wieviele Wörter
+    können entstehen?
+    \begin{equation}
+      \label{eq:5}
+      \frac{4!}{2! \cdot 2!} = 6
+    \end{equation}
+  }
+\end{itemize}
+
+\section{Variation}
+\subsection{ohne Wiederholung}
+\subsubsection{Defintion}
+Eine Variation ist eine Auswahl *k* von *n* verschiedenen Elementen
+(es gilt $ k <= n $). Dabei ist die Reihenfolge von Bedeutung. In den
+*n* Elementen darf jedes Element nur einmal vorkommen.
+
+\begin{equation}
+  \label{eq:6}
+  \frac{n!}{(n - k)!}
+\end{equation}
+
+\subsubsection{Mathcad}
+In Mathcad lautet der Befehl:
+\begin{equation}
+  \label{eq:7}
+  permut(n, k)
+\end{equation}
+
+\subsubsection{Beispiele}
+\begin{itemize}
+\item {
+    Wieviele zweiziffrige Zahlen kann man aus den Ziffern 1, 4, 6, 8
+    und 9 bilden, wenn in der Zahl jede Ziffer nur einmal vorkommen
+    darf?
+    \begin{equation}
+      \label{eq:8}
+      permut(5, 2) = \frac{5!}{(5 - 2)!} = 20
+    \end{equation}
+  }
+\end{itemize}
+
+\subsection{mit Wiederholung}
+\subsection{Defintion}
+Eine Variation mit Wiederholung ist eine Auswahl *k* von *n*
+verschiedenen Elementen. Dabei ist die Reihenfolge wichtig, jedoch
+können alle ausgewählten *k* Elemente gleich sein.
+
+\begin{equation}
+  \label{eq:11}
+  n^k
+\end{equation}
+
+\subsubsection{Mathcad}
+In Mathcad gibt es für die Varation mit Wiederholung keinen Befehl.
+
+\subsection{Beispiele}
+\begin{itemize}
+\item {
+    Ein Alphabet besteht aus den Buchstaben ``ABCDEFG''. Wieviele
+    Passwörter können aus diesem Alphabet generiert werden, wenn ein
+    Passwort eine länge von 5 Buchstaben besitzen muss?
+    \begin{equation}
+      \label{eq:12}
+      7^5 = 16807
+    \end{equation}
+  }
+\end{itemize}
+
+\section{Kombination}
+\subsection{ohne Wiederholung}
+\subsubsection{Defintion}
+Bei einer Kombination ohne Wiederholung wird eine Auswahl *k* von *n*
+Elementen getroffen. Dabei ist die Reihenfolge egal und jedes Element
+von *n* kann nur einmal ausgewählt werden.
+
+\begin{equation}
+  \frac{n!}{k! \cdot (n - k)!}
+\end{equation}
+
+\subsubsection{Mathcad}
+\begin{equation}
+  \label{eq:14}
+  combin(n, k)
+\end{equation}
+
+\subsubsection{Beispiele}
+\begin{itemize}
+\item {
+    In einem Koordinatensystem gibt es 10 Punkte. Wieviele Geraden
+    können gezeichnet werden, wenn maximal 3 Punkte auf einer Gerade
+    liegen dürfen?
+    \begin{equation}
+      \label{eq:13}
+      combin(10, 3) = \frac{10!}{3! \cdot (10 - 3)!} = 120
+    \end{equation}
+  }
+\end{itemize}
+
+\subsection{mit Wiederholung}
+\subsubsection{Defintion}
+Bei einer Kombination mit Wiederholung wird eine Auswahl *k* von *n*
+Elementen getroffen. Dabei ist die Reihenfolge egal und es können alle
+ausgewählten *k* Elemente gleich sein.
+
+\begin{equation}
+  \label{eq:15}
+  \binom{n + k - 1}{k}
+\end{equation}
+
+\subsubsection{Mathcad}
+In Mathcad gibt es für die Kombination mit Wiederholung keinen Befehl,
+jedoch kann dafür der $combin()$-Befehl missbraucht werden.
+\begin{equation}
+  \label{eq:16}
+  combin(n + k - 1, k)
+\end{equation}
+
+\subsubsection{Beispiele}
+\begin{itemize}
+\item {
+    In einer Klasse mit 20 Schülern soll die Aufgabe des
+    Klassenordners und des Kassiers bestimmt werden, dabei kann beide
+    Funktionen auch eine Person übernehmen. Wieviele Möglichkeiten
+    gibt es?
+    \begin{equation}
+      \label{eq:17}
+      combin(20 + 2 - 1, 2) = \binom{20 + 2 - 1}{2} = 210
+    \end{equation}
+  }
+\end{itemize}
+
+\section{Wahrscheinlichkeit}
+\subsection{Definition}
+Die Wahrscheinlichkeit zu berechnen, wenn die Anzahl *x* von
+Möglichkeiten gegeben ist, ist relativ einfach:
+
+\begin{equation}
+  \label{eq:9}
+  \frac{1}{x}
+\end{equation}
+
+\subsection{Beispiel}
+\begin{itemize}
+\item {
+    Wie wahrscheinlich ist es in Lotto 6 aus 45 zu gewinnnen den
+    Jackpot zu gewinnen (6 richtige Zahlen benötigt, egal in welcher
+    Reihenfolge)?
+    \begin{equation}
+      \label{eq:10}
+      \frac{1}{combin(45, 6)} = \frac{1}{\frac{45!}{6! \cdot (45 - 6)!}} = \frac{1}{8145060}
+    \end{equation}
+  }
+\end{itemize}
+
+
+\end{document}
