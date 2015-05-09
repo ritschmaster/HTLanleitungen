@@ -60,7 +60,7 @@ der Eulerschen Zahl aufbauen, nicht integrierbar.
 \item { Es wird eine beliebige Funktion definiert:
     \begin{equation}
       \label{eq:1}
-      f(x) := cos(x)
+      f(x) := (frac{1}{2}^x)
     \end{equation}
   }
 \item { Es wird eine Funktion definiert, die n-te Ableitung der
@@ -75,14 +75,25 @@ der Eulerschen Zahl aufbauen, nicht integrierbar.
     \begin{equation}
       \label{eq:4}
       \begin{split}
-        fi(x,0) = cos(x)  \Rightarrow fi(0,0) = 1\\
-        fi(x,1) = -sin(x) \Rightarrow fi(0,1) = 0\\
-        fi(x,2) = -cos(x) \Rightarrow fi(0,2) = -1\\
-        fi(x,3) = sin(x)  \Rightarrow fi(0,3) = 0\\
-        fi(x,4) = sin(x)  \Rightarrow fi(0,4) = 1\\
-        fi(x,5) = cos(x)  \Rightarrow fi(0,5) = 0\\
-        fi(x,6) = -cos(x) \Rightarrow fi(0,6) = -1\\
+        fi(x,0) = -\frac{ln(2)}{2^x}   \Rightarrow fi(0,1) = -ln(2)\\
+        fi(x,1) = \frac{ln(2)^2}{2^x}  \Rightarrow fi(0,2) = ln(2)^2\\
+        fi(x,2) = -\frac{ln(2)^3}{2^x} \Rightarrow fi(0,3) = -ln(2)^3\\
+        fi(x,3) = \frac{ln(2)^4}{2^x}  \Rightarrow fi(0,4) = ln(2)^4\\
+        fi(x,4) = -\frac{ln(2)^5}{2^x} \Rightarrow fi(0,5) = ln(2)^5\\
       \end{split}
+    \end{equation}
+  }
+\item { Es ist nun möglich eine Regelmäßigkeit zu erkennen. Diese soll
+    durch eine Funktion modeliert werden:
+    \begin{equation}
+      \label{eq:12}
+      regel(i) := (-1)^i \cdot ln(2)^i
+    \end{equation}
+    Für die weitere Verwendung muss diese Regel durch $ i! $ dividert
+    werden:
+    \begin{equation}
+      \label{eq:13}
+      faktor(i) := \frac{regel(i)}{i!}
     \end{equation}
   }
 \item { Es kann nun eine Funktion $ g() $ erstellt werden, welche die
@@ -90,37 +101,21 @@ der Eulerschen Zahl aufbauen, nicht integrierbar.
     \begin{equation}
       \label{eq:10}
       \begin{split}
-        g(x) := f(0) + fi(x,1) \cdot x + \frac{fi(x, 2)}{2!} \cdot x^2 + \frac{fi(x, 3)}{3!} \cdot x^3 + ...\\
-        g(x) \rightarrow 1 + 0 \cdot x + \frac{-1}{2!} \cdot x^2 + 0 \cdot x^3 + \frac{1}{4!} \cdot x^4 \pm ...
+        g(x, n) := \sum_{i = 0}^{n} faktor(i) \cdot x^i
       \end{split}
-    \end{equation}
-  }
-\item { Es kann nun eine Regelmäßigkeiten festgestellt werden und mit
-    der Funktion $ g() $ kombiniert werden und eine intelligente
-    Summenformel erstellt werden:
-    \begin{equation}
-      \label{eq:11}
-      g(x, n) := \sum_{i = 0}^{n} \frac{(-1)^i}{(2 \cdot i)!} \cdot x^{2 \cdot i}
     \end{equation}
   }
 \item { Als letzteres ist die Berechnung des Konvergenzradius
-    möglich. Dafür wird eine Funktion aufgestellt, die das Verhalten
-    des Faktors x\textsuperscript{n} beschreibt. Das bedeutet
-    folgendes:
-    \begin{equation}
-      \label{eq:15}
-      \begin{split}
-        faktor(i) := \frac{(-1)^i}{(2 \cdot i)!}
-      \end{split}
-    \end{equation}
-    Diese Faktor wird nun für die Berechnung des Konvergenzradius
-    herangezogen:
+    möglich.
     \begin{equation}
       \label{eq:16}
       \lim_{i\to\infty} \lvert \frac{faktor(i)}{factor(i + 1)} \rvert \rightarrow \infty
     \end{equation}
   }
 \end{enumerate}
+
+\subsection{Der Konvergenzradius}
+Der Konvergenzradius beschreibt, für welche Werte die Taylorreihe gültig ist.
 
 \subsection{Ablauf mit Mathcad}
 Mathcad kann die Taylorreihe nur für $ x_0 = 0 $ berechnen!
@@ -143,29 +138,6 @@ Mathcad kann die Taylorreihe nur für $ x_0 = 0 $ berechnen!
     hierbei ist wieder, dass n groß sein muss um eine genaue
     Annäherung zu gewährleisten!
   }
-\item { Um den Konvergenzradius zu berechnen muss eine Regelmäßigkeit
-    aus der Taylorreihe gezogen werden können:
-    \begin{equation}
-      \label{eq:14}
-      f(x) Reihen, 6 \rightarrow 1 - \frac{x^2}{2} + \frac{x^4}{24}
-    \end{equation}
-    Es ist nun wichtig, eine Formel aufzustellen, die das Verhalten
-    der Faktoren zu x\textsuperscript{n} beschreibt. Das bedeutet
-    folgendes:
-    \begin{equation}
-      \label{eq:15}
-      \begin{split}
-        h(x, n) := \sum_{i = 0}^{n} \frac{(-1)^i}{(2 \cdot i)!} \cdot x^{2 \cdot i}\\
-        faktor(i) := \frac{(-1)^i}{(2 \cdot i)!}
-      \end{split}
-    \end{equation}
-    Diese Faktor wird nun für die Berechnung des Konvergenzradius
-    herangezogen:
-    \begin{equation}
-      \label{eq:16}
-      \lim_{i\to\infty} \lvert \frac{faktor(i)}{factor(i + 1)} \rvert \rightarrow \infty
-    \end{equation}
-  }
 \end{enumerate}
 
 \section{Fourierreihe}
@@ -178,7 +150,8 @@ angenähert. Für die Annäherung gilt das selbe wie bei Kapitel
 
 \subsection{Verwendungszweck}
 Die Fourierreihe ist vor allem in der Nachrichtentechnik wichtig, um
-bestimmte Schwingungen annähern zu können.
+bestimmte Schwingungen annähern zu können. Außerdem können mit ihr die
+Grundschwingung und die Oberschwingungen ermittelt werden.
 
 \subsection{Ablauf}
 Gegeben soll folgende Funktion sein:\\
@@ -210,8 +183,8 @@ Gegeben soll folgende Funktion sein:\\
 \item { Berechnung der Koeffizienten:
     \begin{equation}
       \label{eq:7}
-          a(n) := \frac{T}{2} \cdot \int_{0}^{T} f(t) \cdot cos(n \cdot \omega_0 \cdot t) dt
-          b(n) := \frac{T}{2} \cdot \int_{0}^{T} f(t) \cdot sin(n \cdot \omega_0 \cdot t) dt
+          a(n) := \frac{2}{T} \cdot \int_{0}^{T} f(t) \cdot cos(n \cdot \omega_0 \cdot t) dt
+          b(n) := \frac{2}{T} \cdot \int_{0}^{T} f(t) \cdot sin(n \cdot \omega_0 \cdot t) dt
     \end{equation}
   }
 \item { Modellierung der Annäherungsreihenfunktion:
