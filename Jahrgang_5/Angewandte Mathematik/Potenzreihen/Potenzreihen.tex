@@ -44,6 +44,7 @@
 
 \section{Taylorreihe}
 \subsection{Definition}
+\label{sec:taylordefinition}
 Die Taylorreihe wird aufgestellt um eine beliebige Funktion mit einer
 unendlichen Potenzreihe anzunähern. Es ist praktisch nicht möglich
 eine unendliche Reihe anzulegen. Deshalb gilt: je größer n ist, desto
@@ -59,7 +60,7 @@ der Eulerschen Zahl aufbauen, nicht integrierbar.
 \item { Es wird eine beliebige Funktion definiert:
     \begin{equation}
       \label{eq:1}
-      f(x) := e^{-x^2}
+      f(x) := cos(x)
     \end{equation}
   }
 \item { Es wird eine Funktion definiert, die n-te Ableitung der
@@ -69,29 +70,115 @@ der Eulerschen Zahl aufbauen, nicht integrierbar.
       fi(x,i) := \frac{d^i}{dx^i} \cdot f(x)
     \end{equation}
   }
-\item { Es können nun mit fi() beliebig viele Ableitungen erstellt
-    werden. Mit dieser können nun regelmäßigkeiten erkannt werden.
+\item { Es können nun mit $ fi() $ beliebig viele Ableitungen an
+    beliebigen Stellen (z.B. für $ x_0 = 0 $)) erstellt werden.
+    \begin{equation}
+      \label{eq:4}
+      \begin{split}
+        fi(x,0) = cos(x)  \Rightarrow fi(0,0) = 1\\
+        fi(x,1) = -sin(x) \Rightarrow fi(0,1) = 0\\
+        fi(x,2) = -cos(x) \Rightarrow fi(0,2) = -1\\
+        fi(x,3) = sin(x)  \Rightarrow fi(0,3) = 0\\
+        fi(x,4) = sin(x)  \Rightarrow fi(0,4) = 1\\
+        fi(x,5) = cos(x)  \Rightarrow fi(0,5) = 0\\
+        fi(x,6) = -cos(x) \Rightarrow fi(0,6) = -1\\
+      \end{split}
+    \end{equation}
+  }
+\item { Es kann nun eine Funktion $ g() $ erstellt werden, welche die
+    gegebene Funktion $ f() $ annäherd:
+    \begin{equation}
+      \label{eq:10}
+      \begin{split}
+        g(x) := f(0) + fi(x,1) \cdot x + \frac{fi(x, 2)}{2!} \cdot x^2 + \frac{fi(x, 3)}{3!} \cdot x^3 + ...\\
+        g(x) \rightarrow 1 + 0 \cdot x + \frac{-1}{2!} \cdot x^2 + 0 \cdot x^3 + \frac{1}{4!} \cdot x^4 \pm ...
+      \end{split}
+    \end{equation}
+  }
+\item { Es kann nun eine Regelmäßigkeiten festgestellt werden und mit
+    der Funktion $ g() $ kombiniert werden und eine intelligente
+    Summenformel erstellt werden:
+    \begin{equation}
+      \label{eq:11}
+      g(x, n) := \sum_{i = 0}^{n} \frac{(-1)^i}{(2 \cdot i)!} \cdot x^{2 \cdot i}
+    \end{equation}
+  }
+\item { Als letzteres ist die Berechnung des Konvergenzradius
+    möglich. Dafür wird eine Funktion aufgestellt, die das Verhalten
+    des Faktors x\textsuperscript{n} beschreibt. Das bedeutet
+    folgendes:
+    \begin{equation}
+      \label{eq:15}
+      \begin{split}
+        faktor(i) := \frac{(-1)^i}{(2 \cdot i)!}
+      \end{split}
+    \end{equation}
+    Diese Faktor wird nun für die Berechnung des Konvergenzradius
+    herangezogen:
+    \begin{equation}
+      \label{eq:16}
+      \lim_{i\to\infty} \lvert \frac{faktor(i)}{factor(i + 1)} \rvert \rightarrow \infty
+    \end{equation}
   }
 \end{enumerate}
 
 \subsection{Ablauf mit Mathcad}
+Mathcad kann die Taylorreihe nur für $ x_0 = 0 $ berechnen!
 \begin{enumerate}
 \item { Es wird eine beliebige Funktion definiert:
     \begin{equation}
       \label{eq:1}
-      f(x) := e^{-x^2}
+      f(x) := cos(x)
     \end{equation}
   }
 \item { Mathcad hat eine eigene Funktion integriert, die eine
-    Taylorreihe mit einer Annäherung von n Summanden:
+    Taylorreihe mit einer Annäherung von n Summanden \textbf{an der
+      Stelle $ f(0) $} berechnet:
     \begin{equation}
       \label{eq:2}
       g(x, n) := f(x) Reihen, n
     \end{equation}
   }
+\item { Es kann nun $ g() $ anstatt $ f() $ benutzt werden. Wichtig
+    hierbei ist wieder, dass n groß sein muss um eine genaue
+    Annäherung zu gewährleisten!
+  }
+\item { Um den Konvergenzradius zu berechnen muss eine Regelmäßigkeit
+    aus der Taylorreihe gezogen werden können:
+    \begin{equation}
+      \label{eq:14}
+      f(x) Reihen, 6 \rightarrow 1 - \frac{x^2}{2} + \frac{x^4}{24}
+    \end{equation}
+    Es ist nun wichtig, eine Formel aufzustellen, die das Verhalten
+    der Faktoren zu x\textsuperscript{n} beschreibt. Das bedeutet
+    folgendes:
+    \begin{equation}
+      \label{eq:15}
+      \begin{split}
+        h(x, n) := \sum_{i = 0}^{n} \frac{(-1)^i}{(2 \cdot i)!} \cdot x^{2 \cdot i}\\
+        faktor(i) := \frac{(-1)^i}{(2 \cdot i)!}
+      \end{split}
+    \end{equation}
+    Diese Faktor wird nun für die Berechnung des Konvergenzradius
+    herangezogen:
+    \begin{equation}
+      \label{eq:16}
+      \lim_{i\to\infty} \lvert \frac{faktor(i)}{factor(i + 1)} \rvert \rightarrow \infty
+    \end{equation}
+  }
 \end{enumerate}
 
 \section{Fourierreihe}
+
+\subsection{Definition}
+Mit der Fourierreihe wird eine beliebige Funktion über eine bestimmte
+Periode mit unendlich vielen Sinus- und Cosinusschwinungen
+angenähert. Für die Annäherung gilt das selbe wie bei Kapitel
+~\autoref{sec:taylordefinition} -~\nameref{sec:taylordefinition}.
+
+\subsection{Verwendungszweck}
+Die Fourierreihe ist vor allem in der Nachrichtentechnik wichtig, um
+bestimmte Schwingungen annähern zu können.
 
 \subsection{Ablauf}
 Gegeben soll folgende Funktion sein:\\
@@ -114,8 +201,10 @@ Gegeben soll folgende Funktion sein:\\
 \item { Festlegung der Periodenlänge:
     \begin{equation}
       \label{eq:6}
-      T := 3
-      \omega_0 = \frac{2 \cdot \pi}{T}
+      \begin{split}
+        T := 3\\
+        \omega_0 = \frac{2 \cdot \pi}{T}
+      \end{split}
     \end{equation}
   }
 \item { Berechnung der Koeffizienten:
@@ -131,11 +220,18 @@ Gegeben soll folgende Funktion sein:\\
       fn(t,n) := \frac{a(0)}{2} + \sum_{i = 1}^{n} (a(i) \cdot cos(i \cdot \omega_0 \cdot t) + b(i) \cdot sin(i \cdot \omega_0 \cdot t))
     \end{equation}
   }
-\item {
+\item { Aufstellen der Funktion zur Berechnung des Fourierspektrums:
     \begin{equation}
       \label{eq:9}
       A(i) := \sqrt{a(i)^2 + b(i)^2}
     \end{equation}
+  }
+\item { Es kann nun für die Funktion $ fn(t, n) $ ein Graph gezeichnet
+    werden. Dieser stellt die Annäherung dar. Dabei muss n ein fixer
+    Wert sein (außer es soll ein 3D Graph sein!)
+  }
+\item { Für den Graphen des Fourierspektrums muss unbedingt in den
+    Grapheneigenschaften auf ,,Stamm'' umgestellt werden!
   }
 \end{enumerate}
 
