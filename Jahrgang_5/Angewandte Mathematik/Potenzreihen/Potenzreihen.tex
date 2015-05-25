@@ -1,0 +1,211 @@
+% Copyright (C)  2015 Richard Bäck.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3 or
+% any later version published by the Free Software Foundation; with no
+% Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+% copy of the license is included in the section entitled "GNU Free
+% Documentation License".
+
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc} % enable umlauts in the source files
+\usepackage{palatino}
+\usepackage{graphicx} % use of graphics
+\usepackage{amsmath} % for equotation*
+\usepackage{eurosym} % the euro symbol
+\usepackage{fixltx2e} % super-/subscript
+\usepackage{listings} % code listings
+\usepackage{fancyhdr} % headers
+\usepackage{hyperref} % to create references to chapters etc.
+\usepackage[version=3]{mhchem} % chemical formulas
+\usepackage[german]{babel} % use german headings
+\usepackage[margin=1.5cm,vmargin={0pt,1cm}]{geometry}
+
+\DeclareGraphicsExtensions{.png}
+
+\setlength{\headheight}{2.5cm}
+\setlength{\headsep}{0.5cm}
+\setlength{\textheight}{26cm}
+
+\pagestyle{fancy}
+\lhead{Richard Bäck}
+\chead{}
+\rhead{\today}
+\lfoot{}
+\cfoot{}
+\rfoot{Seite \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{Zusammenschrift zu Potenzreihen}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\section{Taylorreihe}
+\subsection{Definition}
+\label{sec:taylordefinition}
+Die Taylorreihe wird aufgestellt um eine beliebige Funktion mit einer
+unendlichen Potenzreihe anzunähern. Es ist praktisch nicht möglich
+eine unendliche Reihe anzulegen. Deshalb gilt: je größer n ist, desto
+genauer ist die Annäherung.
+
+\subsection{Verwendungszweck}
+Eine Taylorreihe wird aufgestellt, um das Integral von einer nicht
+integrierbaren Funktion zu bilden. Z.B. sind alle Funktionen, die auf
+der Eulerschen Zahl aufbauen, nicht integrierbar.
+
+\subsection{Ablauf}
+\begin{enumerate}
+\item { Es wird eine beliebige Funktion definiert:
+    \begin{equation}
+      \label{eq:1}
+      f(x) := (frac{1}{2}^x)
+    \end{equation}
+  }
+\item { Es wird eine Funktion definiert, die n-te Ableitung der
+    gegebenen Funktion ermittelt:
+    \begin{equation}
+      \label{eq:3}
+      fi(x,i) := \frac{d^i}{dx^i} \cdot f(x)
+    \end{equation}
+  }
+\item { Es können nun mit $ fi() $ beliebig viele Ableitungen an
+    beliebigen Stellen (z.B. für $ x_0 = 0 $)) erstellt werden.
+    \begin{equation}
+      \label{eq:4}
+      \begin{split}
+        fi(x,0) = -\frac{ln(2)}{2^x}   \Rightarrow fi(0,1) = -ln(2)\\
+        fi(x,1) = \frac{ln(2)^2}{2^x}  \Rightarrow fi(0,2) = ln(2)^2\\
+        fi(x,2) = -\frac{ln(2)^3}{2^x} \Rightarrow fi(0,3) = -ln(2)^3\\
+        fi(x,3) = \frac{ln(2)^4}{2^x}  \Rightarrow fi(0,4) = ln(2)^4\\
+        fi(x,4) = -\frac{ln(2)^5}{2^x} \Rightarrow fi(0,5) = ln(2)^5\\
+      \end{split}
+    \end{equation}
+  }
+\item { Es ist nun möglich eine Regelmäßigkeit zu erkennen. Diese soll
+    durch eine Funktion modeliert werden:
+    \begin{equation}
+      \label{eq:12}
+      regel(i) := (-1)^i \cdot ln(2)^i
+    \end{equation}
+    Für die weitere Verwendung muss diese Regel durch $ i! $ dividert
+    werden:
+    \begin{equation}
+      \label{eq:13}
+      faktor(i) := \frac{regel(i)}{i!}
+    \end{equation}
+  }
+\item { Es kann nun eine Funktion $ g() $ erstellt werden, welche die
+    gegebene Funktion $ f() $ annäherd:
+    \begin{equation}
+      \label{eq:10}
+      \begin{split}
+        g(x, n) := \sum_{i = 0}^{n} faktor(i) \cdot x^i
+      \end{split}
+    \end{equation}
+  }
+\item { Als letzteres ist die Berechnung des Konvergenzradius
+    möglich.
+    \begin{equation}
+      \label{eq:16}
+      \lim_{i\to\infty} \lvert \frac{faktor(i)}{factor(i + 1)} \rvert \rightarrow \infty
+    \end{equation}
+  }
+\end{enumerate}
+
+\subsection{Der Konvergenzradius}
+Der Konvergenzradius beschreibt, für welche Werte die Taylorreihe gültig ist.
+
+\subsection{Ablauf mit Mathcad}
+Mathcad kann die Taylorreihe nur für $ x_0 = 0 $ berechnen!
+\begin{enumerate}
+\item { Es wird eine beliebige Funktion definiert:
+    \begin{equation}
+      \label{eq:1}
+      f(x) := cos(x)
+    \end{equation}
+  }
+\item { Mathcad hat eine eigene Funktion integriert, die eine
+    Taylorreihe mit einer Annäherung von n Summanden \textbf{an der
+      Stelle $ f(0) $} berechnet:
+    \begin{equation}
+      \label{eq:2}
+      g(x, n) := f(x) Reihen, n
+    \end{equation}
+  }
+\item { Es kann nun $ g() $ anstatt $ f() $ benutzt werden. Wichtig
+    hierbei ist wieder, dass n groß sein muss um eine genaue
+    Annäherung zu gewährleisten!
+  }
+\end{enumerate}
+
+\section{Fourierreihe}
+
+\subsection{Definition}
+Mit der Fourierreihe wird eine beliebige Funktion über eine bestimmte
+Periode mit unendlich vielen Sinus- und Cosinusschwinungen
+angenähert. Für die Annäherung gilt das selbe wie bei Kapitel
+~\autoref{sec:taylordefinition} -~\nameref{sec:taylordefinition}.
+
+\subsection{Verwendungszweck}
+Die Fourierreihe ist vor allem in der Nachrichtentechnik wichtig, um
+bestimmte Schwingungen annähern zu können. Außerdem können mit ihr die
+Grundschwingung und die Oberschwingungen ermittelt werden.
+
+\subsection{Ablauf}
+Gegeben soll folgende Funktion sein:\\
+\begin{center}
+  \includegraphics[height=10cm]{BeispielGraph}
+\end{center}
+
+\begin{enumerate}
+\item { Nachmodellieren der gegebenen Funktion mit Hilfe von
+    Entscheidungen:
+    \begin{equation}
+      \label{eq:5}
+      \begin{split}
+        f(t) := \rvert{2 if 0 \le t \le 2}\\
+        \rvert{(-2 \cdot t + 6) if 2 < t \le 3}\\
+        \rvert{0 otherwise}
+      \end{split}
+    \end{equation}
+  }
+\item { Festlegung der Periodenlänge:
+    \begin{equation}
+      \label{eq:6}
+      \begin{split}
+        T := 3\\
+        \omega_0 = \frac{2 \cdot \pi}{T}
+      \end{split}
+    \end{equation}
+  }
+\item { Berechnung der Koeffizienten:
+    \begin{equation}
+      \label{eq:7}
+          a(n) := \frac{2}{T} \cdot \int_{0}^{T} f(t) \cdot cos(n \cdot \omega_0 \cdot t) dt
+          b(n) := \frac{2}{T} \cdot \int_{0}^{T} f(t) \cdot sin(n \cdot \omega_0 \cdot t) dt
+    \end{equation}
+  }
+\item { Modellierung der Annäherungsreihenfunktion:
+    \begin{equation}
+      \label{eq:8}
+      fn(t,n) := \frac{a(0)}{2} + \sum_{i = 1}^{n} (a(i) \cdot cos(i \cdot \omega_0 \cdot t) + b(i) \cdot sin(i \cdot \omega_0 \cdot t))
+    \end{equation}
+  }
+\item { Aufstellen der Funktion zur Berechnung des Fourierspektrums:
+    \begin{equation}
+      \label{eq:9}
+      A(i) := \sqrt{a(i)^2 + b(i)^2}
+    \end{equation}
+  }
+\item { Es kann nun für die Funktion $ fn(t, n) $ ein Graph gezeichnet
+    werden. Dieser stellt die Annäherung dar. Dabei muss n ein fixer
+    Wert sein (außer es soll ein 3D Graph sein!)
+  }
+\item { Für den Graphen des Fourierspektrums muss unbedingt in den
+    Grapheneigenschaften auf ,,Stamm'' umgestellt werden!
+  }
+\end{enumerate}
+
+\end{document}

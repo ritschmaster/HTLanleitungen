@@ -1,0 +1,178 @@
+% Copyright (C)  2015 Richard Bäck.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3 or
+% any later version published by the Free Software Foundation; with no
+% Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+% copy of the license is included in the section entitled "GNU Free
+% Documentation License".
+
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc} % enable umlauts in the source files
+\usepackage{palatino}
+\usepackage{graphicx} % use of graphics
+\usepackage{amsmath} % for equotation*
+\usepackage{eurosym} % the euro symbol
+\usepackage{fixltx2e} % super-/subscript
+\usepackage{listings} % code listings
+\usepackage{fancyhdr} % headers
+\usepackage{hyperref} % to create references to chapters etc.
+\usepackage[version=3]{mhchem} % chemical formulas
+\usepackage[german]{babel} % use german headings
+\usepackage[margin=1.5cm,vmargin={0pt,1cm}]{geometry}
+
+\DeclareGraphicsExtensions{.pdf}
+
+\setlength{\headheight}{2.5cm}
+\setlength{\headsep}{0.5cm}
+\setlength{\textheight}{26cm}
+
+\pagestyle{fancy}
+\lhead{Richard Bäck}
+\chead{}
+\rhead{\today}
+\lfoot{}
+\cfoot{}
+\rfoot{Seite \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\title{Zusammenschrift zu den diskreten Wahrscheinlichkeitsverteilungen}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\section{Hypergeometrische Verteilung}
+\subsection{Defintion}
+Bei der hypergeometrische Verteilung existiert eine Grundgesamtheit
+\textbf{N} und eine Teilmenge \textbf{M} mit einem besonderen Merkmal. Durch eine
+Stichprobe vom Umfang \textbf{n} entsteht eine Schnittmenge von \textbf{x}
+Elementen. Diese \textbf{x} Elemente sind Teil der Menge \textbf{M} und \textbf{n}. Mit der
+hypergeometrischen Verteilung wird die Wahrscheinlichkeit berechnet
+eben \textbf{x} Elemente bei einer Stichprobe von *n* Elementen zu ziehen.
+\\\\
+Eine hypergeometrische Verteilung identifiziert sich durch folgende
+Aussagen:
+\begin{itemize}
+\item Die Wahrscheinlichkeit ein besonderes/gesuchtes Element zu
+  ziehen verändert sich nach jedem Zug.
+\item Eine Ziehung kann nur zwei Ausgänge besitzen (entweder wurde ein
+  besonderes/gesuchtes Element oder ein gewöhnliches Element gezogen).
+\end{itemize}
+
+Zusammenfassung der Variablen:
+\begin{description}
+\item[N] Grundgesamtheit
+\item[M] Besondere/gesuchte Elemente, die eine Teilmenge der
+  Grundgesamtheit sind.
+\item[n] Stichprobenumfang
+\item[x] Anzahl der Elemente in der Stichprobe, die besonders sind.
+\end{description}
+
+\subsection{Wahrscheinlichkeiten}
+\subsubsection{Bestimmte Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:1}
+  dhypergeom(x, M, N - M, n) = \frac{\binom{M}{x} \cdot \binom{N - M}{n - x}}{\binom{N}{n}} = \text{Wahrscheinlichkeit x Elemente zu erhalten}
+\end{equation}
+
+\subsubsection{Kumulative Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:2}
+  phypergeom(x, M, N - M, n) = \text{Wahrscheinlichkeit höchstens x Elemente zu erhalten}
+\end{equation}
+
+\subsubsection{Inverse kumulative Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:6}
+  qhypergeom(p_{\text {höchstens x Elemente}}, M, N - M, n) = \text{x Elemente}
+\end{equation}
+
+\section{Binomial-Verteilung}
+\subsection{Defintion}
+Eine Grundgesamtheit \textbf{n} besteht aus besonderen und normalen
+Elementen. Die Wahrscheinlichkeit ein besonderes Element zu ziehen
+liegt bei $ \text{*p*} * 100 $ Prozent. Es wird nun ermittelt, wie
+hoch die Wahrscheinlichkeit ist, dass in \textbf{n} \textbf{x} besondere Elemente
+enthalten sind.
+\\\\
+Eine Binomial-Verteilung kann folgendermaßen identifiziert werden:
+\begin{itemize}
+\item Die Wahrscheinlicht ein besonderes/gesuchtes Element zu ziehen
+  verändert sich nicht (auch nicht nach unendlich vielen Ziehungen).
+\item Eine Ziehung kann nur zwei Ausgänge besitzen (entweder wurde ein
+  besonderes/gesuchtes Element oder ein gewöhnliches Element gezogen).
+\end{itemize}
+
+Zusammenfassung der Variablen:
+\begin{description}
+\item[n] Grundgesamtheit
+\item[p] Die Wahrscheinlichkeit aus n besondere/gesuchte Elemente zu
+  erhalten.
+\item[x] Die Anzahl von gezogen besonderen/gesuchten Elemente in n.
+\end{description}
+
+\subsection{Wahrscheinlichkeiten}
+\subsubsection{Bestimmte Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:3}
+  dbinom(x, n, p) = \text{Wahrscheinlichkeit x Elemente zu erhalten}
+\end{equation}
+
+\subsubsection{Kumulative Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:4}
+  pbinom(x, n, p) = \text{Wahrscheinlichkeit höchstens x Elemente zu erhalten}
+\end{equation}
+
+\subsubsection{Inverse kumulative Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:5}
+  qbinom(p_{\text{höchstens x Elemente}}, n, p) = \text{x Elemente aus n}
+\end{equation}
+
+\section{Poisson-Verteilung}
+\subsection{Defintion}
+Die Poisson-Verteilung ist aus der Binomial-Verteilung entstanden und
+ist zu verwenden, so bald gilt $ n \rightarrow \infty $ und $ n
+\rightarrow 0 $. Es wird mit ihr die Wahrscheinlichkeit gesucht, dass
+eine bestimmte Anzahl von Ereignissen pro Einheit auftritt, wenn
+bereits ein Erwartungswert für das Auftreten von Ereignissen ermittelt
+wurde.
+\\\\
+Identifikation einer Poisson-Verteilung:
+\begin{itemize}
+\item Die Wahrscheinlicht ein besonderes/gesuchtes Element zu ziehen
+  verändert sich nicht (auch nicht nach unendlich vielen Ziehungen).
+\item Ein Erwartungswert für den Auftritt von Ereignissen pro Einheit
+  ist ermitteltbar.
+\end{itemize}
+
+Zusammenfassung der Variablen:
+\begin{description}
+\item[$ \mu $] mittelere Anzahl von Auftritten eines Ereignisses pro
+  Einheit
+\item[x] Auftreten von einer bestimmten Anzahl von Ereignissen pro
+  Einheit
+\end{description}
+
+\subsection{Wahrscheinlichkeiten}
+\subsubsection{Bestimmte Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:7}
+  dpois(x, \mu) = \text{Wahrscheinlichkeit x Ereignisse zu erhalten}
+\end{equation}
+
+\subsubsection{Kumulative Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:8}
+  ppois(x, \mu) = \text{Wahrscheinlichkeit höchstens x Ereignisse zu erhalten}
+\end{equation}
+
+\subsubsection{Inverse kumulative Wahrscheinlichkeit}
+\begin{equation}
+  \label{eq:9}
+  qpois(p_{\text {höchstens x Ereignisse}}, \mu) = x Ereignisse
+\end{equation}
+
+\end{document}
