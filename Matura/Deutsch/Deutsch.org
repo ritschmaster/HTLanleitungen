@@ -1,0 +1,226 @@
+#+TITLE:     Deutsch
+#+AUTHOR:    Richard Bäck
+#+EMAIL:     richard.baeck@openmailbox.org
+#+DATE:      2015-05-21 Thu
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  de
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+XSLT:
+
+* Kriminalliteratur
+** Arten
+Bei den meistens neueren Werken handelt es sich um Mischformen.
+*** Verbrecher(Kriminal)-roman
+**** Aufbau
+Synthetischer Aufbau. Relevant ist die Vorgeschichte und Psyche des
+**** Beispiele
+- Die schwarze Katze
+- Das verräterische Herz
+- Der Teppich
+Verbrechers.
+*** Detektivroman
+**** Aufbau
+Analytischer Aufbau. Relvant ist die Aufdeckung eines Verbrechens.
+**** Beispiele
+- Komm süßer Tod
+- Das Versprechen
+- Der Henker und sein Richter
+** Aufbau Generell
+*** Mördersuche
+**** Täterrätsel
+Wer könnte der Täter sein?
+***** Verzögerungsregel
+Der Mörder darf nicht alzu schnell gefunden werden.
+***** Überraschungsregel
+Der Mörder darf nicht der wahrscheinlichste Verdächtige sein.
+***** Relevanz- und Irrelevanzregel
+Der Mörder darf nicht die wichtigste aber auch nicht die unwichtigste
+der Nebenfiguren sein.
+**** Hergangsrätsel
+Reale Morde werden am häufigsten aus Eifersucht oder Habgier
+begangen. Beim Kriminalroman ist jedoch ein häufiges Motiv
+Rache. Besonders wenn ein Verbrechen zu milde bestraft wird, dann
+haben Angehörige
+**** Motivrätsel
+*** Watsonfigur
+Figur mit der Vermittlungsfigur zwischen Detektiv und Leser.
+** Besondere Verhältnisse
+*** Locked room mystery
+Es werden Laborbedingungen geschaffen. Das Verbrechen spielt sich im
+Zug, am Schiff, in der eingeschneiten Hütte oder eben auf einer Insel
+ab. Der Mörder ist dann unter den Anwesenden zu suchen, denn niemand
+kann einfach kommen oder gehen. Besonders fällt dies bei Agatha
+Christie auf.
+#+BEGIN_LATEX
+////
+#+END_LATEX
+Beispiele:
+
+*** Tätervariationen
+- Mord in der Rue Murgue (Edgar Allan Poe)
+  Der Mörder ist ein Tier.
+- Ein Mord, den jeder begeht (Hermito von Doderer)
+  Der Mörder ist der Detektiv selbst (unwissend).
+- Agatha Christie
+  Der Mörder ist eines der Opfer.
+
+*** Seriendetektive
+Viele Schriftsteller haben mit dem Detektiven Serienhelden geschaffen.
+
+** Werke
+*** Richter und sein Henker
+**** Handlung
+Hauptprotagonist ist Kommisär Bärlach. Es ist ein analytischer
+Kriminalroman. Vorgeschichte ist eine Wette zwischen den Charakter
+Gastmann und Bärlach. Die Wette beinhaltet, dass Gastmann ein besserer
+Verbrecher als Bärlach ist. Tatsächlich schafft Gastmann dies und
+somit überlegt sich Bärlach einen Weg, wie er ihn ausschalten kann. Er
+verwendet für dies den eigentlichen Täter (zwei parallele Handlungen
+\rightarrow Mord an den Charakter Schmied und Gastmann die gerechte
+Strafe zuführen.) Tschanz. Dieser ist ein Polizeikollege von Bärlach,
+der am Beginn des Werkes einen anderen Kollegen namens Schmied auf
+Grund von Eifersucht tötet (Tschanz möchte sein wie er). Bärlach
+manipoliert Tschanz darauf, dass er Gastmann töten muss um nicht
+aufgedeckt zu werden. Tschanz überführt er mit der Kugel, mit dem er
+bei einem zufällig Überfall eines Hundes auf ihm gerettet wurde (Hund
+wird erschossen).
+**** Merkmale von Bärlach:
+- Manipulator
+- Intelligent
+- Kühl
+- Durchschaut gut Leute
+- Logiker
+- Magenkrebs
+- Raucher
+- Hohes Alter
+**** Gerechtigkeit im Werk
+- Gerechtigkeit :: Selbstjustiz
+- Recht :: Durch Gesetz und Staat
+*** Das blaue Kreuz
+**** Handlung
+In London findet ein katholischer Kongress statt, bei der das blaue
+Kreuz (hoher Wert) ausgestellt werden soll. Pater Brown ist für das
+Anliefern des Austellungsstück zuständig. Im Zug nach London erzählt
+er jeden, dass er etwas Wertvolles mit hat. Daher ist der, der sich an
+seine Fersen heftet, schon verdächtig. Flambeau begeht genau
+dies. Detektiv Valentin findet immer wieder unvernünftige Taten
+(Polizeiruf wegen Teller gegen Wand, Salz und Pfeffer vertauscht,
+Priester stehlen Obst, überhöhte Rechnung gezahlt, Fenster
+eingeschlagen) vor und kommt somit auf die Spur, wohin Flambeau mit
+Brown geht. Während des Weges ist Brown schon längst Flambeau auf die
+Schliche gekommen und hat bei der vorletzten Station (Postamt
+\rightarrow danach Fenster eingeschlagen) das blaue Kreuz
+abgegeben. Mit dem überrascht er Flambeau am Ende im Park, wo er Brown
+bestehlen will. Zeitgleich trifft auch Valentin mit der Polizei ein.
+**** Merkmale für die Kriminalgeschichte
+- Analytisch und synthetisch
+- Es findet kein Verbrechen statt
+**** Merkmale Pater Brown
+- Unkonventioneller Detektiv
+- Ist die Watsonfigur für den Detektiv
+- Nutzt die Vernunft um den Täter zu entlarven
+**** Merkmale Valentin
+- Konventioneller Detektiv
+- Nutzt die Vernunft um Spuren zu finden (,,wenn es keine vernünftigen
+  Hinweise gibt, dann zählt der unvernünftigste Hinweise'')
+**** Merkmale Flambeau
+- Zweifelt an der Vernunft
+*** Komm süßer Tod
+**** Handlung
+Brenner beginnt bei den Kreuzrettern (Rettungsverein) zu
+arbeiten. Kreuzretter und Rettungsbund (anderer Verein) kämpfen um die
+Vorherrschaft in Wien. Beide stehlen sich auch gegenseitig die
+Patienten. Die erste Tat ist ein Mord an ein Paar. Diese deckt durch
+Brenners Anstellung nach und nach ein viel größeres Verbrechen
+auf. Zwischendurch wird auch noch der Nebencharakter Bimbo
+ermordet. Bimbo ist der Mörder des Paares. Zum Schluss stellt sich
+heraus, dass Junior (Chef der Kreuzretter) alte Menschen mit
+Zuckerlösungen ermordete um an deren Nachlass für das Unternehmen zu
+kommen.
+**** Merkmale des Werkes
+- Satzbau :: Aussagen werden mit Gliedsätzen getätigt (z.B. Weil ja
+             Ding.). Dies vermittelt ein Gefühl von einer dialektalen
+             Erzählung (z.B. Artikel vor einem Namen).
+- Sprache :: Es werden Wörter aus dem Dialekt verwendet. Direkte Reden
+             werden generell nur im Dialekt getätigt. Durchgehend
+             werden vugläre Ausdrücke benutzt
+             (Scheißheisltour). Euphemistische (bildhafte) Sprache von
+             Handlungen um einen schwarzen Humor einzubauen (Szene mit
+             Kopfschuss).
+- Erzähler :: Der Leser wird direkt per Du angesprochen. Der Erzähler
+              selbst agiert wie ein Freund von Brenner und erzählt wie
+              bei einem Stammtisch (Siehe Satzbau).
+- Indizien :: Indizien werden über das ganze Werk als Rück- oder
+              Vorrausblicke verstreut.
+- Titel :: ,,Komm süßes Kreuz'' verwechselt Brenner mit ,,Komm süßer
+           Tod''. Der Titel beschreibt die Tötungsart, Tod durch
+           Zuckerschock, von alten Menschen, die vorher noch einen
+           Nachlass für die Rettung bereitgestellt (unterschrieben)
+           haben.
+- Macht :: Bimbo wird getötet, weil zu übermütig wird.
+- Machtkampf der Rettungen ::
+- Aberglaube :: Ningnong (Katze) wird überfahren
+- Rettungsrennfahrer :: Rettung versucht so viele rote Ampel wie
+     möglich zu überfahren.
+- Geldgier ::
+**** Merkmale Simon Brenner
+- Anti-detektivisches Verhalten
+- Benötigt den Zufall
+- Jugendliebe Klara als Watsonfigur
+- Zyniker
+- Ehemaltiger Detektiv (19 jahrelang Polizist)
+- Casanova
+- Das Detektivische interessiert ihn nicht
+- Grand
+- Grand hilft ihm beim lösen von Fällen, da er noch verbissener wird
+- Kein klassischer Detektiv
+**** Unterschied Film und Roman
+- Noch bevor der eigentliche Film beginnt, sieht man Ampullen von
+  Zuckerwasser
+- Im Film ist bekannt, dass Bimbo der Mörder ist (man sieht ihn bei
+  der Tat)
+- Oswald gibt es im Film gar nicht
+- Beati hilft im Film Brenner bei der Verfolgungsjagd
+- Im Film wird die Beziehung zwischen Brenner und Klara wird mehr
+  durchläuchtet
+- Der Lungauer wird im Film auch mehr durchläuchtet
+* Mittelalter
+** Nibelungenlied
+*** Textsorte
+Heldenepos
+*** Informationen über das Werk
+- gebundene (Dichtung, Verse) Sprache im Original
+- ungebundene Sprache bei Köhlmeier
+  - Lässt Aspekte Weg bzw. verkürzt sie
+    - Umwerbung von Grimhilde dauert im Original ungefähr ein Jahr
+  - Fügt Aspekte hinzu
+    - Den Schmied Mime gibt es im Original gar nicht
+  - Änder Aspekte ab
+    - Siegfried badet bei Köhlmeier in Fett (sonst immer in Blut)
+- Entstehung im Donauraum um etwa 1200 n.Chr.
+- Geschrieben von einem Mönch
+- Länge von 39 Aventuren[fn:1]
+- Nationalepos durch Stilisierung von Hagen zum loyalsten Diener und
+  Siegfried als perfekter Mann (Arier).
+
+[fn:1] Abenteuer bzw. hier Teil einer Erzählung
+*** Handlung
+Siegfried ist ein adeliger (Sohn des Königs) aus dem Gebiet der
+Niederlande und unglaublich stark. Aus diesem Grund wird er zum
+Schmied Mime zur Bändigung gesendet. Nach Jahren reißt er nach
+Burgund. Parallel wird die Vorgeschichte zu seiner späteren Frau,
+Grimhilde, erzählt. Diese träumt, dass ihr Mann stirbt, aus diesem
+Grund will sie nie heiraten und schließt sich im Turm ein.
+
+* Ziel dieses Dokumentes
+Zu jeder Matura kommen andere Themen. Dieses Dokument soll als
+Themendatenbank dienen und wäre dazu gedacht, dass jeder Jahrgang
+bestehende Themen herausnehmen und neue eigenen Themen hinzufügen
+kann.
