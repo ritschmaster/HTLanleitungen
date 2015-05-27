@@ -59,7 +59,7 @@ ab. Der Mörder ist dann unter den Anwesenden zu suchen, denn niemand
 kann einfach kommen oder gehen. Besonders fällt dies bei Agatha
 Christie auf.
 #+BEGIN_LATEX
-////
+\\\\
 #+END_LATEX
 Beispiele:
 
@@ -159,6 +159,7 @@ kommen.
               bei einem Stammtisch (Siehe Satzbau).
 - Indizien :: Indizien werden über das ganze Werk als Rück- oder
               Vorrausblicke verstreut.
+**** Themen des Werkes
 - Titel :: ,,Komm süßes Kreuz'' verwechselt Brenner mit ,,Komm süßer
            Tod''. Der Titel beschreibt die Tötungsart, Tod durch
            Zuckerschock, von alten Menschen, die vorher noch einen
@@ -169,6 +170,11 @@ kommen.
 - Aberglaube :: Ningnong (Katze) wird überfahren
 - Rettungsrennfahrer :: Rettung versucht so viele rote Ampel wie
      möglich zu überfahren.
+- Behandlung von Obdachlosen :: Obdachlose (Sandler) werden nicht wie
+     andere Patienten behandelt. Durch einen Zusatz bei den
+     Funksprüchen wird bekanntgegeben, dass es sich um einen
+     Obdachlosen handelt und desweng nicht zu viel am Weg riskiert
+     werden muss.
 - Geldgier ::
 **** Merkmale Simon Brenner
 - Anti-detektivisches Verhalten
@@ -193,11 +199,14 @@ kommen.
 - Der Lungauer wird im Film auch mehr durchläuchtet
 * Mittelalter
 ** Nibelungenlied
-*** Textsorte
-Heldenepos
 *** Informationen über das Werk
-- gebundene (Dichtung, Verse) Sprache im Original
-- ungebundene Sprache bei Köhlmeier
+#+INDEX: Heldenepos
+- Textsorte: Heldenepos[fn:1]
+#+INDEX: gebundene Sprache
+- gebundene Sprache[fn:2] im Original
+- Köhlemeier
+#+INDEX: ungebundene Sprache
+  - ungebundene Sprache[fn:3]
   - Lässt Aspekte Weg bzw. verkürzt sie
     - Umwerbung von Grimhilde dauert im Original ungefähr ein Jahr
   - Fügt Aspekte hinzu
@@ -206,19 +215,290 @@ Heldenepos
     - Siegfried badet bei Köhlmeier in Fett (sonst immer in Blut)
 - Entstehung im Donauraum um etwa 1200 n.Chr.
 - Geschrieben von einem Mönch
-- Länge von 39 Aventuren[fn:1]
+#+INDEX: Aventuren
+- Orginal besitzt eine Länge von 39 Aventuren[fn:4]
+- Im Original dauert es ein Jahr bis Siegfried und Kriemhild heiraten
 - Nationalepos durch Stilisierung von Hagen zum loyalsten Diener und
-  Siegfried als perfekter Mann (Arier).
+  Siegfried als perfekter Mann (Arier.)
 
-[fn:1] Abenteuer bzw. hier Teil einer Erzählung
+[fn:1] Dichtungen bei denen eine Figur des heroischen Zeitalters im
+    Mittelpunkt steht. die Heldendichtung baut auf die Heldensage
+    auf. (Quelle: http://wissen.woxikon.de/heldenepos)
+[fn:2] gebundene Sprache = Dichtung, Verse, Reime
+[fn:3] ungebundene Sprache = Prosa = keine Reime
+[fn:4] Abenteuer bzw. hier Teil einer Erzählung
 *** Handlung
-Siegfried ist ein adeliger (Sohn des Königs) aus dem Gebiet der
-Niederlande und unglaublich stark. Aus diesem Grund wird er zum
-Schmied Mime zur Bändigung gesendet. Nach Jahren reißt er nach
+Siegfried ist ein adeliger (Sohn des Königs) aus Xanten (Gebiet der
+heutigen Niederlande) und unglaublich stark. Aus diesem Grund wird er
+zum Schmied Mime zur Bändigung gesendet. Nach Jahren reist er nach
 Burgund. Parallel wird die Vorgeschichte zu seiner späteren Frau,
-Grimhilde, erzählt. Diese träumt, dass ihr Mann stirbt, aus diesem
-Grund will sie nie heiraten und schließt sich im Turm ein.
+Kriemhild, erzählt. Diese träumt, dass ihr Mann stirbt, aus diesem
+Grund will sie nie heiraten und schließt sich im Turm ein. Als sie
+Siegfried sieht wird sie jedoch schwach gegenüber ihren eigenen
+Versprechen. Allerdings nicht zu sehr, denn sie zeigt sich lange
+nicht, lässt sich aber von Siegfreid durch Taten umwerben.
 
+\rightarrow http://www.schulzeux.de/deutsch/die-nibelungen_von-michael-koehlmeier_-inhaltsangabe-und-zusammenfassung.html
+
+*** Verarbeitete Themen
+**** Falsche Liebe
+Die Liebe zwischen Gunther und Brünhild ist falsch. Gunther hat bei
+den Wettkämpfen geschummelt und Brünhild unrechtmäßig bezwungen. Sie
+ist sich dessen bewusst, aus diesem Grund verweigert sie auch die
+Hochzeitsnacht. Einen drauf setzt dann Gunther mit der Vergewaltigung.
+**** Wahre Liebe
+Die Liebe zwischen Siegfried und Kriemhild.
+**** Unerfüllte Liebe
+Hagen begeert Kriemhild, sie sieht in ihm aber nur einen treuen Freund
+und Diener (*ACHTUNG*: nur in Köhlmeiers Version! Begründung von
+Köhlmeier: ,,er musste wohl etwas von ihr wollen'').
+**** Treue
+- Hagen zu Burgund bzw. zu den Burgundern
+- Kriemhild zu Siegfried
+- Siegfried zu jeden - er ist der einzige, der niemanden verrät,
+**** Hass
+Hagen hasst Siegfried.
+**** Rache
+Kriemhilds ewige Rache gegenüber den Burgundern und dessen Ermordung
+durch Kriemhild.
+**** Lügen und Betrug
+- Hagen erfindet einen Krieg um Siegfried zu hintergehen und zu
+  ermorden.
+- Siegfried gibt vor Gunthers Lehensmann zu seien, obwohl er der König
+  von Xanten ist.
+
+*** Weiterverarbeitungen von anderen
+- ,,Herr der Ringe'' von Tolkien verwendet Elemente
+- Goethe
+- Nationalsozialisten
+  - Hagen \rightarrow treuester Diener
+  - Siegfried \rightarrow Arier
+
+*** Charakteristiken der Charaktäre
+**** Hagen
+Ein geschickter Taktiker und Diplomat. Er ist gerissen und weiß es
+Menschen für sich zu manipulieren. Außerdem ist er der Lehensmann der
+drei Könige. Seine Machtbegierde im Königreich der Burgunden lässt ihn
+dem Hass hinreißen. In diesem Zustand agiert er wie ein kleines Kind,
+immer beleidigt und mies drauf.
+**** Siegfried
+Sohn des Siegismund und der Sieglinde aus Xanten,
+Niederlanden. Gutgläubig, freundlich und direkt, jedoch ziemlich
+naiv. Er ist ungeheuer stark.
+**** Brünhild
+Königin von Island mit hoher Kampflust. Sie möchte sich ständig in
+Disziplinen messen. Durch ihre extremen maskulinen Züge und Auftreten
+ist sie den meisten Männern, von der Stärke, überlegen.
+
+**** Kriemhild
+Durch ihre Intelligenz und Schönheit wird sie von allen Männern sehr
+begehrt. Aus der resultierenden Überheblichkeit ist sie ziemlich
+wählerisch.
+
+**** Gunther/Gernot/Giselher
+Sie sind die drei Könige von Burgunden. Gunther ist der älteste und
+der „Erste der gleichen“, da er der erste König ist. Sie alle leben
+nach dem Prinzip ihres Vaters: „wenn nichts passiert, dann passiert
+nichts“. Alle drei lassen sich durch ihren Lehensmann Hagen mehr oder
+weniger unterdrücken, da er für sie die Entscheidungen trifft.
+
+*** Kontroversen
+**** Lehenswesen
+Besonders gut sieht man die mittelalterlichen Bedingungen bei
+Hagen. Er tritt königlich auf und herrscht de facto schon selbst, ist
+aber offiziell nur der Berater. Außerdem begehrt er Kriemhild, darf
+sie aber auf Grund seines Status als Lehensmann nicht heiraten. Aber
+auch als sich Siegfried als Lehensmann ausgibt, da Brünhild ganz
+empört über seine angebliche unterschiedliche Standeshochzeit ist.
+
+**** Frauenbild
+In der Nibelungensage kommen viele Kontroversen des damaligen
+Frauenbilds vor. Ob Kriemhild oder Brünhild, beide sind keine
+Standardfrauen. Kriemhild lässt sich nicht verheiraten und Brünhild
+ist sogar alleinherrschende Königin, ganz zu schweigen von ihren
+Fähigkeiten im Kampf und Sport.
+
+*** Köhlmeiers Motivation
+Michael Köhlmeier schrieb das Buch da er von Kindheit an mit der
+Nibelungensage konfrontiert worden ist. Dies liegt daran, da er in
+dieser Umgebung aufgewachsen ist. Aus diesem Grund verspürte er den
+Drang eine eigene Version der Nibelungensage zu verfassen.
+
+** Parzival
+*** Informationen über das Werk
+- Gebundene Sprache
+-
+** Lehenswesen
+*** Wortherkunft
+Lehen kommt vom Wort leihen. Das pedant im Latein ist Feudum und
+feudal.
+*** Funktionsaufbau
+- Lehensherr :: Ein weltlicher (König, Fürst, ...) oder ein
+                geistlicher (Bischof, Pabst, ...) bietet einen
+                Lehensmann milte[fn:5] und Schutz. Er ist somit ein
+                Mäzen[fn:6].
+- Lehensmann :: Ist von niederem weltlichen Adel (Ritter), der seinen
+                Lehensherrn durch seinen Treuespruch[fn:7] militärischen
+                Beistand und generelle Loyalität zusichert.
+
+[fn:5] Freigibigkeit in Bezug auf Geld oder Land (Herrscher für seine
+    Untertanen).
+[fn:6] Mäzen = Gönner
+[fn:7] Die Strafe für einen Treuebruch war der Tod.
+** Hierarchie des Mittelalters
+[[file:Bilder/Mittelalterliche_Hierarchie.jpg]]
+** Frauen im Mittelalter
+- Adressantinnen von Minneliedern[fn:8] \rightarrow dadurch hatten
+  sie Einfluss auf die Literaturmode
+- Konnten lesen und schreiben
+- Disziplin der Augen: Frauen müssen sich ansehen lassen, dürfen aber
+  nicht selbst andere Männer ansehen.
+  - Eine Frau, die viele Blicke an sich zieht bringt dem Ehemann viel
+    Ehre.
+- Waren begrenzt rechtsfähig
+- Nicht lebensfähig ohne einen Mann
+- Wurden durch Vater/Brüder verheiratet
+- Die Frau folgt immer den Mann
+- durften nicht prahlen oder überflüssig lachen
+
+[fn:8] Liebeslieder
+* Novellen
+** Werke
+*** Der Falke
+**** Autor
+Autor ist Giovanni Boccaccio.
+**** Rahmenhandlung
+Der Falke ist nur ein Teil aus einer ganzen Novellensammlung bestehend
+aus 100 Novellen. Die Rahmenhandlung ist, dass 10 Adelige wegen der
+Pest im 14. Jahrhundert auf ein Landhaus flüchten. Sie bleiben dort 10
+Tage. Jeder erzählt jeden Tag eine Novelle, somit ergeben sich eben 10
+mal 10 Novellen. Dieses Werk heißt ,,Das Dekameron''[fn:9].
+
+[fn:9] bedeutet so viel wie zehn Tage
+**** Handlung
+Der Edelmann Federigo verliebt sich in die Dame Monna Giovanna und
+veräußert seinen ganzen Besitz um Geschenke für sie zu kaufen. Diese
+jedoch beachtet ihn kaum. Erst nachdem ihr Mann gestorben und ihr Sohn
+dem Tode nah ist wird sie aufmerksam auf ihn. Das liegt aber daran,
+dass ihr Sohn nach dem Falken Federigos begehrt. Als die Dame den
+Edelmann besucht, um nach den Falken zu fragen, tötet er diesen, um
+ihn als Mahl zu verwenden, da er fast keinen Besitz mehr hat. Ihr Sohn
+stirbt und sie verfällt in Trauer. Nach einiger Zeit raten ihr ihre
+Brüder zu einer neuen Ehe und sie heiratet Federigo, da sie sich an
+seine ehrenhafte, wenn auch bittere, Tat erinnert.
+**** Symbolik des Falkens
+- Symbol der Liebe
+- Symbol der ritterlichen Gesinnung
+- Anmut des Tieres spiegelt Federigo selbst wider
+** Falkentheorie
+Sie steht für die Konzentration auf das Grundmotiv im Handlungsverlauf
+und das Symbol für das jeweilige Problem der Novelle (von Giovanni
+Bocaccios ,,Der Falke'').
+* Dichtungsgattungen
+** Epik
+- episch[fn:10]
+- normalerweise in Prosa geschrieben
+[fn:10] episch = erzählend
+** Lyrik
+-
+** Dramatik
+* Gelehrtenprobleme der Wissensfreigabe
+** Die Physiker
+*** Handlung
+*** Stoffliche Anregung
+- Vortrag über Einstein 1979
+*** Themen
+**** Weltpolitische Lage
+- USA gegen Sowjetunion \rightarrow Kalter Krieg
+- Atomare Vernichtung ist eine ständige Bedrohung
+**** Kritik der menschlichen Hybris[fn:11]
+- Der Mensch beherrscht die Natur
+- Der Mensch eignet sich Wissen an
+- Der Mensch überschreitet Grenzen der Berrschung
+- Der Mensch vernichtet die Erde durch sein erlangtes Wissen, da er
+  nichts mehr scheut
+
+[fn:11] Hybris = realitätsfernes, maßloses und unangemessenes
+Vertrauen in die Handlungen der eigenen Person (Quelle
+http://de.wiktionary.org/wiki/Hybris)
+**** Möbius Scheitern
+- Möbius zieht sich zurück um die Menscheit vor sich selbst zu
+  schützen.
+- Es gelingt nicht, da die Wissenschaft nicht aufgehlaten werden kann.
+** Das Leben des Galileo Galilei
+*** Handlung
+*** Autor
+Der Autor ist Bertold Brecht (1898 - 1956). Ein weiteres sehr
+bekanntes Werk von ihm (behandelt ein anderes Thema!) ist ,, Die Drei
+Groschen-Oper''.
+* Gelehrtenproblem des Unwissens/Gelehrtentragödie
+** Faust - der Tragödie erster Teil
+*** Handlung
+* Biedermeier
+** Begriffsherkunft
+
+* Kurzgeschichten
+** Werke
+*** Die schwarze Katze
+**** Handlung
+**** Autor
+# <<sec:DiescharzeKatzeAutor>>
+*** Das verräterische Herz
+**** Handlung
+**** Autor
+*** Der Teppich
+**** Handlung
+**** Autor
+*** In der Strafkolonie
+**** Handlung
+Ein forscher ist auf einer Insel und ihm wird das Rechtssystem von
+einem Offizier erklärt. Dieser ist Richter und Henker zu gleich. Er
+entscheidet wer schuldig ist oder nicht. Sein Exekutionsgerät ist ein
+Apparat, der mit Nadeln das Verbrechen über mehrere Stunden in den
+Veruteilten einritzt und ihn zum Schluss aufspießt. Dieses
+Folterinstrument wurde von dem alten Kommandanten zur Belustigung der
+Massen erfunden. Der neue Kommandant ist gegen dieses blutrünstige
+Verfahren und will es abschaffen. Der Offizier sieht aber sein
+Lebenswerk in ihm und will den Fremden bei einer Inrichtung dafür
+überzeugen. Der Fremde behält seine Meinung und der Offizier entlässt
+den Verurteilten, um sich selbst mit der Maschine zu richten. Der
+Apparat aber funktioniert nicht richtig und tötet den Offizier
+verfrüht und zerstört sich selbst. Danach reist der Fremde ab.
+**** Charakteristiken der Charaktäre
+***** Der Offizier
+Er ist für den Apparat und das Rechtssystem. Sein Argument dafür ist,
+dass Zeit und Kosten gespart werden, wenn nur ein Mann über Schuld und
+Unschuld entscheidet. Außerdem sieht er in dem Apparat sein
+Lebenswerk.
+***** Der alte Kommandant
+Es kann vermutet werden, dass er gerne Leute leiden sah und die Mengen
+damit ködern wollte.
+***** Der neue Kommandant
+Der neue Kommandant hält nichts von der Todesstrafe. Auch scheint es,
+dass er gegen die Allmächtigkeit des Offiziers ist (= für
+Gewaltentrennung).
+***** Der Reisende
+Der Fremde ist zurückhaltend und beobachtend. Er sagt seine Meinung
+nur im äußersten Fall. Auch er ist gegen Folter und das bestehende
+Rechtssystem des Offiziers.
+***** Der Verurteilte und der Soldat
+Beide sind eigentlich nur beteiligt. Der Verurteilte ist faul und
+verspielt. Der Soldat nur verspielt. Beide sehen das Leben ziemlich
+locker.
+**** Analogie zum Mittelalter
+Im Mittelalter wurden die Beschuldigte unter Folter gezwungen zu
+gestehen und dann mit meist einem leichteren Tod bestraft. Hier aber
+wird der Tod durch Folter vollstreckt. Heute werden meist
+Foltermethoden benutzt um Regime am Leben zu halten und Informationen
+zu gewinnen (\rightarrow Geheimdienste) und manchmal von Polizisten
+und Soldaten als Vergeltung.
+**** Autor
+Der Autor ist Franz Kafka (1883 - 1924). Dieser war ein wichtiger
+österreichischer jüdischer Schriftsteller.
+* Bürgerliches Problemstück
+** Kein Platz für Idioten
+*** Handlung
+*** Autor
 * Ziel dieses Dokumentes
 Zu jeder Matura kommen andere Themen. Dieses Dokument soll als
 Themendatenbank dienen und wäre dazu gedacht, dass jeder Jahrgang
