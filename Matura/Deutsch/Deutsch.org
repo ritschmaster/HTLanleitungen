@@ -83,7 +83,7 @@ Gastmann und Bärlach. Die Wette beinhaltet, dass Gastmann ein besserer
 Verbrecher als Bärlach ist. Tatsächlich schafft Gastmann dies und
 somit überlegt sich Bärlach einen Weg, wie er ihn ausschalten kann. Er
 verwendet für dies den eigentlichen Täter (zwei parallele Handlungen
-\rightarrow Mord an den Charakter Schmied und Gastmann die gerechte
+\Rightarrow Mord an den Charakter Schmied und Gastmann die gerechte
 Strafe zuführen.) Tschanz. Dieser ist ein Polizeikollege von Bärlach,
 der am Beginn des Werkes einen anderen Kollegen namens Schmied auf
 Grund von Eifersucht tötet (Tschanz möchte sein wie er). Bärlach
@@ -116,7 +116,7 @@ Priester stehlen Obst, überhöhte Rechnung gezahlt, Fenster
 eingeschlagen) vor und kommt somit auf die Spur, wohin Flambeau mit
 Brown geht. Während des Weges ist Brown schon längst Flambeau auf die
 Schliche gekommen und hat bei der vorletzten Station (Postamt
-\rightarrow danach Fenster eingeschlagen) das blaue Kreuz
+\Rightarrow danach Fenster eingeschlagen) das blaue Kreuz
 abgegeben. Mit dem überrascht er Flambeau am Ende im Park, wo er Brown
 bestehlen will. Zeitgleich trifft auch Valentin mit der Polizei ein.
 **** Merkmale für die Kriminalgeschichte
@@ -238,7 +238,7 @@ Siegfried sieht wird sie jedoch schwach gegenüber ihren eigenen
 Versprechen. Allerdings nicht zu sehr, denn sie zeigt sich lange
 nicht, lässt sich aber von Siegfreid durch Taten umwerben.
 
-\rightarrow http://www.schulzeux.de/deutsch/die-nibelungen_von-michael-koehlmeier_-inhaltsangabe-und-zusammenfassung.html
+\Rightarrow http://www.schulzeux.de/deutsch/die-nibelungen_von-michael-koehlmeier_-inhaltsangabe-und-zusammenfassung.html
 
 *** Verarbeitete Themen
 **** Falsche Liebe
@@ -271,8 +271,8 @@ durch Kriemhild.
 - ,,Herr der Ringe'' von Tolkien verwendet Elemente
 - Goethe
 - Nationalsozialisten
-  - Hagen \rightarrow treuester Diener
-  - Siegfried \rightarrow Arier
+  - Hagen \Rightarrow treuester Diener
+  - Siegfried \Rightarrow Arier
 
 *** Charakteristiken der Charaktäre
 **** Hagen
@@ -348,7 +348,7 @@ feudal.
 ** Hierarchie des Mittelalters
 [[file:Bilder/Mittelalterliche_Hierarchie.jpg]]
 ** Frauen im Mittelalter
-- Adressantinnen von Minneliedern[fn:8] \rightarrow dadurch hatten
+- Adressantinnen von Minneliedern[fn:8] \Rightarrow dadurch hatten
   sie Einfluss auf die Literaturmode
 - Konnten lesen und schreiben
 - Disziplin der Augen: Frauen müssen sich ansehen lassen, dürfen aber
@@ -409,7 +409,7 @@ Bocaccios ,,Der Falke'').
 - Vortrag über Einstein 1979
 *** Themen
 **** Weltpolitische Lage
-- USA gegen Sowjetunion \rightarrow Kalter Krieg
+- USA gegen Sowjetunion \Rightarrow Kalter Krieg
 - Atomare Vernichtung ist eine ständige Bedrohung
 **** Kritik der menschlichen Hybris[fn:11]
 - Der Mensch beherrscht die Natur
@@ -437,6 +437,130 @@ Groschen-Oper''.
 * Biedermeier
 ** Begriffsherkunft
 
+* Romantik
+** Märchen
+*** Warum sind Märchen unsterblich (laut Michael Maar aus ,,Der Falter'')?
+- Die Themen sind immer aktuell
+- Märchen enthalten in ihrem Inneren immer ein Tabu, das in der
+  Geschichte transportabel und teilbar umschrieben wird.
+- Märchen finden immer einen neuen Wirt (Harry Potter, ...)
+*** Logikfehler in Märchen
+- Vier Brüder bekommen je eine Hälfte vom Königreich
+- Märchen sind vom ungebildeten Volk \Rightarrow daher diese Fehler
+- ,,aus Wut aus der Haut fahren'' - Rumpelstilzchen
+*** Die Rolle der Sexualität
+- Sexualität spielt eine große Rolle in Märchen
+- Rapunzel im Orignal: nach vielen Besuchen vom Prinz wird sie
+  schwanger
+- Rotkäppchen kommt aus Frankreich (diese waren sehr freizügig)
+  - Wolf war böser Onkel
+  - Rotes Käppchen steht möglicherweise für die Umschreibung für die
+    erste Menstruation
+- Hans Christian Andersen schrieb seine Homosexualität mit seinem
+  Kunstmärchen ,,Die kleine Seejungfrau'' nieder.
+- Dornröschen wird nicht von einer Nadel ,,gestochen''
+*** Warum Märchen für Kinder?
+- Wichtiger Wertevermittler für Gut und Böse
+- Zeigt auf, dass auch Frauen viel leisten können
+- Fördern eine optimistische Lebensweise
+- Bewältigung von Ängsten, da diese auf das Böse projiziert werden und
+  das Böse immer verliert
+- Vermitteln die dunklen Seiten des Lebens schonend
+*** Rollen Verteilungen
+**** Mann
+Der Mann vermittelt oft:
+- Treue
+- Ehrlichkeit
+- Mut
+**** Frau
+- Ruhepol für den Mann
+- Oft Schweigsam \Rightarrow soll Gehorsamkeit vermitteln
+- Wiederkehrende Eigenschaften:
+  - Klug
+  - Listig
+  - Ausdauerernd
+** Werke
+*** Der blonde Eckbert
+**** Handlung
+http://de.wikipedia.org/wiki/Der_blonde_Eckbert#Inhalt
+**** Merkmale
+- Formalhafte Sprache fehlt
+- 3-teilige Handlungsstruktur besteht
+- Zahlensymbolik fehlt
+- Die Alte stellt eigentlich das bestrafende Gute dar
+- Der Wald als Sinnbild für den Rückzugsort
+- Der Held Eckbert *scheitert*
+- *Belohnung und Bestrafung* als Märchenmotiv
+**** Thema
+- Der entdeckungsfreudige Mensch, der mit seiner Sehnsucht der Ferne
+  andere verletzt.
+- Das gesellschaftliche Drama, wenn ein Kind unehelich(bzw. von einer
+  anderen Beziehung entstanden ist)
+**** Charakteristiken
+***** Bertha
+- Wunderschön
+- Unehehliches Kind
+- Möchte von ihrem Vater wergeschätzt werden und es ihm bewiesen, dass
+  sie auch im Haushalt mithelfen kann
+- Will die Welt entdecken
+***** Eckbert
+- Ritter
+- Hat das Bedürfnis sich sein Leben mit einer guten Freundschaft zu
+  versüßen
+- Liebt seine Frau (Bertha) über alles
+- Etwa 40 Jahre alt
+**** Autor
+Ludwig Tieck
+*** Sandmann
+**** Merkmale
+- Schauernovelle
+**** Handlung
+http://de.wikipedia.org/wiki/Der_Sandmann_%28Hoffmann%29#Inhalt
+**** Autor
+**** Themen
+***** Automaten
+- Waren im 18./19. Jahrhundert in der Literatur sehr beliebt
+- HOffmann wollte selbst einen Automaten entwerfen
+- 1769 - "Schach spielender Türke" \Rightarrow Schachmeister unter
+  einem Tisch bedient eine Puppe
+- Hoffmann selbst im Zwiespalt über Automaten:
+  - Mechanik ist leblos
+  - Die menschliche Kunst enthält den belebenden Geist
+***** Wahnsinn
+- Wandel der Behandlung von psychisch Gestörten im 18. Jahrhundert
+  \Rightarrow sie werden als Patienten und nicht mehr als Verbrecher
+  behandelt
+- Wahrnehmung von Wahnsinn im 18. Jahrhundert:
+  - Übermaß an innerer Erregung kann zum Wahnsinn führen
+  - Rein emotionales Problem
+- Im 19. Jahrhundert werden erste wissenschaftliche Forschungen
+  durchgeführt \Rightarrow es wird bekannt, dass es kein
+  ,,übernatürliches Verhägnis'' ist
+- Modethema in der Romantik
+- Hoffmann beschäftigte sich selbst mit dem Thema sehr und war auch
+  bei einer Obduktion eines Wahnsinnigen dabei.
+- In ,,Der Sandmann'' findet ein Kindheitstrauma stattt, welches nicht
+  bewältigt werden kann und mit dem Tod endet.
+- Laut Freud sei der Verlust der Augen der Kastration gleichzusetzen
+**** Interpretationen
+***** Künsternovelle
+- Scheitern des romantischen Poeten
+- Die Liebe zu Olimpia spiegelt die falsch verstandene Romantik
+  wider. Die Poesie ersetzt die Wirklichkeit.
+***** Narzismus
+- Nathanel findet sein verlorenes ich bei Olimpia, weil er sein
+  Inneres auf sie projezieren kann. Er liebt sich somit selbst
+- Der ,,Mord'' an Olimpia wird somit gleichgesetzt mit dem Verlust
+  seines Inneren.
+**** Symbolik
+***** Coppelius
+- "coppola" \Rightarrow italienisch für ,,Augenhöhle''
+- ,,coppelore'' \Rightarrow italienisch für ,,läutern''
+- Coppelius ist das Böse schlechthin \Rightarrow er treibt Nathanael
+  in den Wahn
+***** Perspektiv
+Es kehrt die Perspektive von Nathanael zu Olimpia um. Der
+entscheidende Moment ist der, wie Olimpia für ihn ,,lebendig'' wird.
 * Kurzgeschichten
 ** Werke
 *** Die schwarze Katze
@@ -490,7 +614,7 @@ Im Mittelalter wurden die Beschuldigte unter Folter gezwungen zu
 gestehen und dann mit meist einem leichteren Tod bestraft. Hier aber
 wird der Tod durch Folter vollstreckt. Heute werden meist
 Foltermethoden benutzt um Regime am Leben zu halten und Informationen
-zu gewinnen (\rightarrow Geheimdienste) und manchmal von Polizisten
+zu gewinnen (\Rightarrow Geheimdienste) und manchmal von Polizisten
 und Soldaten als Vergeltung.
 **** Autor
 Der Autor ist Franz Kafka (1883 - 1924). Dieser war ein wichtiger
