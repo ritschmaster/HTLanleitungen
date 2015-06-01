@@ -200,26 +200,25 @@ kommen.
 * Mittelalter
 ** Nibelungenlied
 *** Informationen über das Werk
-#+INDEX: Heldenepos
 - Textsorte: Heldenepos[fn:1]
-#+INDEX: gebundene Sprache
 - gebundene Sprache[fn:2] im Original
-- Köhlemeier
-#+INDEX: ungebundene Sprache
+- Köhlmeier
   - ungebundene Sprache[fn:3]
   - Lässt Aspekte Weg bzw. verkürzt sie
     - Umwerbung von Grimhilde dauert im Original ungefähr ein Jahr
   - Fügt Aspekte hinzu
     - Den Schmied Mime gibt es im Original gar nicht
-  - Änder Aspekte ab
+  - Änderte Aspekte ab
     - Siegfried badet bei Köhlmeier in Fett (sonst immer in Blut)
 - Entstehung im Donauraum um etwa 1200 n.Chr.
-- Geschrieben von einem Mönch
-#+INDEX: Aventuren
+- Orignaler Autor ist nicht bekannt, es wird aber vermutete, dass der
+  Bischof von Passau am Ende des 12. Jahrhunderts der Autor ist. Sein
+  Name war Wolfger von Erla. (= Entstehung im Donauraum)
 - Orginal besitzt eine Länge von 39 Aventuren[fn:4]
 - Im Original dauert es ein Jahr bis Siegfried und Kriemhild heiraten
-- Nationalepos durch Stilisierung von Hagen zum loyalsten Diener und
-  Siegfried als perfekter Mann (Arier.)
+- Nationalepos im 19. Jahrhunderts
+- Missbrauch durch die Nationalsozialisten durch Stilisierung von
+  Hagen zum loyalsten Diener und Siegfried als perfekter Mann (Arier.)
 
 [fn:1] Dichtungen bei denen eine Figur des heroischen Zeitalters im
     Mittelpunkt steht. die Heldendichtung baut auf die Heldensage
@@ -327,7 +326,22 @@ Drang eine eigene Version der Nibelungensage zu verfassen.
 ** Parzival
 *** Informationen über das Werk
 - Gebundene Sprache
--
+- Höfisches Epos[fn:300]
+- Weist einen doppelten Kursus[fn:101] auf
+- Autor: Wolfram von Eschenbach
+
+[fn:300] Epos, welches vom Hofe Artus ausgeht.
+[fn:101] Ein Held erlangt sehr schnell Ehre, begeht aber auf seinem
+Weg sehr viele Fehler. Durch diese Fehler verliert er seine Ehre
+wieder und er muss sich nochmals behaupten. Bei der zweiten Behauptung
+macht er alles richtig und erreicht endgültige Ehre (bzw. anderes
+Ziel, hier: Gral finden).
+*** Handlung
+*** Geistlich und weltlich
+Es wird im Original der Weg von Parzival und Gawan
+beschrieben. Während Parzival Gralskönig wird und somit das höchst Gut
+in der geistlichen Welt erreicht, erreicht Gawan durch seine Abenteuer
+die höchsten Auszeichnungen und Freuden der weltlichen Welt.
 ** Lehenswesen
 *** Wortherkunft
 Lehen kommt vom Wort leihen. Das pedant im Latein ist Feudum und
@@ -400,43 +414,75 @@ Bocaccios ,,Der Falke'').
 - normalerweise in Prosa geschrieben
 [fn:10] episch = erzählend
 ** Lyrik
--
+- Gesang
 ** Dramatik
-* Gelehrtenprobleme der Wissensfreigabe
-** Die Physiker
-*** Handlung
-*** Stoffliche Anregung
-- Vortrag über Einstein 1979
-*** Themen
-**** Weltpolitische Lage
-- USA gegen Sowjetunion \Rightarrow Kalter Krieg
-- Atomare Vernichtung ist eine ständige Bedrohung
-**** Kritik der menschlichen Hybris[fn:11]
-- Der Mensch beherrscht die Natur
-- Der Mensch eignet sich Wissen an
-- Der Mensch überschreitet Grenzen der Berrschung
-- Der Mensch vernichtet die Erde durch sein erlangtes Wissen, da er
-  nichts mehr scheut
-
-[fn:11] Hybris = realitätsfernes, maßloses und unangemessenes
-Vertrauen in die Handlungen der eigenen Person (Quelle
-http://de.wiktionary.org/wiki/Hybris)
-**** Möbius Scheitern
-- Möbius zieht sich zurück um die Menscheit vor sich selbst zu
-  schützen.
-- Es gelingt nicht, da die Wissenschaft nicht aufgehlaten werden kann.
-** Das Leben des Galileo Galilei
-*** Handlung
-*** Autor
-Der Autor ist Bertold Brecht (1898 - 1956). Ein weiteres sehr
-bekanntes Werk von ihm (behandelt ein anderes Thema!) ist ,, Die Drei
-Groschen-Oper''.
+- Bühnenstücke
+* Die Leiden des jungen Werthers
+** Handlung
+http://www.inhaltsangabe.de/goethe/werther/
+** Merkmale  & Informationen
+- Briefroman
+- Neuerer Briefroman: Gut gegen Nordwind von Daniel Glattauer (zwei
+  Personen schreiben sich E-Mails und verlieben sich)
+** Unterschied zwischen Goethes Leben und dem Film ,,Goethe!''
+Es sind zwar nicht alle Aspekte frei erfunden, dennoch entspricht
+einiges nicht der Wahrheit. Schon zu Beginn wird eine falsche
+Information geliefert. Der junge Goethe ist nicht beim Examen
+durchgefallen, sondern hat lediglich den Doktor nicht bekommen, da er
+Aussagen gegen die Kirche in seiner Doktorarbeit niederschrieb. Dafür
+erhielt er aber das Lizenziat. Goethe hatte sich auch niemals
+duelliert, was folgert, dass er nicht deswegen im Gefängnis saß. "Die
+Leiden des jungen Werthers" selbst schrieb er erst anderthalb Jahre
+nach seiner Arbeit in Wetzlar. Er benötigte zwar nur vier Wochen
+dafür, aber ein paar Nächte, wie es im Film geschildert wird, sind
+dann doch ein bisschen zu wenig. Außerdem war Charlotte schon verlobt,
+wie er in Wetzlar ankam. Weiters erwiderte sie Goethes Liebe nicht.
+Der Tod Jerusalems wurde Goethe erst später bekannt und war nicht so
+wie im Film direkt dabei.
 * Gelehrtenproblem des Unwissens/Gelehrtentragödie
 ** Faust - der Tragödie erster Teil
 *** Handlung
-* Biedermeier
-** Begriffsherkunft
+http://www.inhaltsangabe.de/goethe/faust-1/
+*** Informationen & Merkmale
+- Textgattung: Tragödie
+- Aufteilung in zwei Teilen:
+  - Gelehrtentragödie :: Der Mensch strebt nach Wissen und wird nie
+       satt. Er kann so viel lernen und forschen wie er will, wird er
+       dennoch nie verstehen ,,was die Welt im Innersten
+       zusammenhält''. Dieses Schicksal erleidet auch Faust und ist
+       aus diesem Grund totunglücklich.
+  - Gretchentragödie :: Der Übergriff des Adels auf die Bevölkerung
+       wird durch die zweite Passage stilisiert. Gretchen wird von dem
+       reichen adeligen Faust verführt und fallen gelassen.
+- Die Gretchentragödie war zur Entstehungszeit des Werks ein beliebtes
+  Thema. Aus diesem Grund wurde Goethe auch Plagiat vorgeworfen.
+*** Faust II
+**** Handlung
+http://www.inhaltsangabe24.de/faust-der-tragoedie-zweiter-teil-goethe.php
 
+**** Schluss der Handlungp
+http://de.wikipedia.org/wiki/Faust._Der_Trag%C3%B6die_zweiter_Teil#F.C3.BCnfter_Akt
+[...] Mittlerweile hundert Jahre alt und blind, hält Faust die
+lärmenden Lemuren, die ihm das Grab schaufeln, für seine Arbeiter, die
+einen Deich errichten sollen, mit dem er dem Meer Land für Besitzlose
+abgewinnen will: „Eröffn’ ich Räume vielen Millionen, Nicht sicher
+zwar, doch tätig frei zu wohnen. (11563–11564) […] Solch ein Gewimmel
+möcht’ ich sehn, Auf freiem Grund mit freiem Volke stehn.“
+(11579–11580) Im Streben nach dem „höchsten Dasein“ hat Faust seinen
+Egoismus überwunden. Er will nun seine Fähigkeiten für das Wohl der
+Bedürftigen einsetzen, von denen viele Millionen existieren. Mit
+dieser späten Sinnfindung kann Faust sich endlich akzeptieren und
+sicher sein, durch eine solche Großtat der Nachwelt im Gedächtnis zu
+bleiben. Glücklich bekennt er: „Zum Augenblicke dürft’ ich sagen:
+Verweile doch, du bist so schön! Es kann die Spur von meinen
+Erdentagen Nicht in Äonen untergehn. – Im Vorgefühl von solchem hohen
+Glück Genieß’ ich jetzt den höchsten Augenblick“ (11581–11586).
+
+Mit dem Ausspruch der alten Schwurformel „Zum Augenblicke dürft’ ich
+sagen: Verweile doch, du bist so schön!“ verliert er die Wette nicht,
+da der Konjunktiv (Irrealis) „dürft’“ andeutet, dass Faust dies gerne
+sagen würde, es jedoch nicht tut. Seinem Tod aber entgeht er
+nicht. [...]
 * Romantik
 ** Märchen
 *** Warum sind Märchen unsterblich (laut Michael Maar aus ,,Der Falter'')?
@@ -513,7 +559,7 @@ http://de.wikipedia.org/wiki/Der_blonde_Eckbert#Inhalt
 Ludwig Tieck
 *** Sandmann
 **** Merkmale
-- Schauernovelle
+- Textgattung: Schauernovelle
 **** Handlung
 http://de.wikipedia.org/wiki/Der_Sandmann_%28Hoffmann%29#Inhalt
 **** Autor
@@ -561,6 +607,9 @@ http://de.wikipedia.org/wiki/Der_Sandmann_%28Hoffmann%29#Inhalt
 ***** Perspektiv
 Es kehrt die Perspektive von Nathanael zu Olimpia um. Der
 entscheidende Moment ist der, wie Olimpia für ihn ,,lebendig'' wird.
+* Biedermeier
+** Begriffsherkunft
+
 * Kurzgeschichten
 ** Werke
 *** Die schwarze Katze
@@ -619,10 +668,53 @@ und Soldaten als Vergeltung.
 **** Autor
 Der Autor ist Franz Kafka (1883 - 1924). Dieser war ein wichtiger
 österreichischer jüdischer Schriftsteller.
+* Gelehrtenprobleme der Wissensfreigabe
+** Die Physiker
+*** Merkmale
+- Textgattung: Laut Untertitel eine Komödie, jedoch verarbeitet man
+  das Stück als Zuschauer eher als Tragikomödie oder Groteske
+*** Handlung
+http://www.inhaltsangabe.de/duerrenmatt/die-physiker/
+*** Stoffliche Anregung
+- Vortrag über Einstein 1979
+*** Themen
+**** Weltpolitische Lage
+- USA gegen Sowjetunion \Rightarrow Kalter Krieg
+- Atomare Vernichtung ist eine ständige Bedrohung
+**** Kritik der menschlichen Hybris[fn:11]
+- Der Mensch beherrscht die Natur
+- Der Mensch eignet sich Wissen an
+- Der Mensch überschreitet Grenzen der Berrschung
+- Der Mensch vernichtet die Erde durch sein erlangtes Wissen, da er
+  nichts mehr scheut
+
+[fn:11] Hybris = realitätsfernes, maßloses und unangemessenes
+Vertrauen in die Handlungen der eigenen Person (Quelle
+http://de.wiktionary.org/wiki/Hybris)
+**** Möbius Scheitern
+- Möbius zieht sich zurück um die Menscheit vor sich selbst zu
+  schützen.
+- Es gelingt nicht, da die Wissenschaft nicht aufgehlaten werden kann.
+** Das Leben des Galileo Galilei
+*** Handlung
+*** Autor
+Der Autor ist Bertold Brecht (1898 - 1956). Ein weiteres sehr
+bekanntes Werk von ihm (behandelt ein anderes Thema!) ist ,, Die Drei
+Groschen-Oper''.
+*** Interpretationen
+1. Wenn die Bauern erfahren, dass sie nur eine kleine Figur im
+   Universum sind, lehnen sie sich auf, da es keinen Sinn mehr amchen
+   würde sich für nichts zu Tode zu arbeiten. Dies würde Krieg
+   bedeuten und diesen will niemand.
+2. Die Obrigkeit will nur ihren Luxus nicht hergeben, darum will sie
+   nicht, dass ihre Untertanen gebildet sind.
 * Bürgerliches Problemstück
 ** Kein Platz für Idioten
 *** Handlung
+http://de.wikipedia.org/wiki/Kein_Platz_f%C3%BCr_Idioten#Inhalt
 *** Autor
+Der Autor ist Felix Mitterer. Er hat das Stück aus eigenen Interessen
+geschrieben, da er von einem ähnlichen Vorfall gehört hatte.
 * Ziel dieses Dokumentes
 Zu jeder Matura kommen andere Themen. Dieses Dokument soll als
 Themendatenbank dienen und wäre dazu gedacht, dass jeder Jahrgang
