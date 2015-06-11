@@ -323,6 +323,8 @@ Nibelungensage konfrontiert worden ist. Dies liegt daran, da er in
 dieser Umgebung aufgewachsen ist. Aus diesem Grund verspürte er den
 Drang eine eigene Version der Nibelungensage zu verfassen.
 
+*** Informationen über Köhlmeier
+- Andere bekannte Werke: Sunrise (Erzählung/Novelle)
 ** Parzival
 *** Informationen über das Werk
 - Gebundene Sprache
@@ -456,6 +458,10 @@ http://www.inhaltsangabe.de/goethe/faust-1/
        reichen adeligen Faust verführt und fallen gelassen.
 - Die Gretchentragödie war zur Entstehungszeit des Werks ein beliebtes
   Thema. Aus diesem Grund wurde Goethe auch Plagiat vorgeworfen.
+*** Tragödien-Aufbau
+**** Exposition
+**** Peripetrie
+**** Katastrophe
 *** Faust II
 **** Handlung
 http://www.inhaltsangabe24.de/faust-der-tragoedie-zweiter-teil-goethe.php
@@ -525,6 +531,10 @@ Der Mann vermittelt oft:
   - Klug
   - Listig
   - Ausdauerernd
+*** Gebrüder Grimm
+- Verschriftlichung und Verkindlichung der bäuerlichen Märchen
+  ("Kinder- und Hausmärchen")
+- Ein Bruder hat das erste Wörterbuch geschrieben
 ** Werke
 *** Der blonde Eckbert
 **** Handlung
@@ -537,6 +547,16 @@ http://de.wikipedia.org/wiki/Der_blonde_Eckbert#Inhalt
 - Der Wald als Sinnbild für den Rückzugsort
 - Der Held Eckbert *scheitert*
 - *Belohnung und Bestrafung* als Märchenmotiv
+- Kunstmärchen
+  - Von einem Künstler für die belesenen Bürger und nicht vom Volk für
+    das Volk
+  - Sprachlich mehr anspruchsvoll
+  - Held scheitert meistens
+**** Märchenelemente
+- Vogel legt goldene Eier
+- Armes Bauermädchen wird von einem Ritter geehelicht
+- Romantisches Mittelalter (jedoch hier eher realistisch und nicht
+  irreal)
 **** Thema
 - Der entdeckungsfreudige Mensch, der mit seiner Sehnsucht der Ferne
   andere verletzt.
@@ -563,6 +583,10 @@ Ludwig Tieck
 **** Handlung
 http://de.wikipedia.org/wiki/Der_Sandmann_%28Hoffmann%29#Inhalt
 **** Autor
+Autor ist ETA Hoffmann. Er war Jurist, jedoch war ihm das
+philisterhafte Juristenleben verhasst. Bei Nacht war er Maler,
+Musiker, Dichter. Sein Leben spiegelt sich in Nathanael (romantischer
+Poet) und Klara (bürgerliche wider).
 **** Themen
 ***** Automaten
 - Waren im 18./19. Jahrhundert in der Literatur sehr beliebt
@@ -598,6 +622,19 @@ http://de.wikipedia.org/wiki/Der_Sandmann_%28Hoffmann%29#Inhalt
   Inneres auf sie projezieren kann. Er liebt sich somit selbst
 - Der ,,Mord'' an Olimpia wird somit gleichgesetzt mit dem Verlust
   seines Inneren.
+***** Krankheitsverlauf
+1. Kindheitstrauma - Sein Kindermädchen hat ihm schlimme Geschichten
+   über den Sandmann (Augenmotiv) erzählt
+2. Nathanael projiziert seine Angst/Hass auf den Advokaten Coppelius
+3. Beim heimlichen Zuschauen wird er erwischt und er bildet sich Dinge
+   ein bzw. überbewertet sie (Schläge, Drohung die Augen zu stehlen,
+   Schwimmende Augen im Kessel)
+4. Coppala tritt auf und löst erneut das Trauma aus
+5. Nathanael steigert sich selbst durch seine Furcht ein
+6. Olimpia ist ein lebloser Automat und nur die Augen sind echt
+7. Verlust der Augen löst den Wahnsinn des Traumas aus
+8. Erneutes Sehen der Augen löst wieder den Wahnsinn aus und endet im
+   Tod
 **** Symbolik
 ***** Coppelius
 - "coppola" \Rightarrow italienisch für ,,Augenhöhle''
@@ -607,21 +644,33 @@ http://de.wikipedia.org/wiki/Der_Sandmann_%28Hoffmann%29#Inhalt
 ***** Perspektiv
 Es kehrt die Perspektive von Nathanael zu Olimpia um. Der
 entscheidende Moment ist der, wie Olimpia für ihn ,,lebendig'' wird.
-* Biedermeier
-** Begriffsherkunft
-
-* Kurzgeschichten
+* Romantische Kurzgeschichten
 ** Werke
 *** Die schwarze Katze
+**** Wahnsinn
+# <<sec:PoeWahnsinn>>
+Der Erzähler erzählt wieso er nicht wahnsinnig ist. Durch seine
+Schilderungen wird aber deutlich, dass er wahnsinnig ist, da er sehr
+kühl über seine Tat berichtet.
+**** Augenmotiv
+Das Auge der Katze löst den Wahnsinn aus.
 **** Handlung
 **** Autor
 # <<sec:DiescharzeKatzeAutor>>
 *** Das verräterische Herz
+**** Wahnsinn
+Siehe [[sec:PoeWahnsinn]]
 **** Handlung
 **** Autor
 *** Der Teppich
+**** Wahnsinn
+Siehe [[sec:PoeWahnsinn]]
 **** Handlung
+**** Charaktere
+***** Stark
+- Trunkenbolt
 **** Autor
+Frank Schätzing, deutscher, zeitgenössischer Autor.
 *** In der Strafkolonie
 **** Handlung
 Ein forscher ist auf einer Insel und ihm wird das Rechtssystem von
@@ -668,6 +717,353 @@ und Soldaten als Vergeltung.
 **** Autor
 Der Autor ist Franz Kafka (1883 - 1924). Dieser war ein wichtiger
 österreichischer jüdischer Schriftsteller.
+* Romantische Balladen
+** Der Rabe
+*** Handlung
+- Protagonist verliert seine Frau
+*** Interpretation
+**** Rabe
+**** Tag
+- Kalte Dezembernacht
+- Alles geht vorbei (Neujahr)
+****
+* Biedermeier
+** Begriffsherkunft
+- Zwei Spottfiguren: Bummelmeier und
+- Scheinheilige Opportunisten - "Leiht sein Geld auf Wucher aus"
+- Rückzug aus dem politischen Leben
+** Werke
+*** Die schlimmen Buben in der Schule
+**** Nestroy
+- Begründer des Volkstheater
+- Unterschied zu Mitterer
+  - Versuch witzig (Sprache) und unterhaltend (Musik) zu sein von
+    Nestroy
+  - Wortwitz und glückliches Ende bei Nestroy
+  - Sprechende Namen bei Nestroy (schlimmen Buben)
+**** Handlung
+https://de.wikipedia.org/wiki/Die_schlimmen_Buben_in_der_Schule#Inhalt
+
+Auf dem Schloss des Barons von Wolkenfeld, in seiner Schule für die
+Bediensteten des Gutes, geleitet vom alten Schulmeister Wampl, sollen
+Examina stattfinden. Wampls Gehilfe Franz kann sich nicht gegen den
+frechen Willibald durchsetzen: Nestroy als Willibald (Lithografie von
+Melchior Fritsch, 1857)
+
+#+BEGIN_QUOTE
+„Sie sind kein wirklicher sondern nur ein qua Schulgehilfe, ein qua
+Substitut, qua Supplens, mit einem Wort Sie sind rein nur qua-qua, und
+das in einer Schule, die wahrscheinlich schon am längsten Schule
+gewesen is.“
+#+END_QUOTE
+
+Den Schulmeister stört das Verhältnis seiner Tochter Nettchen mit
+Franz und er ist über die drohende Auflösung der Schule verstört. Als
+ein Besuch des Barons angekündigt wird, der zum Ende des Schuljahrs
+diesmal persönlich das Examen vornehmen will, macht er sich noch mehr
+Sorgen:
+
+#+BEGIN_QUOTE
+„Gutsherr Landrath Examen, es is ein Wahnsinn – aufs Examinieren sind
+meine Schüler nicht eingericht't. Wer hilft mir, wer rathet mir –
+Franz! wo Teufel ist denn der Franz! Aufseher, wo stecken Sie?!“
+#+END_QUOTE
+
+Franz will ihm helfen, allerdings dafür Nettchens Hand bekommen und
+Wampl weiß keinen anderen Ausweg, als zuzustimmen. Franz, der die
+Liste der Fragen vorbereitet hat, verteilt an die Schüler Zettel mit
+den richtigen Antworten. Unbemerkt von Franz tauschen die Schüler
+jedoch ihre Zettel untereinander aus. Als der Baron mit der Prüfung
+beginnt, kommen zwar richtige Antworten, aber auf die falschen Fragen.
+
+#+BEGIN_QUOTE
+Wolkenfeld: „Welche Planeten unseres Sonnensystems sind größer als
+unsere Erde?“
+Stanislaus: „Kärnthen, Krain, Görz, Salzburg und die Windische
+Mark.“
+#+END_QUOTE
+
+Der Baron erweist sich jedoch als stocktaub und nimmt den Unsinn der
+Antworten gar nicht wahr. Daher erhalten alle Schüler ihre Prämien,
+Wampl wird bei vollen Bezügen in Rente geschickt und Franz erhält eine
+volle Lehrerstelle in der Stadt – und sein Nettchen. Wolkenfeld
+gratuliert ihm dazu:
+
+#+BEGIN_QUOTE
+„Auch eine Hochzeit? gratuliere! Sie tragen aus dieser Schule das
+schönste Praemium davon. Dem Verdienste seine Krone.“ (24ste
+Scene)
+#+END_QUOTE
+**** Strafen heute
+- Bei lästigen Schülern, dürfen sie unter Aufsicht verwiesen werden
+- ,,Nachsitzen'' nur unter Einverständnis der Eltern und zum Nachholen
+  versäumten Inhalts
+- Keine kollektive Strafne
+*** Die schwarze Spinne
+* Realismus
+** Marie von Ebner-Eschenbach
+*** Wer war sie?
+Marie von Ebner-Eschenbach war eine österreich-ungarische Gräfin und
+Schriftstellerin aus Mähren. Sie hatte Glück, dass ihre zweite
+Stiefmutter (ihr Vater hatte insgesamt 4 Frauen, die zweite war ihre
+leibliche Mutter) und ihr Mann gebildete Menschen waren und ihrem
+striftstellerischem Drang unterstützten. Sie schloss 1879 eine
+Uhrmacher-Ausbildung ab, das für eine Frau ihrer Zeit extrem
+ungewöhnlich war.
+*** Womit beschäftigte sie sich besonders in ihren Werken?
+Ihre Werke beschäftigten sich besonders mit ihrem sozialen Denken und
+ihrem politischen Bewusstsein. Sie schreibt gegen ihre eigene
+Gesellschaftsklasse. Die Emanzipation der Frau stand bei ihren Werken
+oftmals im Mittelpunkt (Die Totenwacht).
+
+** Werke
+*** Die Totenwacht (Erzählung)
+**** Fasse den Inhalt dieser Erzählung in wenigen Sätzen zusammen.
+Die Hauptprotoganistin ist Anna. Bei der Totenwacht ihrer Mutter,
+besucht sie Georg. Dieser ist ein alter ,,Freund'' Annas. Sie reden
+darüber, wie dekadent, unbarmherzig und grausam er immer zu ihr in
+deren Kindheit war. Danach wird aufgedeckt, dass er sie, im
+jugendlichen Alter, vergewaltigte. Das entstandene Kind liebte Anna,
+musste aber aus ihrer Armut sterben. Georg stellt ihr einen
+Heiratsantrag, um seine Gewissensbisse zu tilgen. Sie lehnt ab, da sie
+ihn verabscheut und eigenständig leben kann, so wie sie es bis zu
+diesem Zeitpunkt auch geschafft hatte.
+**** Erstelle eine Charakteristik der Protagonisten
+***** Anna (als Kind und Erwachsene)
+Anna ist als Kind immer geschlagen und von Georg schickaniert
+worden. Sie wollte meist nur spielen, doch Georg hasste
+sie. Wahrscheinlich hat sie aus diesem Grund auch nie Georg mit den
+Steinen wirklich treffen wollen.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Als Erwachsene ist sie eine starke Frau. Sie kann ihr leben selbst
+bestreiten und will sich nicht von einem bösen Menschen, wie es Georg
+ist, kontrollieren lassen. Mit ihren Händen kann sie sich durchs leben
+schlagen, auch ohne Mann.
+***** Georg Huber (Kind – Erwachsener)
+Georg war als Kind sehr infantil und hat nichts teilen wollen. So hat
+er auch mit einem Stein Anna vom Baum geholt, damit sie sich nicht an
+/seiner/ Katze laben kann. Wegen dem Wohlstand seiner Eltern, war er
+immer sehr dekadent und unbarmherzig. Er hat liebe den Schweinen sein
+dickes Butterbrot gegeben als Anna, die fast verhungert ist.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Wie Georg zum Mann wurde, betrachtete er Anna anders und wollte sie
+haben. Er wird zum Vergewaltiger und stellt ihr nach. Zum Schluss aber
+setzen bei im die Gewissensbisse ein und er will sich selbst
+erlösen. Seine Erlösung sieht er in der Heirat von Anna. Er ist sehr
+aufbrausend und kann schlecht Entscheidungen gegen ihm
+akzeptieren. Dies sieht man besonders als Anna sein Heiratsantrag
+ablehnt. Georg ist außerdem ein großer oder sogar der größte Bauer des
+Dorfes.
+***** Väter
+Georgs Vater ist rechtschaffender Mensch. Seine Schwäche ist jedoch
+die Familie. Für ihm geht die Familie über jedes Recht. Ein Zeugnis
+dafür ist die Entlastung Georgs nur durch seine Verleugnung.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Annas Vater ist ein Trunkenbolt, dem nichts heilig ist, um seine
+Alkohol- und Spielsucht genüge zu tun. Aus diesem Grund ,,stiehlt'' er
+auch das geschenkte Kleid von Anna.
+
+**** Welches Milieu beschreibt die Autorin?
+# <<sec:milieu>>
+Welche Themen und Grundmotive greift sie auf und welche Problematik
+der Zeit kritisiert sie insbesondere?
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Sie greift das Thema des Übergriffs der Männer und der Obrigkeit auf
+die Frauen der armen Bevölkerung auf. Anders als z.B. in Faust ist der
+Übeltäter nicht mehr vom Adel, sondern nur mehr ein etwas reicherer
+Bauer (= bürger, bäuerliches Milieu). Es die vermeintliche absolute
+Bindung einer Frau an einem Mann kritisiert, jedoch auch aufgezeigt,
+dass es eine Frau auch ohne Mann durchs leben schaffen kann, wenn auch
+schwieriger.
+**** Gehe auf die Grundmotive und Themen ein.
+Welche Problematik der Zeit/des Menschen wird von der Autorin
+beschrieben? Woran übt sie Kritik? Was ist realistisch an dieser
+Erzählung?
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Siehe Kapitel [[sec:milieu]]. Es ist eigentlich alles realistisch an der
+Erzählung. Womöglich ist die Kombination des Kindesalter und des
+Erwachsenenalters nicht ganz realistisch (sie kenn sich schon lange
+und er vergewaltigt sie dann), jedoch nicht unmöglich.
+**** Verglichen mit Eschenbachs Zeit
+, inwiefern hat sich das Schicksal dieser Frauen oder Mädchen in der
+   heutigen Gesellschaft geändert/verbessert?
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Vergewaltigte Frauen können nun Schutz bei der Polizei suchen. Sie
+erfahren auch Unterstützung durch den Staat. In der Gesellschaft ist
+man nicht mehr als Alleinerziehende geächtet.
+
+*** Krambambuli
+**** Fasse den Inhalt der Novelle in wenigen Sätzen zusammen.
+Was macht diese Novelle zur Novelle?
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Der Jäger Hopp kauft einem Säufer seinen Hund ab. Dieser ist jedoch
+seinem Besitzer treu und erst nach einigen Monaten erkennt er den
+neuen Herren an. Währendessen zieht ein Wilderer, /der Gelbe/, durch die Wälder und
+schießt sich immer wieder ein Wild. Die Bevölkerung stiehlt sich
+Brennholz. Letzteres wird durch den Oberjäger brutal unterbunden. Aus
+diesem Grund wird er von dem Wilderer erschossen. Der Wilderer ist der
+Besitzer des Hundes. Hopp stellt den Wilderer und der Hund erkennt
+seinen früheren Herrn und springt in, vor Freude, an. Dies ermöglicht
+Hopp den Schuss. Der Wilderer stirbt und er setzt den Hund für seinen
+Verrat aus. Am Ende findet er seinen Hund verendet vor seiner Tür.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Was macht die Geschichte zu einer Novelle:
+- Der Hund ist das zentrale Motiv (Falkentheorie)
+  - Überraschende Wendung: Der Hund entscheidet sich für den
+    anfänglichen Besitzer
+- Direkter Einstieg in die Erzählung
+- Unerhörte Geschichte
+- Sehr kurz
+**** Charakterisiere kurz folgende Figuren.
+Beschreibe deren Abhängigkeitsverhältnis und Rolle in der
+Gesellschaft.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+***** Revierjäger Hopp
+Hopp ist ein rechtschaffender Mensch. Er versteht, warum die
+Bevölkerung den Wald plündert. Er heißt es zwar nicht gut, ist aber
+nicht von tiefsten erzürnt darüber. Außerdem ist er verheiratet. Die
+Beziehung zu seinem Hund bedeutet ihm aber mehr als die zu seiner
+Frau. Er ist den Höhergestellten untergeben und möchte keine Menschen
+töten.
+***** Der Gelbe
+Ist eine Art /Robin Hood/. Er ist jedoch ein Säufer und verliert mit
+seiner Trunkensucht seinen Hund (verkauft ihn um 12 Flaschen Schnaps).
+***** Graf/Adel
+Der Graf stellt die Rahmenbedingung für die ganze Geschichte, da ihm
+der Wald gehört. Er tritt nur ein einziges Mal in Erscheinung und zwar
+wie seine Frau von Hopp den Hund verlangt, da er ihm so viel
+gefällt. Aus dies lässt sich schließen, dass er alles haben will, von
+was er gehört hat.Sehr wenig Geduld.
+***** Krambambuli, der Hund
+Ist ein extrem treuer Hund, dabei ist er immer seinen ersten Herren
+treu geblieben. Er verstand es nie, dass er ihn verlassen musste,
+darum freute er sich auch dem entsprechend wie er in wieder sah. Des
+weiteren ist er auch ein überdurchschnittlich intelligenter Hund, man
+glaubt fast, dass er wie ein Mensch kommuniziert (nur ohne Sprache).
+**** Welche Problematik der Zeit/des Menschen wird von der Autorin beschrieben?
+Woran übt sie Kritik? Welche Themen kommen vor? Liste auf.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+- Die Menschen haben selbst zu wenig, können sich aber nichts
+  beschaffen, da sie sonst entweder erschossen oder eingesperrt
+  werden.
+  - Ungerechte Verteilung der Güter
+  - Macht des Adels
+    - Haben den Anspruch auf den Hund
+- Die Willkür der Jäger, sich das Recht zu nehmen, Wilderer zu
+  erschießen (außer sie tun es in Notwehr)
+- Den Alkoholismus - Tausch eines guten Hundes für Schnaps
+* Wiener Moderne
+** Arthur Schnitzler
+*** Doppelmoral
+- Schein des perfekten Eheleben nach außen
+- In Wirklichkeit leben die Eheleute mit anderen die sexuellen Träume
+  aus
+*** Brief von Freud
+- Freud war neidisch auf Schnitzlers Erfolg mit seinen literarische
+  psychologische Werken
+- Schnitzler kann intuitiv das, das Freud sich über Forschung
+  aneigenen hat müssen
+- Freud wertschätzt ihn im nachhinein
+** Hugo von Hoffmansthal
+** Sigmund Freud
+- Begründer der Psychoanalyse
+*** Ich-Theorie
+**** Über-ich
+- Vernunft
+**** Libido
+- Triebe
+**** Ich
+- Steht im Konflikt mit Über-ich und Libido
+*** Freudscher Versprecher
+Etwas unterbewusst gedachtes wird versehentlich gesagt. Ist ein Effekt
+der Ich-Theorie.
+*** Psychoanalyse
+- Erforschung von psychischen Problemen
+- Wenn das "ich" in die falsche Richtung gelenkt wird, dann entstehen
+  Zwangsneurosen oder andere psychische Probleme.
+** Themen
+- Dekadenz
+- Niedergang des ausschweifenden Lebensstils
+** Werke
+*** Leutnant Gustl
+**** Handlung
+https://de.wikipedia.org/wiki/Leutnant_Gustl#Inhalt
+
+Im Anschluss an ein abendliches Konzert, das er gelangweilt verfolgt
+hat, gerät Gustl an der Garderobe des Konzerthauses in einen Streit
+mit Habetswallner, einem ihm bekannten Bäckermeister. Gustl will
+seinen Säbel ziehen, wird aber durch seinen körperlich überlegenen
+Kontrahenten daran gehindert und als „dummer Bub“ beschimpft. Die
+Schmach, von einem gesellschaftlich tiefer stehenden Bäckermeister
+beleidigt worden zu sein, vermag Gustl nicht zu verwinden. Dem
+militärischen Ehrenkodex verhaftet, beschließt er, am nächsten Morgen
+um sieben Uhr Selbstmord zu begehen, unabhängig davon, ob der
+Bäckermeister den Vorfall publik machen wird oder nicht.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Auf seinem Weg nach Hause durchquert Gustl den Wiener Prater. Der Duft
+der ersten Frühlingsblumen lässt ihn in seinem Selbstmordentschluss
+wanken. Das Bewusstsein, von all diesen schönen Dingen Abschied nehmen
+zu müssen, entfacht in ihm eine neue Lebenslust. Die Erinnerung an
+seine Familie, insbesondere seine Mutter und seine Schwester, sowie an
+diverse, aktuelle und verflossene Geliebte versetzt ihn in eine tiefe
+Betrübnis, die er mit der Feststellung, als österreichischer Offizier
+zum Suizid verpflichtet zu sein, vergeblich zu betäuben versucht.
+#+BEGIN_LATEX
+\\\\
+#+END_LATEX
+Er schläft auf einer Parkbank ein und erwacht erst am frühen
+Morgen. Bevor er nach Hause zurückkehrt, wo er seinen Revolver gegen
+sich zu richten beabsichtigt, besucht er sein Stammkaffeehaus. Der
+dort arbeitende Kellner Rudolf berichtet ihm, sein Beleidiger, der
+Bäcker Habetswallner, sei in der Nacht unerwartet an einem
+Schlaganfall gestorben. Über alle Maßen erleichtert, nimmt Gustl
+freudig von seinen Suizidplänen Abstand und ergeht sich in
+Betrachtungen anstehender Unternehmungen. So wird er sich schon am
+Nachmittag desselben Tages duellieren – mit dem Gedanken an seinen
+Kontrahenten endet der Text:
+#+BEGIN_QUOTE
+„Dich hau' ich zu Krenfleisch!“
+#+END_QUOTE
+**** Merkmale
+- Textgattung: innerer Monolog (häufig auch als Novelle \Rightarrow
+  überraschende Wendung zum Schluss)
+*** Anatol
+**** Merkmale
+- Textgattung: Schauspiel
+*** Jedermann
+**** Doppelrollen
+- Guter Gesell/Teufel
+  Im Original nicht gegeben.
+- Gott/Der arme Nachbar
+**** Themen
+- Materialismus
+- Vergessen der alten Werten
+- Scheinbare Freunde durch Geld
+**** Herkunft des Stoffes
+Aus dem englischen "Everyman". Davor völkstümliche Geschichte. Aus
+seiner eigenen Zeit "Philosophie des Geldes" von Georg Simmel.
 * Gelehrtenprobleme der Wissensfreigabe
 ** Die Physiker
 *** Merkmale
@@ -713,8 +1109,17 @@ Groschen-Oper''.
 *** Handlung
 http://de.wikipedia.org/wiki/Kein_Platz_f%C3%BCr_Idioten#Inhalt
 *** Autor
-Der Autor ist Felix Mitterer. Er hat das Stück aus eigenen Interessen
-geschrieben, da er von einem ähnlichen Vorfall gehört hatte.
+Der Autor ist der aus Tirol stammende Felix Mitterer. Er hat das Stück
+aus eigenen Interessen geschrieben, da er von einem ähnlichen Vorfall
+gehört hatte, wo ein Wirt einen Behinderten verwiesen hat. Geschrieben
+hat er das Stück zur Zeit des aufsteigenden Tourimus in den
+1970er. Mitterer schreibt immer über authentische Themen (,,Kinder des
+Teufels'', Kirchenskandale).
+*** Filmunterschiede
+- Tod vom alten Mann im Film
+- Mutter nur im original gehässig \Rightarrow im Film ist der Vater
+  der Böse
+
 * Ziel dieses Dokumentes
 Zu jeder Matura kommen andere Themen. Dieses Dokument soll als
 Themendatenbank dienen und wäre dazu gedacht, dass jeder Jahrgang
