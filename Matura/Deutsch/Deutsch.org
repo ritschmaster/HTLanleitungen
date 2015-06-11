@@ -458,10 +458,6 @@ http://www.inhaltsangabe.de/goethe/faust-1/
        reichen adeligen Faust verführt und fallen gelassen.
 - Die Gretchentragödie war zur Entstehungszeit des Werks ein beliebtes
   Thema. Aus diesem Grund wurde Goethe auch Plagiat vorgeworfen.
-*** Tragödien-Aufbau
-**** Exposition
-**** Peripetrie
-**** Katastrophe
 *** Faust II
 **** Handlung
 http://www.inhaltsangabe24.de/faust-der-tragoedie-zweiter-teil-goethe.php
@@ -1097,6 +1093,10 @@ http://de.wiktionary.org/wiki/Hybris)
 Der Autor ist Bertold Brecht (1898 - 1956). Ein weiteres sehr
 bekanntes Werk von ihm (behandelt ein anderes Thema!) ist ,, Die Drei
 Groschen-Oper''.
+*** Galileos Einstellung
+- Er will alles unbedingt wissen
+- Seiner Meinung nach hat er die Pflicht das Volk zu informieren, da
+  sie es alleine nicht herausfinden (der Mönch ist anderer Meinung)
 *** Interpretationen
 1. Wenn die Bauern erfahren, dass sie nur eine kleine Figur im
    Universum sind, lehnen sie sich auf, da es keinen Sinn mehr amchen
@@ -1120,6 +1120,12 @@ Teufels'', Kirchenskandale).
 - Mutter nur im original gehässig \Rightarrow im Film ist der Vater
   der Böse
 
+* Kriegsliteratur
+** Begriff Kahlschlagliteratur
+- Kahl, sprachlos auf Grund des Grauen des Krieges
+** Werke
+*** Im Westen nichts Neues
+*** Schtzngrmm
 * Ziel dieses Dokumentes
 Zu jeder Matura kommen andere Themen. Dieses Dokument soll als
 Themendatenbank dienen und wäre dazu gedacht, dass jeder Jahrgang
